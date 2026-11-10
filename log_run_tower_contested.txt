@@ -1,0 +1,7 @@
+[  50.5s] harmed: ['DEV'] | bases leaving a CPEP for all: 221184 | with an inactive actor: 176832
+[  62.9s] with aspirations: no tower [(4621, 142, 0)]
+[  73.2s] without aspirations: tower found [(4621, 870), (1, 1)]
+[  74.7s] T1 PASSED | T2 PASSED
+[  92.0s] T3 PASSED | T4 PASSED | groups that can still gain: 4 | minimal: ['USA+CHN+EU+IND+LIC+DEV']
+[ 151.7s] [post hoc] first-stage candidates 870 | with a non-trivial last stage 15 | newcomers end at or above a0 in 0 | best newcomer gain -0.433
+[ 151.7s] done

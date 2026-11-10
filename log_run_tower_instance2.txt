@@ -1,0 +1,2 @@
+[   0.5s] harmed: ['USA', 'CHN', 'EU'] | bases leaving a CPEP for all: 64 | with an inactive actor: 0
+[   0.5s] no chain: every actor is harmed by some contested lever

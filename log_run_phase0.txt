@@ -3,3 +3,21 @@
 [   1.4s] acceptable region: 12810 profiles; IR: 82022 ; both: 3403
 [   6.0s]   efficient and IR candidates: 326
 [   6.5s] strict core inside acceptable region: 326 profiles
+[ 458.1s] robustness set: 150 draws | orientation holds in 0.58 | joint share over the core: min 0.006666666666666667 max 0.9533333333333334
+[ 482.8s]   nash      [np.int64(2), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(1)] robust: {'individually_rational': 1.0, 'acceptable': 0.6, 'strict_core': 1.0, 'all_three': 0.6, 'equilibrium': 1.0} | equilibrium certified: True
+[ 485.0s]   leximin   [np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(2)] robust: {'individually_rational': 1.0, 'acceptable': 0.9533333333333334, 'strict_core': 1.0, 'all_three': 0.9533333333333334, 'equilibrium': 1.0} | equilibrium certified: True
+[ 487.2s]   deepest   [np.int64(2), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(2)] robust: {'individually_rational': 1.0, 'acceptable': 1.0, 'strict_core': 0.3333333333333333, 'all_three': 0.3333333333333333, 'equilibrium': 0.3333333333333333} | equilibrium certified: True
+[ 489.3s]   ambition  [np.int64(2), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(1)] robust: {'individually_rational': 1.0, 'acceptable': 0.18666666666666668, 'strict_core': 1.0, 'all_three': 0.18666666666666668, 'equilibrium': 1.0} | equilibrium certified: True
+[ 496.0s]   robust    [np.int64(2), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(2)] robust: {'individually_rational': 1.0, 'acceptable': 0.9533333333333334, 'strict_core': 1.0, 'all_three': 0.9533333333333334, 'equilibrium': 1.0} | equilibrium certified: True
+[ 496.0s] lead candidate (most robust core profile): {'USA.climate': 2, 'USA.ai_oversight': 1, 'CHN.climate': 1, 'CHN.ai_oversight': 1, 'EU.climate': 1, 'EU.finance_lic': 2, 'IND.climate': 1, 'IND.surveillance': 1, 'FEX.climate': 0, 'LIC.surveillance': 2, 'DEV.ai_safety': 1, 'MDB.finance_lic': 2}
+[ 497.2s]   heuristic seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'evals': 40948, 'seconds': 0.8}
+[ 498.5s]   heuristic seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'evals': 42377, 'seconds': 0.8}
+[ 500.1s]   heuristic seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'evals': 44279, 'seconds': 1.1}
+[ 501.4s]   heuristic seed 3: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'evals': 41125, 'seconds': 0.9}
+[ 502.8s]   heuristic seed 4: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'evals': 43361, 'seconds': 1.0}
+[ 504.3s]   heuristic seed 5: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'evals': 42692, 'seconds': 1.0}
+[ 505.8s]   heuristic seed 6: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'evals': 41802, 'seconds': 1.2}
+[ 507.3s]   heuristic seed 7: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'evals': 42154, 'seconds': 0.9}
+[ 507.3s] Gate 1: PASSED | all in core: True | share reaching optimum: 1.0
+[ 507.9s] linkage: losers per issue {'climate': ['USA'], 'ai': [], 'pandemic': []} | separate deals in package core: True | core profiles better for all: 0
+[ 507.9s] done
