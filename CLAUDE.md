@@ -26,6 +26,9 @@ signs off each gate, and is the only channel to the outside world.
   core, and a contested variant of the first instance. Both fallbacks ran and both have a defect. With
   a contested lever, a strict-core profile need not be an equilibrium. Nobody has checked this work
   except the session that wrote it.
+- The plan has a new cross-cutting section, "Bounded rationality and diplomatic knowledge", added at
+  Jobst's request. Only a first exploration exists in code (restricted families of groups on the second
+  instance). The datasets it names have not been downloaded.
 - Every number except the emission shares is illustrative. No result says anything about real actors.
 
 ## Next steps, in proposed order (Jobst decides)
@@ -33,6 +36,8 @@ signs off each gate, and is the only channel to the outside world.
 0. Decide on the audit proposals (`audit/AUDIT.md`) and on the two decisions in
    `docs/phase0_instance2.md`. Audit step 1 in a fresh session, as step 0 was done for the first increment.
 1. An oracle that also searches over-fulfilment deviations, and a heuristic for the smallest margin.
+   From the new plan section: the safe-filing check, the stability table (group size, threshold, logit
+   precision, error rate), loss-averse variants, and a relationship layer from real data.
 2. A third instance in which one issue has no deal of its own, to test linkage as a necessity.
 3. Budgets and index weights in the robustness set; a robustness set for the second instance.
 4. The far-sighted formation path and absorbing states (WP8), and internal-and-external stability (WP6).

@@ -197,6 +197,57 @@ def main(heur_seeds=8):
     R['fallback3']['subpackage_with_core'] = best
     log('fallback 3:', {k: (v['n_core'], v['n_core_in_C']) for k, v in sp.items()})
 
+    # ---- [exploration, no pass mark] bounded coordination and diplomatic channels (plan, section
+    # "Bounded rationality and diplomatic knowledge"). Added on Jobst's request after the tests above.
+    # Which candidates are stable if only some groups can coordinate, or if actors move only for a
+    # normalised gain above a threshold? CHANNELS is an illustrative relationship graph [assumption]:
+    # USA and CHN have no bilateral channel; a group can coordinate iff it is connected in the graph.
+    CHANNELS = [('USA', 'EU'), ('CHN', 'EU')]
+
+    def connected(G):
+        G = set(G)
+        seen, todo = set(), [min(G)]
+        while todo:
+            i = todo.pop()
+            seen.add(i)
+            for x, y in CHANNELS:
+                x, y = ACTORS.index(x), ACTORS.index(y)
+                for u, v in ((x, y), (y, x)):
+                    if u == i and v in G and v not in seen:
+                        todo.append(v)
+        return seen == G
+    families = {'all groups': list(Gs),
+                'single actors only': [G for G in Gs if len(G) == 1],
+                'groups of at most two': [G for G in Gs if len(G) <= 2],
+                'groups connected by a channel': [G for G in Gs if connected(G)]}
+    blk_all = [set(fallbacks.strict_blockers(U, OWNER, int(x))) for x in cand]
+    R['restricted'] = dict(channels=CHANNELS, families={})
+    for name, fam in families.items():
+        cols = [Gs.index(G) for G in fam]
+        worst = lm['E'][:, cols].max(1)
+        stable = np.array([not (b & set(fam)) for b in blk_all])
+        rws = np.flatnonzero(worst <= worst.min() + 1e-12)
+        jf = int(rws[np.lexsort((cand[rws], -logn[rws]))[0]])
+        entry = dict(groups=[gname(G) for G in fam], n_stable=int(stable.sum()), least_margin=float(worst.min()),
+                     least_margin_profile=describe(prof(cand[jf])),
+                     least_margin_norm_gain={ACTORS[i]: float(Gn[i, jf]) for i in range(N)},
+                     least_margin_blockers_among_all_groups=[gname(G) for G in sorted(blk_all[jf])],
+                     least_margin_among_all_groups=float(lm['worst'][jf]))
+        if stable.any():
+            st = np.flatnonzero(stable)
+            jb = int(st[int(np.argmax(logn[st]))])
+            fb = int(cand[jb])
+            entry['nash_among_stable'] = dict(
+                flat=fb, profile=describe(prof(fb)), Q=float(ev['Q'].reshape(-1)[fb]), T=int(ev['T'].reshape(-1)[fb]),
+                norm_gain={ACTORS[i]: float(gains[i, fb] / scale[i]) for i in range(N)},
+                blockers_among_all_groups=[gname(G) for G in sorted(blk_all[jb])],
+                margin_among_all_groups=float(lm['worst'][jb]))
+        R['restricted']['families'][name] = entry
+    R['restricted']['n_candidates_with_margin_at_most'] = {
+        f'{e:.2f}': int((lm['worst'] <= e + 1e-12).sum()) for e in (0.0, 0.05, 0.10, 0.15, 0.20, 0.25, 0.30)}
+    log('restricted families:', {k: (v['n_stable'], round(v['least_margin'], 3)) for k, v in R['restricted']['families'].items()},
+        '| by threshold:', R['restricted']['n_candidates_with_margin_at_most'])
+
     # ---- E1: heuristic search on an instance with an empty core
     runs = []
     for s in range(heur_seeds):

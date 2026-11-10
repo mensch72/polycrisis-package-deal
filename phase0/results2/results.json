@@ -5,7 +5,7 @@
   "n_actors": 3,
   "n_levers": 9,
   "n_coalitions": 7,
-  "runtime_seconds": 8.4
+  "runtime_seconds": 7.3
  },
  "orientation": {
   "passed": false,
@@ -239,6 +239,193 @@
    "n_core_in_C": 0
   },
   "subpackage_with_core": "climate"
+ },
+ "restricted": {
+  "channels": [
+   [
+    "USA",
+    "EU"
+   ],
+   [
+    "CHN",
+    "EU"
+   ]
+  ],
+  "families": {
+   "all groups": {
+    "groups": [
+     "USA",
+     "CHN",
+     "EU",
+     "USA+CHN",
+     "USA+EU",
+     "CHN+EU",
+     "USA+CHN+EU"
+    ],
+    "n_stable": 0,
+    "least_margin": 0.1652936145952112,
+    "least_margin_profile": {
+     "USA.access_CHN": 2,
+     "USA.access_EU": 0,
+     "USA.climate": 1,
+     "CHN.access_EU": 0,
+     "CHN.access_USA": 0,
+     "CHN.climate": 2,
+     "EU.access_USA": 1,
+     "EU.access_CHN": 1,
+     "EU.climate": 1
+    },
+    "least_margin_norm_gain": {
+     "USA": 0.4676391125544005,
+     "CHN": 0.5892460091220066,
+     "EU": 0.1286678784731237
+    },
+    "least_margin_blockers_among_all_groups": [
+     "USA+CHN",
+     "USA+CHN+EU",
+     "USA+EU",
+     "CHN+EU"
+    ],
+    "least_margin_among_all_groups": 0.1652936145952112
+   },
+   "single actors only": {
+    "groups": [
+     "USA",
+     "CHN",
+     "EU"
+    ],
+    "n_stable": 548,
+    "least_margin": -0.3326895667046746,
+    "least_margin_profile": {
+     "USA.access_CHN": 2,
+     "USA.access_EU": 1,
+     "USA.climate": 1,
+     "CHN.access_EU": 0,
+     "CHN.access_USA": 0,
+     "CHN.climate": 2,
+     "EU.access_USA": 1,
+     "EU.access_CHN": 1,
+     "EU.climate": 1
+    },
+    "least_margin_norm_gain": {
+     "USA": 0.3345488906930007,
+     "CHN": 0.3326895667046746,
+     "EU": 0.5181770968579589
+    },
+    "least_margin_blockers_among_all_groups": [
+     "USA+CHN",
+     "USA+CHN+EU",
+     "USA+EU",
+     "CHN+EU"
+    ],
+    "least_margin_among_all_groups": 0.3286986887115169,
+    "nash_among_stable": {
+     "flat": 37673,
+     "profile": {
+      "USA.access_CHN": 2,
+      "USA.access_EU": 1,
+      "USA.climate": 1,
+      "CHN.access_EU": 0,
+      "CHN.access_USA": 0,
+      "CHN.climate": 2,
+      "EU.access_USA": 1,
+      "EU.access_CHN": 1,
+      "EU.climate": 1
+     },
+     "Q": 0.7590999999999999,
+     "T": 5,
+     "norm_gain": {
+      "USA": 0.3345488906930007,
+      "CHN": 0.3326895667046746,
+      "EU": 0.5181770968579589
+     },
+     "blockers_among_all_groups": [
+      "USA+CHN",
+      "USA+CHN+EU",
+      "USA+EU",
+      "CHN+EU"
+     ],
+     "margin_among_all_groups": 0.3286986887115169
+    }
+   },
+   "groups of at most two": {
+    "groups": [
+     "USA",
+     "CHN",
+     "EU",
+     "USA+CHN",
+     "USA+EU",
+     "CHN+EU"
+    ],
+    "n_stable": 0,
+    "least_margin": 0.1652936145952112,
+    "least_margin_profile": {
+     "USA.access_CHN": 2,
+     "USA.access_EU": 0,
+     "USA.climate": 1,
+     "CHN.access_EU": 0,
+     "CHN.access_USA": 0,
+     "CHN.climate": 2,
+     "EU.access_USA": 1,
+     "EU.access_CHN": 1,
+     "EU.climate": 1
+    },
+    "least_margin_norm_gain": {
+     "USA": 0.4676391125544005,
+     "CHN": 0.5892460091220066,
+     "EU": 0.1286678784731237
+    },
+    "least_margin_blockers_among_all_groups": [
+     "USA+CHN",
+     "USA+CHN+EU",
+     "USA+EU",
+     "CHN+EU"
+    ],
+    "least_margin_among_all_groups": 0.1652936145952112
+   },
+   "groups connected by a channel": {
+    "groups": [
+     "USA",
+     "CHN",
+     "EU",
+     "USA+EU",
+     "CHN+EU",
+     "USA+CHN+EU"
+    ],
+    "n_stable": 0,
+    "least_margin": 0.025967281225655392,
+    "least_margin_profile": {
+     "USA.access_CHN": 1,
+     "USA.access_EU": 2,
+     "USA.climate": 1,
+     "CHN.access_EU": 0,
+     "CHN.access_USA": 1,
+     "CHN.climate": 2,
+     "EU.access_USA": 0,
+     "EU.access_CHN": 2,
+     "EU.climate": 1
+    },
+    "least_margin_norm_gain": {
+     "USA": 0.09498649134248097,
+     "CHN": 0.19015820980615697,
+     "EU": 0.9076863152427939
+    },
+    "least_margin_blockers_among_all_groups": [
+     "USA+CHN",
+     "USA+CHN+EU"
+    ],
+    "least_margin_among_all_groups": 0.47123004561003456
+   }
+  },
+  "n_candidates_with_margin_at_most": {
+   "0.00": 0,
+   "0.05": 0,
+   "0.10": 0,
+   "0.15": 0,
+   "0.20": 1,
+   "0.25": 10,
+   "0.30": 56
+  }
  },
  "E1": {
   "runs": [

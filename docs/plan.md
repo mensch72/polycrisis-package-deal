@@ -1,6 +1,8 @@
 # Polycrisis package deal — work plan
 
 > Exported on 10 November 2026 from the Claude Doc https://claude.ai/artifact/JsCtfcFLRjq5FHe33x6biu (main tab, revision 35). The two diagrams are omitted. The status log continues in `STATUS.md`.
+>
+> Changed in this repository after the export: the section "Bounded rationality and diplomatic knowledge", one row in "Objections and risks", and thirteen references.
 
 Nov 10, 2026 · @Jobst
 
@@ -389,6 +391,78 @@ Participation needs no extra machinery. The registry already accepts filings fro
 
 **Pilot.** Before any real actor is approached, model-agent delegations play the process on the toy instance. Role-play with people follows once participants are available.
 
+## Bounded rationality and diplomatic knowledge
+
+Two layers cut across the work packages. One keeps the deal sound when actors do not optimise. The other
+feeds in what diplomats know about relationships and constraints. Added on 10 November 2026 at Jobst's
+request. A first toy exploration is in `docs/phase0_instance2.md`.
+
+**Why.** The theorems describe actors who compute best responses and can coordinate in any group. Real
+actors satisfice (Simon, 1955), make errors, weigh losses more than gains (Kahneman and Tversky, 1979),
+and are not unitary. Groups without a working relationship can coordinate neither a deal nor a deviation.
+
+**Bounded rationality: design rules** \[assumption\].
+
+| Limit of the actor | Response in the design | Where |
+| --- | --- | --- |
+| Cannot foresee the filings of others | Safe filings. A filing through an individually rational profile cannot leave its author worse off than no deal, for levers that pass the orientation test (WP9). The certificate checks this by enumeration. The standard is that of obviously strategy-proof mechanisms (Li, 2017): safety must show without contingent reasoning. | WP7, WP8 |
+| Cannot evaluate complex functions | A complexity budget for filings: steps or ladders with few conditions, in the actor's own indicators. | WP7, WP9 |
+| Optimises only roughly | Stability with a margin. Certificates report the smallest loss of any deviating group, and deviation probabilities under logit quantal response (McKelvey and Palfrey, 1995) for a range of precisions. | WP6, WP8 |
+| Moves only for a noticeable gain | Stability is reported as a function of an inertia threshold. | WP6 |
+| Cannot coordinate in large groups | Stability is reported by group size, next to stability against all groups. | WP8 |
+| Errs in implementation | Gradual filings and liability redistribution, so that one shortfall does not void the deal. Expected loss is reported for a range of error rates. | WP7 |
+| Weighs losses more than gains | Loss-averse variants of each preference file enter Θ. Losses on single issues are shown in the briefs. | WP4, WP9 |
+| Learns by trial, not by deduction | Stage 5 of WP6 runs generic learners and model agents, and scores adaptation. | WP6, WP10 |
+| Is not unitary | Internal veto players enter as a ratification constraint. | WP1, WP4 |
+
+**Rule of caution.** Each of these limits can make a deal look more stable than it is. A certificate that
+relies on one states it, and gives the result without it alongside.
+
+**Diplomatic knowledge: where it enters.**
+
+| Kind of knowledge | Formal object it changes | Where |
+| --- | --- | --- |
+| Relationships: alliance, rivalry, recognition, sanctions, dependence | the family of groups that can coordinate, as in games on graphs (Myerson, 1977); relative-gains terms between rivals | WP1, WP4, WP6, WP8 |
+| Red lines and non-negotiables | aspiration sets | WP4 |
+| Existing obligations and legal bars | lever catalogue: barred levels, instrument, approver | WP3 |
+| Linkage taboos and customary linkages | admissible issue sets | WP2 |
+| Who cannot be seen to sign with whom | filing form: filings are unilateral, and conditions refer to registry levels, not to named counterparts | WP7 |
+| Ratification rules and domestic veto players | ratification constraint | WP1, WP4 |
+| Sequence, face and credit | cascade order | WP9 |
+| Compliance record | priors on compliance; size of compensation factor and deposits | WP7 |
+
+**Is there data?** Yes for formal ties between states, mostly by pair and year. Little exists for firms
+and armed groups, and tacit knowledge is in no dataset.
+
+| Knowledge | Source | Limit |
+| --- | --- | --- |
+| Alliances and their obligations | ATOP (Leeds et al., 2002) | coded treaty texts; states only |
+| Disputes and rivalry | Militarized Interstate Disputes (Palmer et al., 2022); UCDP/PRIO armed conflict (Gleditsch et al., 2002) | events, not intentions |
+| Voting affinity | UN General Assembly ideal points (Bailey, Strezhnev and Voeten, 2017) | one dimension |
+| Sanctions | Global Sanctions Data Base (Felbermayr et al., 2020) | announced measures, not their bite |
+| Trade agreements | DESTA (Dür, Baccini and Elsig, 2014) | design, not use |
+| Environmental agreements | IEADB (Mitchell et al., 2020) | membership and text |
+| Membership of intergovernmental bodies | Correlates of War IGO data (Pevehouse et al., 2020) | formal membership |
+| Domestic veto players | political constraint index (Henisz, 2002) | coarse |
+| Negotiating positions and salience | DEU (Thomson et al., 2006) | EU legislation only |
+
+None of these has been downloaded yet. Versions, coverage years and licences are checked at extraction
+(WP5). Tacit knowledge covers who trusts whom, what is negotiable in private, and what would cost face.
+It needs practitioners, whom the team cannot reach alone. Document reading and language-model personas
+stand in as priors only, and the correction channel of WP10 replaces them over time.
+
+**Method.**
+
+1. Add a relationship layer to the knowledge base: a typed, dated multigraph on the actors, each edge with source and "who says".
+2. Derive the family of groups connected by a working channel. Run WP6 and WP8 with all groups and with this family, and report both.
+3. Enter each constraint as a filter with provenance. Rank constraints by how often they flip the result, as for data entries in WP6.
+4. Give every certificate a stability table: by group size, by inertia threshold, by logit precision, by error rate.
+5. Keep the relationship layer under the access rules of WP5. It is a map of pressure points.
+
+**Status.** Explored on the second toy instance: stability by group size, by threshold and with one
+channel removed. Not yet built: the safe-filing check, quantal response, loss-averse variants, error
+rates, and any real relationship data \[open\].
+
 ## Sequencing and gates
 
 Phase 0 exercises all ten work packages on a small instance before anything is scaled. Each later phase starts only when the gate before it is passed.
@@ -418,6 +492,7 @@ The plan above implements the request as stated. These are the points where it m
 | Paying for restraint | Rewarding restraint can invite a build-up of what is to be restrained. | Threat-free reference fixed at an earlier date. No transfer for withdrawing a threat. |
 | Misuse of the knowledge base | It maps red lines and pressure points. | Access rules, aggregated publication, policy-level content only. |
 | Scale | One deal for everything may be less attainable than several overlapping conditional deals. | The rule ℓ is computed over whatever is filed, so partial packages work. Phase 0 tests this first. |
+| Assumed limits flatter the deal | Bounded coordination, inertia and missing channels all enlarge the set of stable outcomes. | The result without the assumption is always reported alongside. |
 | One-AI team | No second person checks the work, so an error of mine can pass unnoticed. The team has no access to people or to non-public knowledge. | Full enumeration on small instances, published certificates, fresh-session audits, and Jobst's sign-off at each gate. |
 
 ## Status log
@@ -448,8 +523,11 @@ Identifiers were checked on 10 November 2026 against Crossref, arXiv, publisher 
 - Chwe, M.S.-Y. (1994) 'Farsighted coalitional stability', *Journal of Economic Theory*, 63(2), pp. 299–325. [doi:10.1006/jeth.1994.1044](https://doi.org/10.1006/jeth.1994.1044)
 - Dima, S., Fischer, S., Heitzig, J. and Oliver, J. (2025) 'Non-maximizing policies that fulfill multi-criterion aspirations in expectation', in Freeman, R. and Mattei, N. (eds) *Algorithmic Decision Theory. ADT 2024*. Lecture Notes in Computer Science, vol. 15248. Cham: Springer, pp. 113–127. [doi:10.1007/978-3-031-73903-3\_8](https://doi.org/10.1007/978-3-031-73903-3_8)
 - Donges, J.F., Heitzig, J., Barfuss, W., Wiedermann, M., Kassel, J.A., Kittel, T., Kolb, J.J., Kolster, T., Müller-Hansen, F., Otto, I.M., Zimmerer, K.B. and Lucht, W. (2020) 'Earth system modeling with endogenous and dynamic human societies: the copan:CORE open World–Earth modeling framework', *Earth System Dynamics*, 11(2), pp. 395–413. [doi:10.5194/esd-11-395-2020](https://doi.org/10.5194/esd-11-395-2020)
+- Dür, A., Baccini, L. and Elsig, M. (2014) 'The design of international trade agreements: introducing a new dataset', *Review of International Organizations*, 9(3), pp. 353–375. [doi:10.1007/s11558-013-9179-8](https://doi.org/10.1007/s11558-013-9179-8)
+- Felbermayr, G., Kirilakha, A., Syropoulos, C., Yalcin, E. and Yotov, Y.V. (2020) 'The global sanctions data base', *European Economic Review*, 129, 103561. [doi:10.1016/j.euroecorev.2020.103561](https://doi.org/10.1016/j.euroecorev.2020.103561)
 - Gerber, A. and Wichardt, P.C. (2009) 'Providing public goods in the absence of strong institutions', *Journal of Public Economics*, 93(3–4), pp. 429–439. [doi:10.1016/j.jpubeco.2008.10.006](https://doi.org/10.1016/j.jpubeco.2008.10.006)
 - Gilboa, I., Samuelson, L. and Schmeidler, D. (2014) 'No-betting-Pareto dominance', *Econometrica*, 82(4), pp. 1405–1442. [doi:10.3982/ECTA11281](https://doi.org/10.3982/ECTA11281)
+- Gleditsch, N.P., Wallensteen, P., Eriksson, M., Sollenberg, M. and Strand, H. (2002) 'Armed conflict 1946–2001: a new dataset', *Journal of Peace Research*, 39(5), pp. 615–637. [doi:10.1177/0022343302039005007](https://doi.org/10.1177/0022343302039005007)
 - Granovetter, M. (1978) 'Threshold models of collective behavior', *American Journal of Sociology*, 83(6), pp. 1420–1443. [doi:10.1086/226707](https://doi.org/10.1086/226707)
 - Grieco, J.M. (1988) 'Anarchy and the limits of cooperation: a realist critique of the newest liberal institutionalism', *International Organization*, 42(3), pp. 485–507. [doi:10.1017/S0020818300027715](https://doi.org/10.1017/S0020818300027715)
 - Harstad, B. (2012) 'Climate contracts: a game of emissions, investments, negotiations, and renegotiations', *Review of Economic Studies*, 79(4), pp. 1527–1557. [doi:10.1093/restud/rds011](https://doi.org/10.1093/restud/rds011)
@@ -463,26 +541,36 @@ Identifiers were checked on 10 November 2026 against Crossref, arXiv, publisher 
 - Heitzig, J., Lessmann, K. and Zou, Y. (2011) 'Self-enforcing strategies to deter free-riding in the climate change mitigation game and other repeated public good games', *Proceedings of the National Academy of Sciences*, 108(38), pp. 15739–15744. [doi:10.1073/pnas.1106265108](https://doi.org/10.1073/pnas.1106265108)
 - Heitzig, J., Oechssler, J., Pröschel, C., Ragavan, N. and Lo, Y.L. (2023) 'Improving international climate policy via mutually conditional binding commitments'. arXiv preprint. [arXiv:2307.14267](https://arxiv.org/abs/2307.14267)
 - Heitzig, J., Simmons, F.W. and Constantino, S.M. (2025) 'Fair group decisions via non-deterministic proportional consensus', *Social Choice and Welfare*, 64, pp. 345–371. [doi:10.1007/s00355-024-01524-3](https://doi.org/10.1007/s00355-024-01524-3)
+- Henisz, W.J. (2002) 'The institutional environment for infrastructure investment', *Industrial and Corporate Change*, 11(2), pp. 355–389. [doi:10.1093/icc/11.2.355](https://doi.org/10.1093/icc/11.2.355)
 - Jackson, M.O. and Wilkie, S. (2005) 'Endogenous games and mechanisms: side payments among players', *Review of Economic Studies*, 72(2), pp. 543–566. [doi:10.1111/j.1467-937X.2005.00342.x](https://doi.org/10.1111/j.1467-937X.2005.00342.x)
+- Kahneman, D. and Tversky, A. (1979) 'Prospect theory: an analysis of decision under risk', *Econometrica*, 47(2), pp. 263–291. [doi:10.2307/1914185](https://doi.org/10.2307/1914185)
 - Kalai, A.T., Kalai, E., Lehrer, E. and Samet, D. (2010) 'A commitment folk theorem', *Games and Economic Behavior*, 69(1), pp. 127–137. [doi:10.1016/j.geb.2009.09.008](https://doi.org/10.1016/j.geb.2009.09.008)
 - Konishi, H. and Ray, D. (2003) 'Coalition formation as a dynamic process', *Journal of Economic Theory*, 110(1), pp. 1–41. [doi:10.1016/S0022-0531(03)00004-8](https://doi.org/10.1016/S0022-0531%2803%2900004-8)
 - Kulveit, J., Douglas, R., Ammann, N., Turan, D., Krueger, D. and Duvenaud, D. (2025) 'Gradual disempowerment: systemic existential risks from incremental AI development'. arXiv preprint. [arXiv:2501.16946](https://arxiv.org/abs/2501.16946)
 - Lawrence, M., Homer-Dixon, T., Janzwood, S., Rockström, J., Renn, O. and Donges, J.F. (2024) 'Global polycrisis: the causal mechanisms of crisis entanglement', *Global Sustainability*, 7, e6. [doi:10.1017/sus.2024.1](https://doi.org/10.1017/sus.2024.1)
+- Leeds, B.A., Ritter, J.M., Mitchell, S.M. and Long, A.G. (2002) 'Alliance Treaty Obligations and Provisions, 1815–1944', *International Interactions*, 28(3), pp. 237–260. [doi:10.1080/03050620213653](https://doi.org/10.1080/03050620213653)
+- Li, S. (2017) 'Obviously strategy-proof mechanisms', *American Economic Review*, 107(11), pp. 3257–3287. [doi:10.1257/aer.20160425](https://doi.org/10.1257/aer.20160425)
 - Maggi, G. (2016) 'Issue linkage', in Bagwell, K. and Staiger, R.W. (eds) *Handbook of Commercial Policy*, vol. 1B. Amsterdam: North-Holland, pp. 513–564. [doi:10.1016/bs.hescop.2016.04.017](https://doi.org/10.1016/bs.hescop.2016.04.017)
+- McKelvey, R.D. and Palfrey, T.R. (1995) 'Quantal response equilibria for normal form games', *Games and Economic Behavior*, 10(1), pp. 6–38. [doi:10.1006/game.1995.1023](https://doi.org/10.1006/game.1995.1023)
+- Mitchell, R.B., Andonova, L.B., Axelrod, M., Balsiger, J., Bernauer, T., Green, J.F., Hollway, J., Kim, R.E. and Morin, J.-F. (2020) 'What we know (and could know) about international environmental agreements', *Global Environmental Politics*, 20(1), pp. 103–121. [doi:10.1162/glep_a_00544](https://doi.org/10.1162/glep_a_00544)
 - Monderer, D. and Tennenholtz, M. (2009) 'Strong mediated equilibrium', *Artificial Intelligence*, 173(1), pp. 180–195. [doi:10.1016/j.artint.2008.10.005](https://doi.org/10.1016/j.artint.2008.10.005)
+- Myerson, R.B. (1977) 'Graphs and cooperation in games', *Mathematics of Operations Research*, 2(3), pp. 225–229. [doi:10.1287/moor.2.3.225](https://doi.org/10.1287/moor.2.3.225)
 - Myerson, R.B. and Satterthwaite, M.A. (1983) 'Efficient mechanisms for bilateral trading', *Journal of Economic Theory*, 29(2), pp. 265–281. [doi:10.1016/0022-0531(83)90048-0](https://doi.org/10.1016/0022-0531%2883%2990048-0)
 - Nash, J.F. (1950) 'The bargaining problem', *Econometrica*, 18(2), pp. 155–162. [doi:10.2307/1907266](https://doi.org/10.2307/1907266)
 - Nash, J. (1953) 'Two-person cooperative games', *Econometrica*, 21(1), pp. 128–140. [doi:10.2307/1906951](https://doi.org/10.2307/1906951)
 - Nordhaus, W. (2015) 'Climate clubs: overcoming free-riding in international climate policy', *American Economic Review*, 105(4), pp. 1339–1370. [doi:10.1257/aer.15000001](https://doi.org/10.1257/aer.15000001)
 - Oechssler, J., Reischmann, A. and Sofianos, A. (2022) 'The conditional contribution mechanism for repeated public goods – the general case', *Journal of Economic Theory*, 203, 105488. [doi:10.1016/j.jet.2022.105488](https://doi.org/10.1016/j.jet.2022.105488)
 - Oesterheld, C. and Conitzer, V. (2022) 'Safe Pareto improvements for delegated game playing', *Autonomous Agents and Multi-Agent Systems*, 36(2), 46. [doi:10.1007/s10458-022-09574-6](https://doi.org/10.1007/s10458-022-09574-6)
+- Palmer, G., McManus, R.W., D'Orazio, V., Kenwick, M.R., Karstens, M., Bloch, C., Dietrich, N., Kahn, K., Ritter, K. and Soules, M.J. (2022) 'The MID5 dataset, 2011–2014: procedures, coding rules, and description', *Conflict Management and Peace Science*, 39(4), pp. 470–482. [doi:10.1177/0738894221995743](https://doi.org/10.1177/0738894221995743)
 - Pauw, W.P., Castro, P., Pickering, J. and Bhasin, S. (2020) 'Conditional nationally determined contributions in the Paris Agreement: foothold for equity or Achilles heel?', *Climate Policy*, 20(4), pp. 468–484. [doi:10.1080/14693062.2019.1635874](https://doi.org/10.1080/14693062.2019.1635874)
+- Pevehouse, J.C.W., Nordstrom, T., McManus, R.W. and Jamison, A.S. (2020) 'Tracking organizations in the world: the Correlates of War IGO Version 3.0 datasets', *Journal of Peace Research*, 57(3), pp. 492–503. [doi:10.1177/0022343319881175](https://doi.org/10.1177/0022343319881175)
 - Putnam, R.D. (1988) 'Diplomacy and domestic politics: the logic of two-level games', *International Organization*, 42(3), pp. 427–460. [doi:10.1017/S0020818300027697](https://doi.org/10.1017/S0020818300027697)
 - Raiffa, H. (1982) *The Art and Science of Negotiation*. Cambridge, MA: Belknap Press of Harvard University Press. ISBN 978-0-674-04813-3. No DOI.
 - Ray, D. and Vohra, R. (2015) 'The farsighted stable set', *Econometrica*, 83(3), pp. 977–1011. [doi:10.3982/ECTA12022](https://doi.org/10.3982/ECTA12022)
 - Reischmann, A. and Oechssler, J. (2018) 'The binary conditional contribution mechanism for public good provision in dynamic settings — theory and experimental evidence', *Journal of Public Economics*, 159, pp. 104–115. [doi:10.1016/j.jpubeco.2018.02.009](https://doi.org/10.1016/j.jpubeco.2018.02.009)
 - Rengert, M., Heitzig, J. and Asano, Y. (2026) 'Cooperation is not competence – conditional commitments in LLM public-good games'. Poster, Trustworthy AI for Good (AI4GOOD) Workshop at NeurIPS 2026. No DOI. [neurips.cc/virtual/2026/165274](https://neurips.cc/virtual/2026/165274)
 - Sebenius, J.K. (1983) 'Negotiation arithmetic: adding and subtracting issues and parties', *International Organization*, 37(2), pp. 281–316. [doi:10.1017/S002081830003438X](https://doi.org/10.1017/S002081830003438X)
+- Simon, H.A. (1955) 'A behavioral model of rational choice', *Quarterly Journal of Economics*, 69(1), pp. 99–118. [doi:10.2307/1884852](https://doi.org/10.2307/1884852)
 - Tennenholtz, M. (2004) 'Program equilibrium', *Games and Economic Behavior*, 49(2), pp. 363–373. [doi:10.1016/j.geb.2004.02.002](https://doi.org/10.1016/j.geb.2004.02.002)
 - Tessler, M.H., Bakker, M.A., Jarrett, D., Sheahan, H., Chadwick, M.J., Koster, R., Evans, G., Campbell-Gillingham, L., Collins, T., Parkes, D.C., Botvinick, M. and Summerfield, C. (2024) 'AI can help humans find common ground in democratic deliberation', *Science*, 386(6719), eadq2852. [doi:10.1126/science.adq2852](https://doi.org/10.1126/science.adq2852)
 - Thomson, R., Stokman, F.N., Achen, C.H. and König, T. (eds) (2006) *The European Union Decides*. Cambridge: Cambridge University Press. [doi:10.1017/CBO9780511492082](https://doi.org/10.1017/CBO9780511492082)

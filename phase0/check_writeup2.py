@@ -100,6 +100,25 @@ chk('climate-only deal', f3['subpackage_with_core'] == 'climate' and [npt['profi
     and r3(npt['margin_in_package_game']) == .479 and set(npt['blockers_in_package_game']) == {'USA+CHN', 'USA+EU', 'CHN+EU', 'USA+CHN+EU'}
     and 2.5 < npt['margin_in_package_game'] / f1['eps'] < 3,
     '| 0.30, 0.14, 0.47 |', 'There its margin is 0.479, almost three times', 'its focal deal has margin 0.479')
+# bounded coordination and channels
+rs = R['restricted']
+fam = rs['families']
+chk('restricted families', [fam[k]['n_stable'] for k in ('all groups', 'groups of at most two', 'groups connected by a channel', 'single actors only')] == [0, 0, 0, 548]
+    and [r3(fam[k]['least_margin']) for k in ('all groups', 'groups of at most two', 'groups connected by a channel')] == [.165, .165, .026]
+    and len(fam['all groups']['groups']) == 7 and 'USA+CHN' not in fam['groups connected by a channel']['groups']
+    and rs['channels'] == [['USA', 'EU'], ['CHN', 'EU']],
+    '| all 7 groups | 0 | 0.165 |', '| groups of at most two | 0 | 0.165 |',
+    '| groups connected by a channel (no USA+CHN) | 0 | 0.026 |', '| single actors only | 548 | not applicable |',
+    'from 0.165 to 0.026')
+th = rs['n_candidates_with_margin_at_most']
+chk('inertia', (th['0.15'], th['0.20'], th['0.25'], th['0.30']) == (0, 1, 10, 56) and r3(f1['eps']) == .165,
+    'below a threshold of 0.165', 'At 0.20 one candidate is stable, at 0.25 there are 10, and at 0.30 there are 56')
+ch = fam['groups connected by a channel']
+chk('channel profile favours the broker', ch['least_margin_profile'] != f1['profile']
+    and [round(100 * ch['least_margin_norm_gain'][k]) for k in ('EU', 'USA', 'CHN')] == [91, 9, 19]
+    and set(ch['least_margin_blockers_among_all_groups']) == {'USA+CHN', 'USA+CHN+EU'}
+    and r3(ch['least_margin_among_all_groups']) == .471,
+    'EU holds 91 % of its largest acceptable gain there, USA 9 % and CHN 19 %', 'with a margin of 0.471')
 # contested variant
 chk('kappa', K['kappa'] == .20 and {(v['lever'], v['actor']) for v in K['orientation']['violations']} ==
     {('USA.ai_oversight', 'DEV'), ('CHN.ai_oversight', 'DEV')} and all(r2(v['largest']) == .17 for v in K['orientation']['violations']),

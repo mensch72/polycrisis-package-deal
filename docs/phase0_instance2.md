@@ -130,6 +130,36 @@ the package game. There its margin is 0.479, almost three times that of the marg
 core and the package has none. Taking an issue off the table helps only if its levers leave with it.
 Far-sighted stability, the second fallback of the plan, is not implemented yet [open].
 
+## Bounded coordination and diplomatic channels [exploration]
+
+Stability of the second instance depends sharply on who can coordinate with whom. This section was
+added on Jobst's request after the tests above. It has no pass mark. The plan section "Bounded
+rationality and diplomatic knowledge" gives the concepts.
+
+The 548 candidates were re-tested against restricted families of groups. The channel graph is an
+illustrative assumption: USA and CHN have no bilateral channel, and a group can coordinate only if it
+is connected.
+
+| Groups that can coordinate | Candidates no such group blocks | Smallest margin |
+| --- | --- | --- |
+| all 7 groups | 0 | 0.165 |
+| groups of at most two | 0 | 0.165 |
+| groups connected by a channel (no USA+CHN) | 0 | 0.026 |
+| single actors only | 548 | not applicable |
+
+**Inertia.** Suppose actors move only for a normalised gain above a threshold. No candidate is stable
+below a threshold of 0.165. At 0.20 one candidate is stable, at 0.25 there are 10, and at 0.30 there are 56.
+
+**Reading.**
+
+1. Removing one channel does not restore a core, but it cuts the smallest margin from 0.165 to 0.026.
+   The profile that achieves this is a different one, and it favours the broker. EU holds 91 % of its
+   largest acceptable gain there, USA 9 % and CHN 19 %. Among connected groups only the grand coalition
+   blocks it. If USA and CHN could talk after all, they would block it with a margin of 0.471.
+2. Against single actors every candidate holds. The whole difficulty lies in pairs.
+3. A missing channel and a threshold are optimistic assumptions. A certificate that relies on either
+   must say so, and the unrestricted result must be reported next to it.
+
 ## Contested variant of the first instance
 
 The search handles real blocking, and the result shows why a core certificate is not enough.

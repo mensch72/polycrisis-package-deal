@@ -56,3 +56,16 @@ Newest entry last. Every session ends with an entry: what ran, what failed, what
     fallback. The audit proposals were not acted on.
   - Claude Doc: not edited. It lacks the audit, the second instance and the repository.
   - Open decisions for Jobst, added: the two at the end of `docs/phase0_instance2.md`.
+- Later again, on Jobst's request for bounded rationality and diplomatic knowledge:
+  - `docs/plan.md` gained the section "Bounded rationality and diplomatic knowledge" (design rules,
+    where diplomatic knowledge enters, a table of data sources, method, status), one row in
+    "Objections and risks", and thirteen references. All thirteen DOIs were checked against Crossref
+    today. The Claude Doc does not have these changes.
+  - `phase0/run_instance2.py` gained an exploration without pass mark: stability of the second
+    instance by group size, by inertia threshold, and with the USA–CHN channel removed. The write-up
+    has a section on it, with assertions.
+  - A first reading of that result was wrong and the text assertion caught it: the profile with the
+    smallest margin under the channel restriction is not the margin fallback but one that favours EU.
+  - Not built: the safe-filing check, quantal response, loss aversion, error rates. No dataset was
+    downloaded.
+  - `run_all.sh` was rerun from a clean state after the last code change.
