@@ -52,8 +52,10 @@ for mechanism-level statements to be machine-checked in a proof assistant.
 
 ## Rules of work
 
+- Commit and push to the working branch after every completed unit of work, and before any long run.
+  A session can end without warning at a spending limit; nothing may be left unpushed.
 - External actions need Jobst's instruction: no publishing, posting, messaging, contact with actors,
-  new repositories or scheduled runs unasked. Commit and push as Jobst directs.
+  new repositories or scheduled runs unasked.
 - Tag claims: [proved] is a theorem in a cited paper, [model] holds in our model, [open] is
   unresolved, [assumption] is a planning choice. Do not claim what the files do not support.
 - Fix pass marks before running a test, and write them into the code. A test or selection rule
