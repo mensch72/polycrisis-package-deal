@@ -69,3 +69,19 @@ Newest entry last. Every session ends with an entry: what ran, what failed, what
   - Not built: the safe-filing check, quantal response, loss aversion, error rates. No dataset was
     downloaded.
   - `run_all.sh` was rerun from a clean state after the last code change.
+- Last part of the session, on Jobst's three remarks:
+  - Pushing: `CLAUDE.md` now has the rule to commit and push after every unit and before long runs.
+  - Towers in a pre-CPEP: `phase0/tower.py`, `run_tower.py`, `run_tower_relaxed.py`, `check_towers.py`,
+    `docs/phase0_towers.md`. Tests T1 to T4 were pushed before the first run and passed. Under condition
+    (ii): no tower in the triangle; in the contested variant none with aspirations, and without them a
+    tower whose last stage adds nothing and which leaves DEV below no deal. In the original game 4 of
+    255 groups can still gain, by at most 0.017. Under the relaxed (ii′), which is Claude's proposal and
+    post hoc: 169 acceptable towers, and the selected one is a strictly strong equilibrium.
+  - Weak: only chains of two coalitions and step filings. The selected towers have trivial last stages.
+    Three readings of the definition await Jobst's confirmation.
+  - Plan: "Strategy and roadmap" replaces "Sequencing and gates" (horizons, candidate pilots, who does
+    what, milestones M0 to M6 with venues, decisions). "Beyond CPEPs: towers" added to the framing. The
+    reading of the task, item 3 of the WP3 method and three risk rows changed. Gates 2 and 3 are
+    restated, because their earlier wording was in a diagram the export omitted. The Claude Doc has
+    none of this.
+  - `run_all.sh` includes the tower runners and was rerun from a clean state.

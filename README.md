@@ -13,6 +13,7 @@ Jobst Heitzig. Not yet reviewed by a second person.
 | `docs/plan.md` | the work plan: ten work packages, phases, gates, objections, references |
 | `docs/phase0_results.md` | write-up of the first increment of Phase 0 |
 | `docs/phase0_instance2.md` | write-up of the second instance and the contested variant (step 1) |
+| `docs/phase0_towers.md` | towers in a pre-CPEP: definitions as implemented, tests, assessment |
 | `audit/` | independent audit of the first increment: report, checker, outputs |
 | `phase0/` | code and results of the Phase 0 toy instance |
 | `run_all.sh` | recomputes every Phase 0 result from a clean state |
@@ -65,6 +66,11 @@ Needs Python 3 with numpy (tested with Python 3.13, numpy 2.5). All random seeds
 | `run_instance2.py` | second instance through core, both fallbacks, registry rule and search; tests E1 to E3 |
 | `run_contested.py` | first instance with a compliance burden on developers; search test G1c |
 | `check_writeup2.py` | asserts every number quoted in `docs/phase0_instance2.md`, against files and text |
+| `tower.py` | towers of coalitions and filings in a pre-CPEP: stage games, nested step filings, registry rule |
+| `run_tower.py` | builds and tests a tower under Jobst's condition (ii); argument `contested` or `instance2` |
+| `run_tower_relaxed.py` | the same under the relaxed condition (ii′), on the contested variant |
+| `check_towers.py` | asserts every number quoted in `docs/phase0_towers.md`, against files and text |
+| `results2/tower_*.json` | results of the tower runners |
 | `results2/results.json`, `results2/contested.json`, `results2/params.json` | results of the two runners |
 
 ## Second instance and contested variant

@@ -1,0 +1,5 @@
+[   1.0s] orientation test: passed | contested variant flags 2 lever-actor pairs
+[   1.4s] sufficiency: {'climate': ['CHN'], 'ai': ['USA', 'CHN'], 'pandemic': ['IND', 'LIC']}
+[   1.4s] acceptable region: 12810 profiles; IR: 82022 ; both: 3403
+[   6.0s]   efficient and IR candidates: 326
+[   6.5s] strict core inside acceptable region: 326 profiles

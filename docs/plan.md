@@ -469,7 +469,7 @@ rates, and any real relationship data \[open\].
 
 ## Strategy and roadmap
 
-The realistic outcome is a small conditional-pledge registry in real use, on one issue, within about two years of work. Everything before it builds the credibility needed to get it hosted. Everything after it is growth. Revised on 10 November 2026 at Jobst's request. All of this section is \[assumption\] until Jobst decides.
+The realistic outcome is a small conditional-pledge registry in real use, on one issue. Everything before it builds the credibility needed to get it hosted. Everything after it is growth. Revised on 10 November 2026 at Jobst's request. All of this section is \[assumption\] until Jobst decides.
 
 **Three horizons.**
 
@@ -491,7 +491,7 @@ The realistic outcome is a small conditional-pledge registry in real use, on one
 | Track | Why realistic | First coalition | What is filed | Main obstacle |
 | --- | --- | --- | --- | --- |
 | A. Climate | States already file conditional pledges under the Paris Agreement (Pauw et al., 2020). Data are public. | a club of states, regions or one sector | conditional parts of pledges, as functions of others' pledges | attention is scarce; pledges are political signals as much as commitments |
-| B. Frontier AI safety | Few actors, able to contract. Twenty companies signed if-then style commitments in 2024 (see WP1). | a handful of developers, later their home states | safety thresholds and practices, conditional on rivals' | competition law; verification of internal practice \[open\] |
+| B. Frontier AI safety | Few actors, able to contract. Twenty companies signed commitments tied to risk thresholds in 2024 (see WP1). | a handful of developers, later their home states | safety thresholds and practices, conditional on rivals' | competition law; verification of internal practice \[open\] |
 | C. Pooled finance | Matching pledges to multilateral funds are conditional commitments in all but name. | funders of one replenishment | contribution schedules as functions of others' contributions | examples and rules still to be collected in M3 |
 
 Proposed: prepare A and B in parallel up to M3, then choose one for the pilot. A has the better data and precedent. B has the fewest actors and the highest stakes. Jobst decides.
@@ -516,12 +516,12 @@ Claude can carry H1 almost entirely in drafts. Nothing leaves the project except
 | M0 | Phase 0 toys, audit, fallbacks, towers | done; audits continue | Gate 1; decisions listed in `STATUS.md` | none | nothing yet |
 | M1 | Theory note: pre-CPEPs and towers | definitions, tests, draft | proofs, final text | one or two game theorists as readers | arXiv, then a journal; *Games* would continue Heitzig (2025) |
 | M2 | Method paper and toolkit: search, certificates, fallbacks, stability tables | software, scaling tests on 20 to 40 actors, draft | Gate 2; opening the repository | one outside code reviewer | arXiv and journal; public repository with an open licence |
-| M3 | Worked case on public data for tracks A and B, with a back-test on the 1978 Bonn package | knowledge base, case study, briefs | choice of track; first conversations | two or three domain experts; one former negotiator | working paper; a policy brief through Jobst's institute |
+| M3 | Worked case on public data for tracks A and B, with a back-test on the 1978 Bonn package | knowledge base, case study, briefs | choice of track; first conversations | two or three domain experts; one former negotiator | working paper; a policy brief through a channel Jobst chooses |
 | M4 | Behavioural evidence | model-agent pilot; experiment design | approach to experimentalists | a lab and its ethics board | paper; preregistration |
 | M5 | Pilot design: protocol, filing templates, legal questions, host, funding | all drafts, the registry in a deployable state | negotiation with host and funder | counsel on competition and treaty law; a convening host; a funder | pilot protocol |
 | M6 | Pilot with real filings, then evaluation | operation support, monitoring, re-solving | steering | the actors | evaluation report; paper |
 
-The earlier gates map onto this: Gate 1 closes M0, Gate 2 (scaling) closes M2, Gate 3 (certified case) closes M3, Gate 4 (legal questions) and Gate 5 (pilot) belong to M5 and M6. A milestone starts when the one before it has passed its gate, except that M1 and M2 run side by side.
+The gates are restated to fit: Gate 1 closes M0. Gate 2 is a passed scaling test and closes M2. Gate 3 is a certified worked case and closes M3. Gate 4, the list of legal questions, belongs to M5, and Gate 5, the pilot, to M6. The earlier wording of Gates 2 and 3 stood in a diagram that the export omitted. A milestone starts when the one before it has passed its gate, except that M1 and M2 run side by side.
 
 **Rules for impact.**
 

@@ -10,41 +10,44 @@ signs off each gate, and is the only channel to the outside world.
 
 1. `STATUS.md`: what was done last and what is open. Add an entry at the end of every session.
 2. `docs/plan.md`: the work plan with ten work packages (WP1 to WP10), phases, gates, objections and references.
-3. `docs/phase0_results.md` and `docs/phase0_instance2.md`: write-ups of Phase 0 so far.
+3. `docs/phase0_results.md`, `docs/phase0_instance2.md` and `docs/phase0_towers.md`: write-ups of Phase 0 so far.
    `audit/AUDIT.md`: audit of the first increment.
 4. `README.md`: files, conventions, how to reproduce.
 
 ## State on 10 November 2026, after session 2
 
-- Phase 0, first instance: 8 actors, 3 issues and 12 levers, small enough for full enumeration. Code is
-  in `phase0/`, results in `phase0/results/`, write-up in `docs/phase0_results.md`.
-- It was audited by a fresh session (`audit/AUDIT.md`). No number was wrong. Seven findings on method
-  and wording await Jobst's decision; none has been acted on.
-- Gate 1 (heuristic search matches enumeration): the criterion is met, and so are the stress tests after
-  one repair of the blocking oracle. Jobst has not signed off yet.
-- Step 1 is done (`docs/phase0_instance2.md`): a second instance with contested levers and an empty
-  core, and a contested variant of the first instance. Both fallbacks ran and both have a defect. With
-  a contested lever, a strict-core profile need not be an equilibrium. Nobody has checked this work
-  except the session that wrote it.
-- The plan has a new cross-cutting section, "Bounded rationality and diplomatic knowledge", added at
-  Jobst's request. Only a first exploration exists in code (restricted families of groups on the second
-  instance). The datasets it names have not been downloaded.
+- Aim, as revised by Jobst: real-world use. The realistic outcome is one small pilot registry with real
+  filings, reached through milestones M0 to M6 in `docs/plan.md`, section "Strategy and roadmap". That
+  section also says what Claude does alone, what needs Jobst, and when other people come in.
+- Phase 0, first instance: 8 actors, 3 issues and 12 levers. Write-up `docs/phase0_results.md`. Audited
+  by a fresh session (`audit/AUDIT.md`): no number was wrong; seven findings await Jobst's decision.
+- Gate 1: the criterion is met, and so are the stress tests after one repair of the blocking oracle.
+  Jobst has not signed off yet.
+- Step 1 (`docs/phase0_instance2.md`): a second instance with contested levers and an empty core, and a
+  contested variant of the first. Both fallbacks have a defect. With a contested lever, a strict-core
+  profile need not be an equilibrium.
+- Towers in a pre-CPEP, Jobst's proposal (`docs/phase0_towers.md`): implemented and tested for chains
+  of two coalitions with step filings. Under his condition (ii) no acceptable tower exists on the toys.
+  Under the relaxed (ii′) the selected tower is a strictly strong equilibrium of the original game.
+  Jobst has not yet chosen between (ii) and (ii′), nor confirmed three readings listed in that file.
+- The plan section "Bounded rationality and diplomatic knowledge" exists; only a first exploration is
+  in code. The datasets it names have not been downloaded.
+- Nobody has checked step 1 or the tower work except the session that wrote them.
 - Every number except the emission shares is illustrative. No result says anything about real actors.
 
-## Next steps, in proposed order (Jobst decides)
+## Next steps (Jobst decides; the order is that of the plan's roadmap)
 
-0. Decide on the audit proposals (`audit/AUDIT.md`) and on the two decisions in
-   `docs/phase0_instance2.md`. Audit step 1 in a fresh session, as step 0 was done for the first increment.
-1. An oracle that also searches over-fulfilment deviations, and a heuristic for the smallest margin.
-   From the new plan section: the safe-filing check, the stability table (group size, threshold, logit
-   precision, error rate), loss-averse variants, and a relationship layer from real data.
-2. A third instance in which one issue has no deal of its own, to test linkage as a necessity.
-3. Budgets and index weights in the robustness set; a robustness set for the second instance.
-4. The far-sighted formation path and absorbing states (WP8), and internal-and-external stability (WP6).
-   Far-sighted stability is also the second fallback for an empty core.
-5. MaxParC over the menu, and a model-agent pilot (WP10).
-6. Beliefs in the effect model, so that the no-betting test has something to test.
-7. An independent checker for the certificates, published with them. `audit/` is a start.
+0. Jobst's open decisions: Gate 1; tower definition (ii) or (ii′); pilot tracks; when the repository
+   becomes public; the audit proposals; the two decisions in `docs/phase0_instance2.md`.
+1. A fresh-session audit of step 1 and of the tower code.
+2. Towers with longer chains, a search over chains, and a look-ahead selection rule.
+3. The search oracle extended to over-fulfilment, and a heuristic for the smallest margin.
+4. A scaling test of search and certificates on synthetic instances with 20 to 40 actors (start of M2).
+5. A first draft of the theory note on pre-CPEPs and towers (M1), marked as draft.
+6. Source lists and extraction schemas for pilot tracks A and B, without contacting anyone.
+7. Still open from the first list: an instance in which one issue has no deal of its own; budgets in the
+   robustness set; far-sighted formation; MaxParC and a model-agent pilot; beliefs for the no-betting
+   test; the stability table and safe-filing check of the bounded-rationality section.
 
 Also open: the case distinction behind the equilibrium certificate (`docs/phase0_results.md`,
 section "Core, menu and certificates") is a prose argument, checked by enumeration only. WP8 asks
@@ -63,7 +66,8 @@ for mechanism-level statements to be machine-checked in a proof assistant.
   criterion that was fixed earlier, such as the Gate 1 criterion in `phase0/run_phase0.py`.
 - Check by full enumeration wherever the instance allows. Certify equilibrium directly where the
   orientation test fails. Keep an enumerable instance in the test suite at every scale-up.
-- Every number in a write-up gets an assertion in `phase0/check_writeup.py`. Before reporting, run
+- Every number in a write-up gets an assertion in a `check_*.py` script, which from now on also checks
+  that the number stands in the text. Before reporting, run
   `sh run_all.sh` from a clean state. Do not edit files in `phase0/results/` by hand.
 - Every parameter carries provenance: sourced, with URL and retrieval date, or illustrative, with
   who set it. Never present invented data as sourced.
@@ -91,6 +95,6 @@ The plan and the Phase 0 write-up are also a Claude Doc:
 https://claude.ai/artifact/JsCtfcFLRjq5FHe33x6biu
 
 `docs/plan.md` and `docs/phase0_results.md` were exported from it on 10 November 2026.
-`docs/phase0_instance2.md` and `audit/AUDIT.md` exist only in this repository. In this
+`docs/phase0_instance2.md`, `docs/phase0_towers.md` and `audit/AUDIT.md` exist only in this repository. In this
 repository the Markdown files are the working copies. If a session cannot edit the Claude Doc,
 list in `STATUS.md` what changed, so that the doc can be brought up to date.
