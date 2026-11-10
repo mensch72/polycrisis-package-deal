@@ -1,0 +1,303 @@
+{
+ "n_efficient": 21490,
+ "n_core": 19649,
+ "n_blocked": 1841,
+ "B1": {
+  "n": 300,
+  "detected": 294,
+  "recall": 0.98,
+  "passed": true,
+  "detected_by_first_version": 191,
+  "recall_first_version": 0.6366666666666667,
+  "invalid_blocks": 0,
+  "blocking_coalition_sizes": {
+   "7": 71,
+   "3": 30,
+   "2": 49,
+   "6": 89,
+   "5": 45,
+   "4": 10
+  },
+  "false_alarms_on_200_core_profiles": 0
+ },
+ "B1_holdout": {
+  "n": 300,
+  "detected": 300,
+  "recall": 1.0,
+  "passed": true
+ },
+ "B2": {
+  "runs": [
+   {
+    "actor": "USA",
+    "seed": 0,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37975,
+    "seconds": 0.4
+   },
+   {
+    "actor": "USA",
+    "seed": 1,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 38225,
+    "seconds": 0.4
+   },
+   {
+    "actor": "USA",
+    "seed": 2,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 38452,
+    "seconds": 0.6
+   },
+   {
+    "actor": "CHN",
+    "seed": 0,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 39017,
+    "seconds": 0.4
+   },
+   {
+    "actor": "CHN",
+    "seed": 1,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 41026,
+    "seconds": 0.5
+   },
+   {
+    "actor": "CHN",
+    "seed": 2,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 39694,
+    "seconds": 0.5
+   },
+   {
+    "actor": "EU",
+    "seed": 0,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 35929,
+    "seconds": 0.4
+   },
+   {
+    "actor": "EU",
+    "seed": 1,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37086,
+    "seconds": 0.4
+   },
+   {
+    "actor": "EU",
+    "seed": 2,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37525,
+    "seconds": 0.5
+   },
+   {
+    "actor": "IND",
+    "seed": 0,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 36950,
+    "seconds": 0.4
+   },
+   {
+    "actor": "IND",
+    "seed": 1,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 34817,
+    "seconds": 0.4
+   },
+   {
+    "actor": "IND",
+    "seed": 2,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37412,
+    "seconds": 0.5
+   },
+   {
+    "actor": "FEX",
+    "seed": 0,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 36307,
+    "seconds": 0.4
+   },
+   {
+    "actor": "FEX",
+    "seed": 1,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 36591,
+    "seconds": 0.4
+   },
+   {
+    "actor": "FEX",
+    "seed": 2,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37515,
+    "seconds": 0.5
+   },
+   {
+    "actor": "LIC",
+    "seed": 0,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 2,
+    "cuts": 1,
+    "evals": 43021,
+    "seconds": 0.5
+   },
+   {
+    "actor": "LIC",
+    "seed": 1,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 2,
+    "cuts": 1,
+    "evals": 44828,
+    "seconds": 0.5
+   },
+   {
+    "actor": "LIC",
+    "seed": 2,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 2,
+    "cuts": 1,
+    "evals": 44592,
+    "seconds": 0.4
+   },
+   {
+    "actor": "DEV",
+    "seed": 0,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37794,
+    "seconds": 0.5
+   },
+   {
+    "actor": "DEV",
+    "seed": 1,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37558,
+    "seconds": 0.5
+   },
+   {
+    "actor": "DEV",
+    "seed": 2,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 36503,
+    "seconds": 0.4
+   },
+   {
+    "actor": "MDB",
+    "seed": 0,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37956,
+    "seconds": 0.4
+   },
+   {
+    "actor": "MDB",
+    "seed": 1,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 37984,
+    "seconds": 0.5
+   },
+   {
+    "actor": "MDB",
+    "seed": 2,
+    "found": true,
+    "in_core": true,
+    "gap": 0.0,
+    "rounds": 1,
+    "cuts": 0,
+    "evals": 38830,
+    "seconds": 0.4
+   }
+  ],
+  "all_in_core": true,
+  "share_reaching_optimum": 1.0,
+  "passed": true,
+  "mean_cuts": 0.125,
+  "mean_share_of_profiles_evaluated": 0.019331713599269117
+ },
+ "runtime_seconds": 249.5
+}

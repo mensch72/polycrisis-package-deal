@@ -1,0 +1,238 @@
+{
+ "base": {
+  "e.USA": 0.1111,
+  "e.CHN": 0.2951,
+  "e.EU": 0.0578,
+  "e.IND": 0.0833,
+  "e.FEX": 0.1033,
+  "d.USA": 0.35,
+  "d.CHN": 0.45,
+  "d.EU": 0.5,
+  "d.IND": 0.9,
+  "d.FEX": 0.15,
+  "d.LIC": 1.0,
+  "d.DEV": 0.05,
+  "d.MDB": 0.4,
+  "k.USA": 0.1,
+  "k.CHN": 0.2,
+  "k.EU": 0.1,
+  "k.IND": 0.15,
+  "k.FEX": 0.4,
+  "al.USA": 1.0,
+  "al.CHN": 0.8,
+  "al.EU": 0.8,
+  "al.IND": 0.5,
+  "al.FEX": 0.4,
+  "al.LIC": 0.3,
+  "al.DEV": 0.6,
+  "al.MDB": 0.2,
+  "h.USA": 0.2,
+  "h.CHN": 0.2,
+  "kap.USA": 0.3,
+  "kap.CHN": 0.3,
+  "m.DEV": 0.08,
+  "pi.USA": 0.5,
+  "pi.CHN": 0.5,
+  "pi.EU": 0.6,
+  "pi.IND": 0.5,
+  "pi.FEX": 0.3,
+  "pi.LIC": 0.6,
+  "pi.DEV": 0.2,
+  "pi.MDB": 0.6,
+  "kL.LIC": 0.5,
+  "kI.IND": 0.3,
+  "f.EU": 0.08,
+  "f.MDB": 0.15,
+  "r.LIC": 0.25,
+  "wA.min": 0.5,
+  "wA.sum": 0.2,
+  "wA.dev": 0.3,
+  "B.USA": 0.9,
+  "B.CHN": 0.9,
+  "B.EU": 0.8,
+  "B.IND": 0.6,
+  "B.FEX": 0.4,
+  "B.LIC": 0.3,
+  "B.DEV": 0.35,
+  "Qmin.EU": 0.5
+ },
+ "provenance": {
+  "e.": {
+   "status": "sourced",
+   "source": "EDGAR 2026 report, total GHG excl. LULUCF, year 2025; FEX = Russia + Iran + Saudi Arabia + Iraq + UAE + Kuwait + Qatar",
+   "url": "https://edgar.jrc.ec.europa.eu/report_2026",
+   "retrieved": "2026-11-10"
+  },
+  "default": {
+   "status": "illustrative",
+   "source": "chosen by the team for the toy instance",
+   "who_says": "Claude",
+   "retrieved": "2026-11-10"
+  }
+ },
+ "perturbed": [
+  "d.USA",
+  "d.CHN",
+  "d.EU",
+  "d.IND",
+  "d.FEX",
+  "d.LIC",
+  "d.DEV",
+  "d.MDB",
+  "k.USA",
+  "k.CHN",
+  "k.EU",
+  "k.IND",
+  "k.FEX",
+  "al.USA",
+  "al.CHN",
+  "al.EU",
+  "al.IND",
+  "al.FEX",
+  "al.LIC",
+  "al.DEV",
+  "al.MDB",
+  "h.USA",
+  "h.CHN",
+  "kap.USA",
+  "kap.CHN",
+  "m.DEV",
+  "pi.USA",
+  "pi.CHN",
+  "pi.EU",
+  "pi.IND",
+  "pi.FEX",
+  "pi.LIC",
+  "pi.DEV",
+  "pi.MDB",
+  "kL.LIC",
+  "kI.IND",
+  "f.EU",
+  "f.MDB",
+  "r.LIC"
+ ],
+ "levers": [
+  {
+   "actor": "USA",
+   "lever": "climate",
+   "levels": 4,
+   "issue": "climate"
+  },
+  {
+   "actor": "USA",
+   "lever": "ai_oversight",
+   "levels": 3,
+   "issue": "ai"
+  },
+  {
+   "actor": "CHN",
+   "lever": "climate",
+   "levels": 4,
+   "issue": "climate"
+  },
+  {
+   "actor": "CHN",
+   "lever": "ai_oversight",
+   "levels": 3,
+   "issue": "ai"
+  },
+  {
+   "actor": "EU",
+   "lever": "climate",
+   "levels": 4,
+   "issue": "climate"
+  },
+  {
+   "actor": "EU",
+   "lever": "finance_lic",
+   "levels": 3,
+   "issue": "pandemic"
+  },
+  {
+   "actor": "IND",
+   "lever": "climate",
+   "levels": 4,
+   "issue": "climate"
+  },
+  {
+   "actor": "IND",
+   "lever": "surveillance",
+   "levels": 2,
+   "issue": "pandemic"
+  },
+  {
+   "actor": "FEX",
+   "lever": "climate",
+   "levels": 4,
+   "issue": "climate"
+  },
+  {
+   "actor": "LIC",
+   "lever": "surveillance",
+   "levels": 3,
+   "issue": "pandemic"
+  },
+  {
+   "actor": "DEV",
+   "lever": "ai_safety",
+   "levels": 4,
+   "issue": "ai"
+  },
+  {
+   "actor": "MDB",
+   "lever": "finance_lic",
+   "levels": 3,
+   "issue": "pandemic"
+  }
+ ],
+ "actors": {
+  "USA": {
+   "name": "United States",
+   "cls": "state",
+   "role": "signatory",
+   "instrument": "statute containing the CCF"
+  },
+  "CHN": {
+   "name": "China",
+   "cls": "state",
+   "role": "signatory",
+   "instrument": "statute or State Council decision containing the CCF"
+  },
+  "EU": {
+   "name": "European Union",
+   "cls": "supranational polity",
+   "role": "signatory",
+   "instrument": "regulation containing the CCF"
+  },
+  "IND": {
+   "name": "India",
+   "cls": "state",
+   "role": "signatory",
+   "instrument": "statute containing the CCF"
+  },
+  "FEX": {
+   "name": "Fossil-exporter bloc (Russia, Iran, Saudi Arabia, Iraq, UAE, Kuwait, Qatar)",
+   "cls": "bloc of states",
+   "role": "signatory",
+   "instrument": "parallel statutes"
+  },
+  "LIC": {
+   "name": "Low-income country bloc",
+   "cls": "bloc of states",
+   "role": "signatory",
+   "instrument": "parallel statutes"
+  },
+  "DEV": {
+   "name": "Frontier AI developers",
+   "cls": "bloc of firms",
+   "role": "signatory",
+   "instrument": "board resolutions and contracts"
+  },
+  "MDB": {
+   "name": "Multilateral development banks",
+   "cls": "intergovernmental finance",
+   "role": "signatory",
+   "instrument": "board mandate"
+  }
+ }
+}
