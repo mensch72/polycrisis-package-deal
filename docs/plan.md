@@ -2,7 +2,7 @@
 
 > Exported on 10 November 2026 from the Claude Doc https://claude.ai/artifact/JsCtfcFLRjq5FHe33x6biu (main tab, revision 35). The two diagrams are omitted. The status log continues in `STATUS.md`.
 >
-> Changed in this repository after the export: the section "Bounded rationality and diplomatic knowledge", one row in "Objections and risks", and thirteen references.
+> Changed in this repository after the export: the reading of the task; "Beyond CPEPs: towers" in the framing; item 3 of the WP3 method; the section "Bounded rationality and diplomatic knowledge"; "Strategy and roadmap", which replaces "Sequencing and gates"; four rows in "Objections and risks"; and thirteen references.
 
 Nov 10, 2026 · @Jobst
 
@@ -10,7 +10,7 @@ Nov 10, 2026 · @Jobst
 
 The deal is a public registry of unilateral but mutually conditional commitments, one per signatory, whose joint outcome a fixed rule computes. A recommender proposes a focal package with stability certificates. What binds is each signatory's own filed commitment, never our estimate of their values.
 
-**Reading of the task (assumption).** This is a research-and-design programme without a mandate from any actor. Its outputs are a method, a knowledge base, a draft deal with certificates, and a platform. The team is one AI working in sessions, as set out in the next section, so the plan states order and gates, not dates.
+**Reading of the task (assumption).** This is a research-and-design programme without a mandate from any actor. The aim is real use, not a blueprint: a first small registry with real filings, grown from there. One deal for everything is the horizon, not the first step. The section "Strategy and roadmap" says how to get there and who does what. The work packages below are the toolbox.
 
 **Formal objects.**
 
@@ -40,6 +40,10 @@ The registry applies one rule to the filed profile c. It selects the largest mut
 6. Robust: 1 to 5 hold on a stated set Θ of preference and belief profiles.
 
 **Why this is tractable.** For costly positive externality problems, the outcomes of strictly strong equilibria of the CCF mechanism are exactly the strict-core profiles, and simple step-function CCFs sustain them \[proved: Heitzig, 2025, Theorems 2 and A1\]. Properties 2, 3 and the static half of 4 therefore reduce to one task: exhibit a core profile a\* of the modelled game. WP6 searches for a\*, WP7 writes the CCFs through a\*, WP8 certifies it.
+
+**Beyond CPEPs: towers.** With many actors the premise of the theorem is too strict, because some levers harm some actors. Drop the requirement that others welcome every lever, and call the result a pre-CPEP. A tower is a chain of coalitions I₁ ⊆ … ⊆ I_m = I with filings c₁ ≤ … ≤ c_m = c such that, for every k, (i) c_k is zero outside I_k and ignores actors outside I_k, and (ii) the game of I_k, with outsiders at a⁰ and members of I_(k−1) held at or above the outcome of c_(k−1), is a proper CPEP in which c_k is a strong equilibrium \[Jobst's proposal, 10 November 2026\]. The tower is also the implementation path: small coalitions with modest outcomes first, the grand coalition last.
+
+For step filings with two stages, a tower degrades to the earlier stage if newcomers fail, is a Nash equilibrium, and can be upset only by a group that mixes newcomers with earlier members and takes an earlier stage back \[model; argument and enumeration in `docs/phase0_towers.md`; longer chains open\]. Condition (ii) proved stricter than needed on the toys. The variant (ii′), "c_k is a strong equilibrium of the stage game, tested directly", is carried along as an alternative \[open, for Jobst\]. Cyclic harms admit no tower.
 
 The theorem does not give three things: the truth of the model, compliance over time, and reachability. Validation (WP8), liability redistribution after shortfalls (WP7) and far-sighted coalition-formation analysis (WP8) cover them.
 
@@ -168,7 +172,7 @@ Each actor gets a short catalogue of levers. Every lever is oriented so that mor
 
 1. Derive each actor's levers from the issue ontology and the currency list.
 2. Orientation test: the owner weakly prefers less, every other actor weakly prefers more. Levers that pass fall under the proved results (Heitzig, 2025).
-3. Levers that fail have a contested direction, such as the speed of technology diffusion. Split or re-parametrise them, or route them to the generalised mechanism for arbitrary games \[open; in preparation as a postscriptum to Heitzig, 2025\].
+3. Levers that fail have a contested direction, such as the speed of technology diffusion. Split or re-parametrise them, look for a tower in which the harmed actors join after the lever has moved (see "Beyond CPEPs"), or route them to the generalised mechanism for arbitrary games \[open; in preparation as a postscriptum to Heitzig, 2025\].
 4. Add side payments as levers. A transfer from i to j costs i and benefits j. It passes the test unless third actors hold relative-gains concerns (WP4).
 5. Choose the committed quantity by attribution: an action where outcomes depend on others or on chance, an outcome where it is observable and the actor's own.
 6. Add state-contingent levers of the form "if indicator X crosses level z, then action Y". They let actors with different forecasts agree, subject to the betting caveat in WP4.
@@ -463,17 +467,86 @@ stand in as priors only, and the correction channel of WP10 replaces them over t
 channel removed. Not yet built: the safe-filing check, quantal response, loss-averse variants, error
 rates, and any real relationship data \[open\].
 
-## Sequencing and gates
+## Strategy and roadmap
 
-Phase 0 exercises all ten work packages on a small instance before anything is scaled. Each later phase starts only when the gate before it is passed.
+The realistic outcome is a small conditional-pledge registry in real use, on one issue, within about two years of work. Everything before it builds the credibility needed to get it hosted. Everything after it is growth. Revised on 10 November 2026 at Jobst's request. All of this section is \[assumption\] until Jobst decides.
 
-*[Diagram omitted in this export: roadmap · 6 phases, 5 gates]*
+**Three horizons.**
 
-**Dependencies.** WP1 to WP3 iterate to closure. WP4 and WP5 feed WP6. WP6 and WP8 run as one loop. WP7 needs a certified candidate. WP9 and WP10 start with the registry prototype.
+| Horizon | Outcome | What makes it real |
+| --- | --- | --- |
+| H1 | A published method with open software: recommender, registry prototype, certificates. Shown on toys, on one case with public data, and in experiments. | papers, a public repository, an explorer site |
+| H2 | One pilot registry with real filings by five to fifteen willing actors on one issue. | a host with convening power, legal clearance, a funder |
+| H3 | Growth by towers: more actors, then more issues, with the polycrisis package as the limit. | each stage stable on its own, so nobody waits for everybody |
 
-**Papers along the way.** A method paper after Phase 0, the data descriptor after Phase 1, a certified case study after Phase 2.
+**Why this order.**
 
-**Pace.** With a one-AI team, progress is counted in sessions, not months. Phase 0 started on 10 November 2026.
+1. A filing is unilateral, conditional and withdrawable. An actor that files first risks nothing. This is the selling point, so the first users should be actors who gain much and risk little.
+2. Conditional pledges are already normal practice in some places. There the step to a registry is small: write the conditions so that a rule can compute the joint outcome.
+3. A deal among all needs a first stage among few. The tower gives that stage a definition and a stability test.
+4. Nobody hosts an untested mechanism. Theory, software, a worked case and experiments come first, in that order of cost.
+
+**Where to start: candidate pilots.**
+
+| Track | Why realistic | First coalition | What is filed | Main obstacle |
+| --- | --- | --- | --- | --- |
+| A. Climate | States already file conditional pledges under the Paris Agreement (Pauw et al., 2020). Data are public. | a club of states, regions or one sector | conditional parts of pledges, as functions of others' pledges | attention is scarce; pledges are political signals as much as commitments |
+| B. Frontier AI safety | Few actors, able to contract. Twenty companies signed if-then style commitments in 2024 (see WP1). | a handful of developers, later their home states | safety thresholds and practices, conditional on rivals' | competition law; verification of internal practice \[open\] |
+| C. Pooled finance | Matching pledges to multilateral funds are conditional commitments in all but name. | funders of one replenishment | contribution schedules as functions of others' contributions | examples and rules still to be collected in M3 |
+
+Proposed: prepare A and B in parallel up to M3, then choose one for the pilot. A has the better data and precedent. B has the fewest actors and the highest stakes. Jobst decides.
+
+**Who does what.**
+
+| | Claude, alone, between check-ins | Needs Jobst | Needs others |
+| --- | --- | --- | --- |
+| Theory | definitions, counter-examples, exhaustive tests, proof drafts | proofs he stands behind; choice among definitions | readers who try to break it |
+| Software | recommender, registry, certificates, checker, explorer | sign-off at gates; making the repository public | outside code review |
+| Data | extraction from public sources with provenance | choice of case | expert correction; tacit knowledge |
+| Experiments | model-agent pilots; design and preregistration drafts | approval | a lab, participants, ethics approval |
+| Writing | full drafts of papers, briefs, talks, letters | authorship, every submission, every message sent | co-authors, editors |
+| Outreach | stakeholder maps, drafts, briefing packs | all contact | hosts, funders, counsel, the actors |
+
+Claude can carry H1 almost entirely in drafts. Nothing leaves the project except through Jobst. The first point at which other people are needed is M1, as readers. They become indispensable at M3.
+
+**Milestones.**
+
+| | Content | Claude | Jobst | Others, from this point | Published where |
+| --- | --- | --- | --- | --- | --- |
+| M0 | Phase 0 toys, audit, fallbacks, towers | done; audits continue | Gate 1; decisions listed in `STATUS.md` | none | nothing yet |
+| M1 | Theory note: pre-CPEPs and towers | definitions, tests, draft | proofs, final text | one or two game theorists as readers | arXiv, then a journal; *Games* would continue Heitzig (2025) |
+| M2 | Method paper and toolkit: search, certificates, fallbacks, stability tables | software, scaling tests on 20 to 40 actors, draft | Gate 2; opening the repository | one outside code reviewer | arXiv and journal; public repository with an open licence |
+| M3 | Worked case on public data for tracks A and B, with a back-test on the 1978 Bonn package | knowledge base, case study, briefs | choice of track; first conversations | two or three domain experts; one former negotiator | working paper; a policy brief through Jobst's institute |
+| M4 | Behavioural evidence | model-agent pilot; experiment design | approach to experimentalists | a lab and its ethics board | paper; preregistration |
+| M5 | Pilot design: protocol, filing templates, legal questions, host, funding | all drafts, the registry in a deployable state | negotiation with host and funder | counsel on competition and treaty law; a convening host; a funder | pilot protocol |
+| M6 | Pilot with real filings, then evaluation | operation support, monitoring, re-solving | steering | the actors | evaluation report; paper |
+
+The earlier gates map onto this: Gate 1 closes M0, Gate 2 (scaling) closes M2, Gate 3 (certified case) closes M3, Gate 4 (legal questions) and Gate 5 (pilot) belong to M5 and M6. A milestone starts when the one before it has passed its gate, except that M1 and M2 run side by side.
+
+**Rules for impact.**
+
+1. Claim only what a certificate supports. An invented number never appears as a finding about a real actor.
+2. Every release is checked by a fresh session, and from M2 by a person outside the project.
+3. Lead with what the first users gain. Certificates and theory go in the annex.
+4. Approach carriers before principals: middle powers, cities, firms, funders, academies.
+5. Keep relationship maps and red lines out of public releases (WP5 access rules).
+6. Disclose the AI's role in every publication. Authors are the people who take responsibility for the text.
+
+**Decisions for Jobst now.**
+
+1. Which definition of a tower to develop: (ii), (ii′), or both.
+2. Whether tracks A and B are the right pair, and which people could be the first readers at M1.
+3. When the repository becomes public: at M1, at M2, or later.
+4. Gate 1.
+
+**Next work without Jobst, in order.**
+
+1. A fresh-session audit of step 1 and of the tower code.
+2. Towers with longer chains, a search over chains, and a look-ahead selection rule.
+3. The search oracle extended to over-fulfilment, and a heuristic for the smallest margin.
+4. A scaling test of search and certificates on synthetic instances with 20 to 40 actors (start of M2).
+5. A first draft of the theory note (M1), marked as draft.
+6. Source lists and extraction schemas for tracks A and B, without contacting anyone.
 
 ## Objections and risks
 
@@ -484,7 +557,9 @@ The plan above implements the request as stated. These are the points where it m
 | Proof is model-relative | Certificates hold for the effect model F and the set Θ only. A wrong model or preference file voids them. | Validation, the robustness set, and actors' own filings in place of estimates. |
 | The core may be empty | Likely once relative-gains concerns or contested levers enter. | Smallest blocking margin, far-sighted stability, or a smaller issue set. |
 | Binding liabilities are assumed | The static theorem presumes fulfilment. Linear compensation is proved for one good with public monitoring. | \[open\] for vector levers, noisy monitoring and unequal discounting. Devices 2 to 4 of WP7 are the fallback. |
-| Contested levers | Central levers may fail the orientation test, for instance where an ally dislikes a protector's disarmament. | Needs the generalised mechanism \[open\]. |
+| Contested levers | Central levers may fail the orientation test, for instance where an ally dislikes a protector's disarmament. | Towers for nested harms, with a direct equilibrium check at every stage. Cyclic harms still need the generalised mechanism \[open\]. |
+| Too ambitious to be used | A design for all actors and all issues may never get a first filing. | The roadmap starts with one issue and a handful of willing actors, and grows by towers. |
+| An AI-drafted proposal is discounted | Readers may distrust work drafted by an AI, or over-trust it. | The AI's role is disclosed, audits are published, and people check everything that leaves the project. |
 | Strategic misreporting | Actors can shift the focal point by misstating aspirations. | The registry takes no preferences. The recommender returns a menu and reports sensitivity to each actor's file. |
 | Bets | A package may rest on contradictory forecasts. | No-betting test, with contingent clauses flagged. |
 | Linkage fragility and complexity | A package ties issues together, so failure can spread. Transaction and information costs grow with issues and parties (Sebenius, 1983; Maggi, 2016). | Indifference-curve filings degrade gradually. Linkage value is computed. The start is three issues. |
