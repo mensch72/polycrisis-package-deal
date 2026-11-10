@@ -12,3 +12,8 @@ python3 check_writeup.py | tee ../log_check_writeup.txt
 python3 run_instance2.py  | tee ../log_run_instance2.txt
 python3 run_contested.py  | tee ../log_run_contested.txt
 python3 check_writeup2.py | tee ../log_check_writeup2.txt
+# towers in a pre-CPEP (session 2)
+python3 run_tower.py instance2    | tee ../log_run_tower_instance2.txt
+python3 run_tower.py contested    | tee ../log_run_tower_contested.txt
+python3 run_tower_relaxed.py      | tee ../log_run_tower_relaxed.txt
+python3 check_towers.py           | tee ../log_check_towers.txt
