@@ -21,3 +21,23 @@ Newest entry last. Every session ends with an entry: what ran, what failed, what
 - Open decisions for Jobst: Gate 1 sign-off; whether further increments run as scheduled sessions.
 - Handover: this repository was assembled at the end of the session so that work can continue in
   Claude Code. The proposed first task is the audit, step 0 in `CLAUDE.md`.
+
+## 10 November 2026, session 2 (Claude, Claude Code session)
+
+- The zip from session 1 was imported unmodified into this repository, on branch
+  `claude/something-from-d7fvox`. The repository was empty before.
+- Step 0, audit of the first increment: done, report in `audit/AUDIT.md`. Nothing in `phase0/` or
+  `docs/` was changed.
+- Ran: `run_all.sh` from a clean copy, and an independent checker written before reading `core.py`
+  (`audit/`: own model in exact arithmetic, own strict core, own registry rule).
+- Outcome: every result file reproduced, apart from run times. The checker agrees on all core,
+  equilibrium, robustness and linkage numbers. The emission shares match the EDGAR page.
+- Failed or weak: nothing failed. Seven findings on method and wording are listed in the report.
+  The largest: on 500 fresh draws the deepest candidate stays in the strict core in 46.6 % of
+  draws, against 33 % reported from 150. The lead holds at 96.4 %.
+- Added post hoc by the audit: the fresh-draw test.
+- Not audited: the learning rule and the compensation formula against the papers, the references,
+  and the Markdown exports against the Claude Doc.
+- Claude Doc: not edited. It still says that no repository exists.
+- Open decisions for Jobst: Gate 1 sign-off; the four proposals at the end of `audit/AUDIT.md`;
+  whether further increments run as scheduled sessions.

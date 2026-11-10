@@ -1,0 +1,165 @@
+{
+ "orientation_base": [
+  [],
+  []
+ ],
+ "orientation_contested": [
+  [],
+  [
+   [
+    "USA",
+    "o"
+   ],
+   [
+    "CHN",
+    "o"
+   ]
+  ]
+ ],
+ "lead_tightest_group_missing_a_contributor": [
+  -0.09442380235209678,
+  [
+   "USA",
+   "CHN",
+   "EU",
+   "IND",
+   "LIC",
+   "MDB"
+  ]
+ ],
+ "lead_gain": {
+  "USA": 0.5804,
+  "CHN": 0.7563,
+  "EU": 1.0292,
+  "IND": 0.8676,
+  "FEX": 0.5788,
+  "LIC": 1.3934,
+  "DEV": 0.4229,
+  "MDB": 0.6534
+ },
+ "lead_ngain": {
+  "USA": 0.5481,
+  "CHN": 0.7749,
+  "EU": 0.7845,
+  "IND": 0.6532,
+  "FEX": 0.9224,
+  "LIC": 0.724,
+  "DEV": 0.9378,
+  "MDB": 0.6665
+ },
+ "single_issue_core": {
+  "climate": {
+   "n": 3,
+   "max_indicator": 0.5473
+  },
+  "ai": {
+   "n": 3,
+   "max_indicator": 0.5499999999999999
+  },
+  "pandemic": {
+   "n": 14,
+   "max_indicator": 1.0
+  }
+ },
+ "combos": {
+  "n": 126,
+  "in_package_core": 56,
+  "acceptable": 33,
+  "both": 11,
+  "both_in_core_list": 11
+ },
+ "separate_deals": {
+  "profile": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   0,
+   2,
+   1,
+   2
+  ],
+  "in_core_list": true,
+  "core_profiles_better_for_all": 0,
+  "lead_minus_sep": {
+   "USA": -0.2611,
+   "CHN": 0.05,
+   "EU": 0.0556,
+   "IND": 0.1,
+   "FEX": 0.0167,
+   "LIC": 0.1111,
+   "DEV": 0.0056,
+   "MDB": 0.0444
+  }
+ },
+ "robust": {
+  "orientation_holds": 87,
+  "draws_non_owner_harmed": 0,
+  "owner_fail": {
+   "CHN.c": 1,
+   "USA.o": 31,
+   "IND.s": 25,
+   "DEV.s": 16
+  },
+  "per_draw_surviving": {
+   "mean": 101.62,
+   "min": 12,
+   "max": 278
+  },
+  "best": 143,
+  "n_at_best": 6,
+  "n_ge_90pct": 9,
+  "lead": {
+   "joint": 143,
+   "core": 150,
+   "eq": 150,
+   "acc": 143,
+   "ir": 150,
+   "lic_fail": 7,
+   "other_acc_fail": 0
+  },
+  "core_without_IR_vs_a0": 0,
+  "menu_core_but_not_equilibrium": 0,
+  "menu": {
+   "nash": {
+    "acc": 90,
+    "core": 150,
+    "all3": 90,
+    "eq": 150,
+    "ir": 150
+   },
+   "leximin": {
+    "acc": 143,
+    "core": 150,
+    "all3": 143,
+    "eq": 150,
+    "ir": 150
+   },
+   "deepest": {
+    "acc": 150,
+    "core": 50,
+    "all3": 50,
+    "eq": 50,
+    "ir": 150
+   },
+   "ambition": {
+    "acc": 28,
+    "core": 150,
+    "all3": 28,
+    "eq": 150,
+    "ir": 150
+   },
+   "robust": {
+    "acc": 143,
+    "core": 150,
+    "all3": 143,
+    "eq": 150,
+    "ir": 150
+   }
+  }
+ }
+}

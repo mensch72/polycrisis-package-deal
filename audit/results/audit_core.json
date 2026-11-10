@@ -1,0 +1,173 @@
+{
+ "max_abs_U_diff": 8.881784197001252e-16,
+ "acc_mismatch": 0,
+ "n_acceptable": 12810,
+ "n_IR": 82022,
+ "n_both": 3403,
+ "acc_share_per_actor": {
+  "USA": 0.5556,
+  "CHN": 0.3889,
+  "EU": 0.6445,
+  "IND": 0.625,
+  "FEX": 0.5,
+  "LIC": 0.7407,
+  "DEV": 0.75,
+  "MDB": 0.7778
+ },
+ "n_core_in_C": 326,
+ "n_pareto_dominated": 3077,
+ "n_efficient_but_blocked_by_proper": 0,
+ "core_shape": {
+  "oversight_both_1": 326,
+  "P_full": 225,
+  "FEX_1": 196,
+  "FEX_pos": 196,
+  "any_climate3": 0,
+  "Q": [
+   0.5095,
+   0.9028
+  ],
+  "A": [
+   0.35,
+   0.55
+  ],
+  "P": [
+   0.5,
+   1.0
+  ]
+ },
+ "menu": {
+  "nash": {
+   "profile": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    0,
+    2,
+    1,
+    1
+   ],
+   "ngain": {
+    "USA": 0.5481,
+    "CHN": 0.7749,
+    "EU": 0.7845,
+    "IND": 0.6532,
+    "FEX": 0.9224,
+    "LIC": 0.5941,
+    "DEV": 0.9378,
+    "MDB": 0.8195
+   },
+   "Q": 0.6584,
+   "A": 0.45,
+   "P": 1.0
+  },
+  "leximin": {
+   "profile": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    0,
+    2,
+    1,
+    2
+   ],
+   "ngain": {
+    "USA": 0.7946,
+    "CHN": 0.7237,
+    "EU": 0.7421,
+    "IND": 0.5779,
+    "FEX": 0.8959,
+    "LIC": 0.6663,
+    "DEV": 0.9255,
+    "MDB": 0.6212
+   },
+   "Q": 0.5473,
+   "A": 0.45,
+   "P": 1.0
+  },
+  "deepest": {
+   "profile": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    0,
+    0,
+    1,
+    1,
+    2
+   ],
+   "ngain": {
+    "USA": 0.312,
+    "CHN": 0.5187,
+    "EU": 0.5558,
+    "IND": 0.6909,
+    "FEX": 0.6834,
+    "LIC": 0.8279,
+    "DEV": 0.716,
+    "MDB": 0.3605
+   },
+   "Q": 0.6584,
+   "A": 0.45,
+   "P": 0.5
+  },
+  "ambition": {
+   "profile": [
+    2,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1
+   ],
+   "ngain": {
+    "USA": 0.6957,
+    "CHN": 0.9311,
+    "EU": 0.6782,
+    "IND": 0.8,
+    "FEX": 0.3872,
+    "LIC": 0.6934,
+    "DEV": 0.5565,
+    "MDB": 0.9057
+   },
+   "Q": 0.8195,
+   "A": 0.55,
+   "P": 1.0
+  }
+ },
+ "ties": {
+  "deepest": 1,
+  "ambition": 3,
+  "leximin_min": 1
+ },
+ "menu_equilibrium_violations": {
+  "nash": [],
+  "leximin": [],
+  "deepest": [],
+  "ambition": []
+ },
+ "core_profiles_not_equilibrium": 0,
+ "nofilter_efficient_IR": 21490,
+ "nofilter_blocked_by_proper": 1841,
+ "nofilter_core": 19649,
+ "nofilter_core_acceptable": 326
+}

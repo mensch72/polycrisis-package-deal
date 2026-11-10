@@ -1,0 +1,76 @@
+{
+ "lead_equilibrium_violations_registry_iteration": [],
+ "normaliser_acceptable_to_all": {
+  "USA": 1.0591,
+  "CHN": 0.976,
+  "EU": 1.3119,
+  "IND": 1.3282,
+  "FEX": 0.6274,
+  "LIC": 1.9246,
+  "DEV": 0.451,
+  "MDB": 0.9803
+ },
+ "normaliser_acceptable_to_self": {
+  "USA": 1.3084,
+  "CHN": 1.1998,
+  "EU": 2.0383,
+  "IND": 1.7802,
+  "FEX": 0.902,
+  "LIC": 2.5501,
+  "DEV": 0.6925,
+  "MDB": 1.38
+ },
+ "nofilter_core_same_set_as_original": true,
+ "fresh_draws": {
+  "nash": {
+   "all_three": 317,
+   "acceptable": 317,
+   "strict_core": 500,
+   "n": 500,
+   "wilson95": [
+    0.591,
+    0.675
+   ]
+  },
+  "leximin": {
+   "all_three": 482,
+   "acceptable": 482,
+   "strict_core": 500,
+   "n": 500,
+   "wilson95": [
+    0.944,
+    0.977
+   ]
+  },
+  "deepest": {
+   "all_three": 233,
+   "acceptable": 500,
+   "strict_core": 233,
+   "n": 500,
+   "wilson95": [
+    0.423,
+    0.51
+   ]
+  },
+  "ambition": {
+   "all_three": 95,
+   "acceptable": 95,
+   "strict_core": 500,
+   "n": 500,
+   "wilson95": [
+    0.158,
+    0.227
+   ]
+  },
+  "robust": {
+   "all_three": 482,
+   "acceptable": 482,
+   "strict_core": 500,
+   "n": 500,
+   "wilson95": [
+    0.944,
+    0.977
+   ]
+  }
+ }
+}
