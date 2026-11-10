@@ -85,3 +85,20 @@ Newest entry last. Every session ends with an entry: what ran, what failed, what
     restated, because their earlier wording was in a diagram the export omitted. The Claude Doc has
     none of this.
   - `run_all.sh` includes the tower runners and was rerun from a clean state.
+- On Jobst's decision to adopt (ii′) and to develop both pilots until outside people are needed:
+  - Recorded the decision in the plan, `docs/phase0_towers.md` and `CLAUDE.md`. Still open: individual
+    rationality against a⁰ at every stage.
+  - Facts: two research sub-sessions collected public facts with URL and quote
+    (`data/sources/`). I re-read at the source: the South African pledge table, Anthropic's policy
+    v3.4, the September 2026 essay on pacing, and the CRS note of 28 September 2026. Gaps and conflicts
+    are listed at the end of each fact file.
+  - Pilots: `pilots/run_pilot.py` (rules and tests pushed before any instance), `pilot_a.py` (South
+    African partnership shape, pledge sizes sourced, preferences illustrative), `pilot_b.py` (five
+    stylised developers, all illustrative). Tests T1 to T4 pass on both.
+  - Weak or failed: pilot A has no tower along the chain fixed in advance, because two donors' share
+    caps cannot both hold. The tower reported comes from a scan over all first coalitions, added post
+    hoc, as were the tipping factors. Pilot B's selected tower has an empty first stage. All preferences
+    are invented; no output is a finding about a real actor.
+  - Outreach: `docs/outreach_proposal.md`, briefs and email drafts in `outreach/`. Nothing was sent and
+    nobody was contacted.
+  - Plan: the table of candidate pilots and the paragraph after it changed. The Claude Doc has none of this.

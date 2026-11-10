@@ -17,3 +17,9 @@ python3 run_tower.py instance2    | tee ../log_run_tower_instance2.txt
 python3 run_tower.py contested    | tee ../log_run_tower_contested.txt
 python3 run_tower_relaxed.py      | tee ../log_run_tower_relaxed.txt
 python3 check_towers.py           | tee ../log_check_towers.txt
+# pilot skeletons (session 2)
+cd ../pilots
+rm -rf results
+python3 run_pilot.py pilot_a   | tee ../log_run_pilot_a.txt
+python3 run_pilot.py pilot_b   | tee ../log_run_pilot_b.txt
+python3 check_pilots.py        | tee ../log_check_pilots.txt

@@ -490,11 +490,11 @@ The realistic outcome is a small conditional-pledge registry in real use, on one
 
 | Track | Why realistic | First coalition | What is filed | Main obstacle |
 | --- | --- | --- | --- | --- |
-| A. Climate | States already file conditional pledges under the Paris Agreement (Pauw et al., 2020). Data are public. | a club of states, regions or one sector | conditional parts of pledges, as functions of others' pledges | attention is scarce; pledges are political signals as much as commitments |
-| B. Frontier AI safety | Few actors, able to contract. Twenty companies signed commitments tied to risk thresholds in 2024 (see WP1). | a handful of developers, later their home states | safety thresholds and practices, conditional on rivals' | competition law; verification of internal practice \[open\] |
-| C. Pooled finance | Matching pledges to multilateral funds are conditional commitments in all but name. | funders of one replenishment | contribution schedules as functions of others' contributions | examples and rules still to be collected in M3 |
+| A. Climate finance for a country platform | Partnerships of the JETP kind already tie a recipient's mitigation to donors' finance, and pledges are public. Design note: `docs/pilot_A_country_platform.md`. | one recipient and its donor group | mitigation and reform levels, and finance allocations, each as a function of the others | whether a ministry can sign a conditional schedule; domestic politics |
+| B. Frontier AI safety | Twelve developers publish safety frameworks, and three of them already make safeguards depend on rivals. Design note: `docs/pilot_B_frontier_ai.md`. | developers with a published framework | safeguard and evaluator-access levels, conditional on rivals' | competition law, first; verification \[open\] |
+| C. Pooled finance | Share caps and matching pledges to multilateral funds are conditional commitments in all but name; examples are in `data/sources/trackA_climate_facts.md`. | funders of one replenishment | contribution schedules as functions of others' contributions | folded into track A for now |
 
-Proposed: prepare A and B in parallel up to M3, then choose one for the pilot. A has the better data and precedent. B has the fewest actors and the highest stakes. Jobst decides.
+Jobst decided on 10 November 2026 to develop A and B in parallel until outside people are needed. That point is reached: both have a design note, a sourced fact file, a skeleton instance and a brief. `docs/outreach_proposal.md` proposes whom to ask first, with what, and how.
 
 **Who does what.**
 

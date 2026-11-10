@@ -14,6 +14,11 @@ Jobst Heitzig. Not yet reviewed by a second person.
 | `docs/phase0_results.md` | write-up of the first increment of Phase 0 |
 | `docs/phase0_instance2.md` | write-up of the second instance and the contested variant (step 1) |
 | `docs/phase0_towers.md` | towers in a pre-CPEP: definitions as implemented, tests, assessment |
+| `docs/pilot_A_country_platform.md`, `docs/pilot_B_frontier_ai.md` | design notes of the two pilot tracks |
+| `docs/outreach_proposal.md` | whom to involve first, with what, on which channel; nothing sent |
+| `pilots/` | pilot skeleton instances, generic runner, results, assertion script |
+| `data/sources/` | sourced fact files for the pilots, with URLs and quotes, collected 10 November 2026 |
+| `outreach/` | two-page briefs and email drafts for Jobst to edit and send |
 | `audit/` | independent audit of the first increment: report, checker, outputs |
 | `phase0/` | code and results of the Phase 0 toy instance |
 | `run_all.sh` | recomputes every Phase 0 result from a clean state |

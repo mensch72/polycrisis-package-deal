@@ -11,6 +11,7 @@ signs off each gate, and is the only channel to the outside world.
 1. `STATUS.md`: what was done last and what is open. Add an entry at the end of every session.
 2. `docs/plan.md`: the work plan with ten work packages (WP1 to WP10), phases, gates, objections and references.
 3. `docs/phase0_results.md`, `docs/phase0_instance2.md` and `docs/phase0_towers.md`: write-ups of Phase 0 so far.
+   `docs/pilot_A_country_platform.md`, `docs/pilot_B_frontier_ai.md`, `docs/outreach_proposal.md`: the pilots.
    `audit/AUDIT.md`: audit of the first increment.
 4. `README.md`: files, conventions, how to reproduce.
 
@@ -31,6 +32,11 @@ signs off each gate, and is the only channel to the outside world.
   Under the relaxed (ii′) the selected tower is a strictly strong equilibrium of the original game.
   Jobst adopted (ii′) and confirmed the three readings listed in that file. Still open: whether every
   stage must be individually rational against a⁰ for all actors.
+- Pilot tracks (`docs/pilot_A_country_platform.md`, `docs/pilot_B_frontier_ai.md`): developed to the
+  point where outside knowledge is needed. Each has a sourced fact file in `data/sources/`, a skeleton
+  instance in `pilots/` with illustrative preferences, and a two-page brief in `outreach/`.
+  `docs/outreach_proposal.md` proposes whom Jobst should ask first. Nothing has been sent. Claude is
+  built by Anthropic, a party to track B; that is disclosed in the track's documents.
 - The plan section "Bounded rationality and diplomatic knowledge" exists; only a first exploration is
   in code. The datasets it names have not been downloaded.
 - Nobody has checked step 1 or the tower work except the session that wrote them.
@@ -38,14 +44,15 @@ signs off each gate, and is the only channel to the outside world.
 
 ## Next steps (Jobst decides; the order is that of the plan's roadmap)
 
-0. Jobst's open decisions: Gate 1; individual rationality against a⁰ at every tower stage; when the repository
+0. Jobst's open decisions: the three in `docs/outreach_proposal.md`; Gate 1; individual rationality against a⁰ at every tower stage; when the repository
    becomes public; the audit proposals; the two decisions in `docs/phase0_instance2.md`.
 1. A fresh-session audit of step 1 and of the tower code.
 2. Towers with longer chains, a search over chains, and a look-ahead selection rule.
 3. The search oracle extended to over-fulfilment, and a heuristic for the smallest margin.
 4. A scaling test of search and certificates on synthetic instances with 20 to 40 actors (start of M2).
 5. A first draft of the theory note on pre-CPEPs and towers (M1), marked as draft.
-6. Source lists and extraction schemas for pilot tracks A and B, without contacting anyone.
+6. Pilots: fill the gaps listed in the fact files (per-donor data for Indonesia and Viet Nam, statute
+   texts); correct the skeletons once outside answers arrive. No contact by Claude.
 7. Still open from the first list: an instance in which one issue has no deal of its own; budgets in the
    robustness set; far-sighted formation; MaxParC and a model-agent pilot; beliefs for the no-betting
    test; the stability table and safe-filing check of the bounded-rationality section.
