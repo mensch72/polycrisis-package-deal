@@ -29,7 +29,8 @@ signs off each gate, and is the only channel to the outside world.
 - Towers in a pre-CPEP, Jobst's proposal (`docs/phase0_towers.md`): implemented and tested for chains
   of two coalitions with step filings. Under his condition (ii) no acceptable tower exists on the toys.
   Under the relaxed (ii′) the selected tower is a strictly strong equilibrium of the original game.
-  Jobst has not yet chosen between (ii) and (ii′), nor confirmed three readings listed in that file.
+  Jobst adopted (ii′) and confirmed the three readings listed in that file. Still open: whether every
+  stage must be individually rational against a⁰ for all actors.
 - The plan section "Bounded rationality and diplomatic knowledge" exists; only a first exploration is
   in code. The datasets it names have not been downloaded.
 - Nobody has checked step 1 or the tower work except the session that wrote them.
@@ -37,7 +38,7 @@ signs off each gate, and is the only channel to the outside world.
 
 ## Next steps (Jobst decides; the order is that of the plan's roadmap)
 
-0. Jobst's open decisions: Gate 1; tower definition (ii) or (ii′); pilot tracks; when the repository
+0. Jobst's open decisions: Gate 1; individual rationality against a⁰ at every tower stage; when the repository
    becomes public; the audit proposals; the two decisions in `docs/phase0_instance2.md`.
 1. A fresh-session audit of step 1 and of the tower code.
 2. Towers with longer chains, a search over chains, and a look-ahead selection rule.

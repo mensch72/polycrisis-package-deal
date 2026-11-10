@@ -43,7 +43,7 @@ The registry applies one rule to the filed profile c. It selects the largest mut
 
 **Beyond CPEPs: towers.** With many actors the premise of the theorem is too strict, because some levers harm some actors. Drop the requirement that others welcome every lever, and call the result a pre-CPEP. A tower is a chain of coalitions I₁ ⊆ … ⊆ I_m = I with filings c₁ ≤ … ≤ c_m = c such that, for every k, (i) c_k is zero outside I_k and ignores actors outside I_k, and (ii) the game of I_k, with outsiders at a⁰ and members of I_(k−1) held at or above the outcome of c_(k−1), is a proper CPEP in which c_k is a strong equilibrium \[Jobst's proposal, 10 November 2026\]. The tower is also the implementation path: small coalitions with modest outcomes first, the grand coalition last.
 
-For step filings with two stages, a tower degrades to the earlier stage if newcomers fail, is a Nash equilibrium, and can be upset only by a group that mixes newcomers with earlier members and takes an earlier stage back \[model; argument and enumeration in `docs/phase0_towers.md`; longer chains open\]. Condition (ii) proved stricter than needed on the toys. The variant (ii′), "c_k is a strong equilibrium of the stage game, tested directly", is carried along as an alternative \[open, for Jobst\]. Cyclic harms admit no tower.
+For step filings with two stages, a tower degrades to the earlier stage if newcomers fail, is a Nash equilibrium, and can be upset only by a group that mixes newcomers with earlier members and takes an earlier stage back \[model; argument and enumeration in `docs/phase0_towers.md`; longer chains open\]. Condition (ii) proved stricter than needed on the toys. Jobst therefore adopted the weaker (ii′) on 10 November 2026: c_k is a strong equilibrium of the stage game, tested directly, and the stage game need not be a CPEP. He also confirmed the three readings listed in `docs/phase0_towers.md`. Whether every stage outcome must be individually rational against a⁰ for all actors is still \[open, for Jobst\]. Cyclic harms admit no tower.
 
 The theorem does not give three things: the truth of the model, compliance over time, and reachability. Validation (WP8), liability redistribution after shortfalls (WP7) and far-sighted coalition-formation analysis (WP8) cover them.
 
@@ -534,7 +534,7 @@ The gates are restated to fit: Gate 1 closes M0. Gate 2 is a passed scaling test
 
 **Decisions for Jobst now.**
 
-1. Which definition of a tower to develop: (ii), (ii′), or both.
+1. Whether every stage of a tower must be individually rational against a⁰ for all actors. (Decided on 10 November 2026: condition (ii′) and the three readings.)
 2. Whether tracks A and B are the right pair, and which people could be the first readers at M1.
 3. When the repository becomes public: at M1, at M2, or later.
 4. Gate 1.

@@ -126,6 +126,8 @@ Yes, with three qualifications.
 **What towers add beyond a certificate.** An implementation path, graceful degradation, and stability
 that needs only irreversibility of earlier stages, not the full strong-equilibrium property.
 
+**Decision.** On 10 November 2026 Jobst confirmed the three readings above and adopted (ii′). The requirement of individual rationality against a⁰ at every stage is not yet decided.
+
 ## Open
 
 1. Chains with more than two coalitions, and a search over chains.
