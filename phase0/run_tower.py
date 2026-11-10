@@ -206,6 +206,46 @@ def main():
         strictly_strong_equilibrium=len(groups) == 0)
     log('T3', 'PASSED' if R['T3']['passed'] else 'NOT PASSED', '| T4', 'PASSED' if R['T4']['passed'] else 'NOT PASSED',
         '| groups that can still gain:', len(groups), '| minimal:', R['original_game']['minimal_groups'])
+    # ---- [post hoc] added after the first run showed a trivial last stage and a newcomer left below a0:
+    # over ALL first-stage candidates (same filter as the tower that was built), how often does the last
+    # stage add anything, and does the newcomer ever end at or above its no-deal utility?
+    use_asp = R['aspiration_filter_used']
+    members = chain[0]
+    Uk, dims, owner_k, sub = tower.stage_game(U, OWNER, members, np.zeros(D, int))
+    ck, _ = core.strict_core(Uk, owner_k, np.ones(sub, bool))
+    n_c = n_nontrivial = n_new_ir = 0
+    best_new = -np.inf
+    best_tower = None
+    for f in ck:
+        b1 = tower.to_full(f, dims, sub, np.zeros(D, int), D)
+        f1 = int(np.ravel_multi_index(tuple(b1), SHAPE))
+        if use_asp and not acc.reshape(N, -1)[members, f1].all():
+            continue
+        if not tower.box_is_cpep(viol, OWNER, range(N), b1):
+            continue
+        n_c += 1
+        U2, d2, o2, s2 = tower.stage_game(U, OWNER, range(N), b1)
+        c2, _ = core.strict_core(U2, o2, np.ones(s2, bool))
+        full2 = [tower.to_full(x, d2, s2, b1, D) for x in c2]
+        fl2 = [int(np.ravel_multi_index(tuple(b), SHAPE)) for b in full2]
+        if use_asp:
+            fl2 = [x for x in fl2 if C[x]]
+        if any(x != f1 for x in fl2):
+            n_nontrivial += 1
+        for x in fl2:
+            gnew = min(float(gains[i, x] / scale[i]) for i in newcomers)
+            if gnew > best_new:
+                best_new, best_tower = gnew, (f1, x)
+        n_new_ir += int(any(all(gains[i, x] >= -1e-9 for i in newcomers) for x in fl2))
+    R['all_first_stage_candidates_post_hoc'] = dict(
+        n_candidates=n_c, n_with_nontrivial_last_stage=n_nontrivial, n_where_newcomers_end_at_or_above_a0=n_new_ir,
+        best_final_norm_gain_of_a_newcomer=None if best_tower is None else best_new,
+        best_for_newcomer=None if best_tower is None else dict(
+            stage1=inst.describe(np.array(np.unravel_index(best_tower[0], SHAPE))),
+            final=inst.describe(np.array(np.unravel_index(best_tower[1], SHAPE))),
+            final_norm_gain_over_a0={ACTORS[i]: float(gains[i, best_tower[1]] / scale[i]) for i in range(N)}))
+    log('[post hoc] first-stage candidates', n_c, '| with a non-trivial last stage', n_nontrivial,
+        '| newcomers end at or above a0 in', n_new_ir, '| best newcomer gain', None if best_tower is None else round(best_new, 3))
     R['runtime_seconds'] = round(time.time() - T0, 1)
     json.dump(R, open(os.path.join(OUT, f'tower_{which}.json'), 'w'), indent=1)
     log('done')

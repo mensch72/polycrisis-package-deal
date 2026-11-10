@@ -464,5 +464,51 @@
   },
   "strictly_strong_equilibrium": false
  },
- "runtime_seconds": 86.0
+ "all_first_stage_candidates_post_hoc": {
+  "n_candidates": 870,
+  "n_with_nontrivial_last_stage": 15,
+  "n_where_newcomers_end_at_or_above_a0": 0,
+  "best_final_norm_gain_of_a_newcomer": -0.43266930746120175,
+  "best_for_newcomer": {
+   "stage1": {
+    "USA.climate": 2,
+    "USA.ai_oversight": 2,
+    "CHN.climate": 2,
+    "CHN.ai_oversight": 2,
+    "EU.climate": 3,
+    "EU.finance_lic": 0,
+    "IND.climate": 3,
+    "IND.surveillance": 1,
+    "FEX.climate": 1,
+    "LIC.surveillance": 2,
+    "DEV.ai_safety": 0,
+    "MDB.finance_lic": 1
+   },
+   "final": {
+    "USA.climate": 2,
+    "USA.ai_oversight": 2,
+    "CHN.climate": 2,
+    "CHN.ai_oversight": 2,
+    "EU.climate": 3,
+    "EU.finance_lic": 0,
+    "IND.climate": 3,
+    "IND.surveillance": 1,
+    "FEX.climate": 1,
+    "LIC.surveillance": 2,
+    "DEV.ai_safety": 0,
+    "MDB.finance_lic": 1
+   },
+   "final_norm_gain_over_a0": {
+    "USA": 0.4629373530631999,
+    "CHN": 0.06612225481645909,
+    "EU": 0.7526011092668313,
+    "IND": 0.3050084327189495,
+    "FEX": 0.6483325672846126,
+    "LIC": 0.7269042918008937,
+    "DEV": -0.43266930746120175,
+    "MDB": 1.1482433590402743
+   }
+  }
+ },
+ "runtime_seconds": 147.7
 }
