@@ -112,8 +112,26 @@ def main(heur_seeds=8):
         smallest_blocking_group=min(len(G) for G in blockers) if blockers else None,
         pareto_efficient=tuple(range(N)) not in blockers,
         coalitions_gaining_by_over_fulfilment=over)
-    log('fallback 1: eps', round(lm['eps'], 4), '| minimisers', len(rows), '| profile', list(a), '| blockers',
+    log('fallback 1: eps', round(lm['eps'], 4), '| minimisers', len(rows), '| profile', [int(x) for x in a], '| blockers',
         R['fallback1']['strict_blockers'])
+
+    # ---- [post hoc] added after the first run showed that the fallback profile is Pareto-dominated:
+    # the same selection rule restricted to candidates that no profile Pareto-dominates
+    eff = info.get('efficient_idx', np.array([], int))
+    if len(eff):
+        pe = np.flatnonzero(np.isin(cand, eff))
+        we = lm['worst'][pe]
+        re_ = pe[np.flatnonzero(we <= we.min() + 1e-12)]
+        je = int(re_[np.lexsort((cand[re_], -logn[re_]))[0]])
+        fe = int(cand[je])
+        R['fallback1_efficient_post_hoc'] = dict(
+            n_efficient_candidates=int(len(eff)), eps=float(lm['worst'][je]), flat=fe, profile=describe(prof(fe)),
+            norm_gain={ACTORS[i]: float(gains[i, fe] / scale[i]) for i in range(N)},
+            Q=float(ev['Q'].reshape(-1)[fe]), T=int(ev['T'].reshape(-1)[fe]),
+            strict_blockers=[gname(G) for G in fallbacks.strict_blockers(U, OWNER, fe)],
+            coalitions_gaining_by_over_fulfilment=core.over_fulfilment(U, OWNER, prof(fe)))
+        log('fallback 1 among efficient candidates [post hoc]: eps', round(float(lm['worst'][je]), 4),
+            '| profile', [int(x) for x in prof(fe)])
 
     # ---- E2: registry rule at the fallback profile, all deviations to unconditional actions
     ccfs = [mechanism.canonical(i, a) for i in range(N)]
