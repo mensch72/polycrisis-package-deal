@@ -1,0 +1,81 @@
+{
+ "base": {
+  "x.base": 0.5,
+  "x.prod": 0.2,
+  "x.census": 0.1,
+  "x.draw": 0.2,
+  "a.USA": 1.0,
+  "a.CHN": 1.0,
+  "a.SUP": 0.8,
+  "f.USA": 0.2,
+  "f.CHN": 0.2,
+  "G": 0.2,
+  "sig": 0.5,
+  "kd": 0.03,
+  "th": 0.15,
+  "r.SUP": 0.3,
+  "c.SUP": 0.05,
+  "m.SUP": 0.25,
+  "gap": 1
+ },
+ "provenance": {
+  "default": {
+   "status": "illustrative",
+   "source": "set by Claude before the first run; structure after the hardwired-pause report, numbers invented",
+   "who_says": "Claude",
+   "retrieved": "2026-11-10"
+  }
+ },
+ "perturbed": [
+  "a.USA",
+  "a.CHN",
+  "a.SUP",
+  "f.USA",
+  "f.CHN",
+  "G",
+  "sig",
+  "kd",
+  "th",
+  "r.SUP",
+  "c.SUP",
+  "m.SUP"
+ ],
+ "levers": [
+  {
+   "actor": "USA",
+   "lever": "pause",
+   "levels": 2,
+   "issue": "ai"
+  },
+  {
+   "actor": "USA",
+   "lever": "drawdown",
+   "levels": 4,
+   "issue": "ai"
+  },
+  {
+   "actor": "CHN",
+   "lever": "pause",
+   "levels": 2,
+   "issue": "ai"
+  },
+  {
+   "actor": "CHN",
+   "lever": "drawdown",
+   "levels": 4,
+   "issue": "ai"
+  },
+  {
+   "actor": "SUP",
+   "lever": "production_stop",
+   "levels": 2,
+   "issue": "ai"
+  },
+  {
+   "actor": "SUP",
+   "lever": "census",
+   "levels": 2,
+   "issue": "ai"
+  }
+ ]
+}

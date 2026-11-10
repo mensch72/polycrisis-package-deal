@@ -26,7 +26,14 @@ Both pilots now stop at questions that public documents cannot answer.
 | later | JET Project Management Unit, South Africa | the partnership's own unit | keeps the pledge register | only after a researcher has read the brief |
 | later | a donor-side official | Germany is the largest pledger in South Africa and co-leads Indonesia | could say what a ministry can sign | through Jobst's institutional channels |
 
-**Track B.**
+**Track B, variant B2 (states and hardware; see `docs/note_hardwired_pause.md`). Proposed as the first contact for track B.**
+
+| Order | Person or body | Affiliation | Why | Ask |
+| --- | --- | --- | --- | --- |
+| 1 | Wesley H. Holliday; William Fithian | University of California, Berkeley (philosophy; statistics); organisers of the Working Group on AI Pause Feasibility | their report assumes conditional willingness to pause and leaves the entry step open | whether a companion analysis of entry would be useful; comments on an outline. Draft: `outreach/email_B2.md` |
+| later, through them | Shachar Kariv; Rose Gottemoeller | Berkeley (economics); Stanford (CISAC) | an experimental economist and a former arms-control negotiator, both members of that group | experiments (M4); what negotiators can sign (M5) |
+
+**Track B, variant B1 (developers).**
 
 | Order | Person or body | Affiliation | Why | Ask |
 | --- | --- | --- | --- | --- |
@@ -66,7 +73,7 @@ that is not marked as a placeholder.
 
 | Wave | When | Who | Purpose |
 | --- | --- | --- | --- |
-| 1 | now | one researcher per track: Pauw; Felstead or Orbach | find the worst errors cheaply |
+| 1 | now | one contact per track: Pauw for A; Holliday and Fithian for B2; a lawyer (Felstead or Orbach) only if B1 is pursued | find the worst errors cheaply |
 | 2 | after their answers and a draft of the theory note | the second-order names above; theory readers | correct the skeletons; test the theory |
 | 3 | after a corrected case study | a practitioner per track; a possible host; a funder | pilot design |
 

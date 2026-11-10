@@ -69,4 +69,24 @@ chk('B tower in brief', True, BB, 'all five can move one tier together', 'collap
 tp = B['tipping_post_hoc']['ranking']
 chk('B sensitivity', B['robustness']['final_stays_certified'] == 200 and min(min(x for x in (r['up'], r['down'], 99) if x) for r in tp) == 2.0, DB,
     '200 of 200 draws', 'no number tips it below a factor of 2')
+# ---- pilot B2 and the note on the hardwired-pause report
+B2 = json.load(open(os.path.join(HERE, 'results', 'pilot_b2.json')))
+NB = txt('docs', 'note_hardwired_pause.md')
+t = B2['tower']
+tipped = {r['parameter'] for r in B2['tipping_post_hoc']['ranking']}
+chk('B2', (B2['n_profiles'], B2['n_groups'], B2['core']['n_core'], B2['core']['n_equilibria']) == (256, 7, 1, 1)
+    and {(v['lever'], v['actor']) for v in B2['orientation']['violations']} >= {('USA.pause', 'SUP'), ('CHN.pause', 'SUP')}
+    and B2['tower_chain'] == 'fixed' and B2['chain'][0] == ['USA', 'CHN']
+    and t['stage1'] == {'USA.pause': 1, 'USA.drawdown': 3, 'CHN.pause': 1, 'CHN.drawdown': 3, 'SUP.production_stop': 0, 'SUP.census': 0}
+    and t['final']['SUP.production_stop'] == 1 and t['final']['SUP.census'] == 1
+    and B2['chain_scan_post_hoc']['first_coalitions_with_a_nontrivial_first_stage'] == ['USA+CHN']
+    and B2['full_game']['strictly_strong_equilibrium'] and all(B2['tests'].values())
+    and B2['withdrawal']['SUP']['falls_to'] == 'stage 1' and B2['withdrawal']['USA']['falls_to'] == 'zero'
+    and B2['withdrawal']['CHN']['falls_to'] == 'zero'
+    and 'G' not in tipped and 3.0 in B2['tipping_post_hoc']['grid'], NB,
+    '| lattice | 256 profiles, 7 groups |', '| 1 profile, an equilibrium |', 'only the two lead states together',
+    'suppliers out: back to stage 1; either lead state out: back to zero', 'can be tripled without breaking the certificate')
+P2 = json.load(open(os.path.join(HERE, 'results', 'pilot_b2_params.json')))['base']
+net_mutual = P2['a.USA'] * P2['x.base'] - P2['f.USA']
+chk('B2 tripled gain makes a Prisoner\'s Dilemma', P2['G'] < net_mutual < 3 * P2['G'], NB, "the stage game is a Prisoner's Dilemma, not a stag hunt")
 print(f'all {n_ok} checks passed')

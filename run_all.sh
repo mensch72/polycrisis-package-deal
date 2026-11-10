@@ -22,4 +22,5 @@ cd ../pilots
 rm -rf results
 python3 run_pilot.py pilot_a   | tee ../log_run_pilot_a.txt
 python3 run_pilot.py pilot_b   | tee ../log_run_pilot_b.txt
+python3 run_pilot.py pilot_b2  | tee ../log_run_pilot_b2.txt
 python3 check_pilots.py        | tee ../log_check_pilots.txt

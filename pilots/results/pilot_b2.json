@@ -1,0 +1,279 @@
+{
+ "pilot": "pilot_b2",
+ "n_actors": 3,
+ "n_levers": 6,
+ "n_profiles": 256,
+ "n_groups": 7,
+ "chain": [
+  [
+   "USA",
+   "CHN"
+  ],
+  [
+   "USA",
+   "CHN",
+   "SUP"
+  ]
+ ],
+ "scale": {
+  "USA": 0.7100000000000001,
+  "CHN": 0.7100000000000001,
+  "SUP": 0.35
+ },
+ "orientation": {
+  "passed": false,
+  "violations": [
+   {
+    "lever": "USA.pause",
+    "actor": "USA"
+   },
+   {
+    "lever": "USA.pause",
+    "actor": "SUP"
+   },
+   {
+    "lever": "USA.drawdown",
+    "actor": "USA"
+   },
+   {
+    "lever": "CHN.pause",
+    "actor": "CHN"
+   },
+   {
+    "lever": "CHN.pause",
+    "actor": "SUP"
+   },
+   {
+    "lever": "CHN.drawdown",
+    "actor": "CHN"
+   },
+   {
+    "lever": "SUP.production_stop",
+    "actor": "SUP"
+   },
+   {
+    "lever": "SUP.census",
+    "actor": "SUP"
+   }
+  ]
+ },
+ "regions": {
+  "acceptable": 50,
+  "individually_rational": 55,
+  "both": 41
+ },
+ "core": {
+  "n_efficient": 1,
+  "n_core": 1,
+  "n_equilibria": 1
+ },
+ "towers": {
+  "n_first_stage_core": 1,
+  "n_first_stage_admissible": 1,
+  "n_towers": 1,
+  "n_nontrivial": 1,
+  "n_all_at_or_above_a0": 1
+ },
+ "chain_scan_post_hoc": {
+  "n_first_coalitions": 6,
+  "n_with_a_tower": 6,
+  "n_with_a_nontrivial_first_stage": 1,
+  "first_coalitions_with_a_nontrivial_first_stage": [
+   "USA+CHN"
+  ],
+  "by_first_coalition": {
+   "USA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 1,
+    "n_nontrivial": 1,
+    "n_all_at_or_above_a0": 1,
+    "best_smallest_gain": 1.0,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "CHN": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 1,
+    "n_nontrivial": 1,
+    "n_all_at_or_above_a0": 1,
+    "best_smallest_gain": 1.0,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "SUP": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 1,
+    "n_nontrivial": 1,
+    "n_all_at_or_above_a0": 1,
+    "best_smallest_gain": 1.0,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "USA+CHN": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 1,
+    "n_nontrivial": 1,
+    "n_all_at_or_above_a0": 1,
+    "best_smallest_gain": 1.0,
+    "n_with_nontrivial_first_stage": 1
+   },
+   "USA+SUP": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 1,
+    "n_nontrivial": 1,
+    "n_all_at_or_above_a0": 1,
+    "best_smallest_gain": 1.0,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "CHN+SUP": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 1,
+    "n_nontrivial": 1,
+    "n_all_at_or_above_a0": 1,
+    "best_smallest_gain": 1.0,
+    "n_with_nontrivial_first_stage": 0
+   }
+  }
+ },
+ "tower_chain": "fixed",
+ "tower": {
+  "stage1": {
+   "USA.pause": 1,
+   "USA.drawdown": 3,
+   "CHN.pause": 1,
+   "CHN.drawdown": 3,
+   "SUP.production_stop": 0,
+   "SUP.census": 0
+  },
+  "final": {
+   "USA.pause": 1,
+   "USA.drawdown": 3,
+   "CHN.pause": 1,
+   "CHN.drawdown": 3,
+   "SUP.production_stop": 1,
+   "SUP.census": 1
+  },
+  "nontrivial": true,
+  "stage1_indicators": {
+   "X": 0.7000000000000001
+  },
+  "final_indicators": {
+   "X": 1.0
+  },
+  "stage1_norm_gain": {
+   "USA": 0.5774647887323944,
+   "CHN": 0.5774647887323944,
+   "SUP": 0.8857142857142859
+  },
+  "final_norm_gain": {
+   "USA": 1.0,
+   "CHN": 1.0,
+   "SUP": 1.0
+  },
+  "final_certified_in_full_game": true
+ },
+ "tests": {
+  "T1": true,
+  "T2": true,
+  "T3": true,
+  "T4": true
+ },
+ "full_game": {
+  "groups_with_profitable_deviation": 0,
+  "groups": [],
+  "strictly_strong_equilibrium": true
+ },
+ "withdrawal": {
+  "USA": {
+   "outcome": {
+    "USA.pause": 0,
+    "USA.drawdown": 0,
+    "CHN.pause": 0,
+    "CHN.drawdown": 0,
+    "SUP.production_stop": 0,
+    "SUP.census": 0
+   },
+   "indicators": {
+    "X": 0.0
+   },
+   "falls_to": "zero",
+   "norm_gain": {
+    "USA": 0.0,
+    "CHN": 0.0,
+    "SUP": 0.0
+   }
+  },
+  "CHN": {
+   "outcome": {
+    "USA.pause": 0,
+    "USA.drawdown": 0,
+    "CHN.pause": 0,
+    "CHN.drawdown": 0,
+    "SUP.production_stop": 0,
+    "SUP.census": 0
+   },
+   "indicators": {
+    "X": 0.0
+   },
+   "falls_to": "zero",
+   "norm_gain": {
+    "USA": 0.0,
+    "CHN": 0.0,
+    "SUP": 0.0
+   }
+  },
+  "SUP": {
+   "outcome": {
+    "USA.pause": 1,
+    "USA.drawdown": 3,
+    "CHN.pause": 1,
+    "CHN.drawdown": 3,
+    "SUP.production_stop": 0,
+    "SUP.census": 0
+   },
+   "indicators": {
+    "X": 0.7000000000000001
+   },
+   "falls_to": "stage 1",
+   "norm_gain": {
+    "USA": 0.5774647887323944,
+    "CHN": 0.5774647887323944,
+    "SUP": 0.8857142857142859
+   }
+  }
+ },
+ "robustness": {
+  "n": 200,
+  "spread": 0.25,
+  "n_perturbed_parameters": 12,
+  "final_stays_certified": 200,
+  "ranking": []
+ },
+ "tipping_post_hoc": {
+  "grid": [
+   1.1,
+   1.25,
+   1.5,
+   2.0,
+   3.0
+  ],
+  "n_parameters": 16,
+  "n_that_tip_within_grid": 2,
+  "ranking": [
+   {
+    "parameter": "a.SUP",
+    "up": null,
+    "down": 2.0
+   },
+   {
+    "parameter": "m.SUP",
+    "up": 3.0,
+    "down": null
+   }
+  ]
+ },
+ "runtime_seconds": 0.2
+}

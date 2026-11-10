@@ -102,3 +102,13 @@ Newest entry last. Every session ends with an entry: what ran, what failed, what
   - Outreach: `docs/outreach_proposal.md`, briefs and email drafts in `outreach/`. Nothing was sent and
     nobody was contacted.
   - Plan: the table of candidate pilots and the paragraph after it changed. The Claude Doc has none of this.
+- On Jobst's pointer to the "hardwired pause" report (Fithian, Holliday and the Working Group on AI Pause
+  Feasibility, working paper v1.0.2, 26 October 2026):
+  - Read: executive summary, sections 2.3, 3.4, 3.5, the author list and keyword passages. Not the whole report.
+  - New: `docs/note_hardwired_pause.md`, `pilots/pilot_b2.py` (three actors, levers and order of entry
+    from the report, preferences invented; pushed before its first run), `outreach/email_B2.md`.
+  - Result: the skeleton's tower follows the report's order, and the filing stays certified when the
+    stage game is a Prisoner's Dilemma. One core profile on 256 profiles: a format test only.
+  - Proposed, not decided: B2 as lead variant of track B; Holliday and Fithian as first contact.
+  - Changed: plan (pilot table, one reference), pilot B note, outreach proposal, `run_all.sh`,
+    `pilots/check_pilots.py`. The Claude Doc has none of this.
