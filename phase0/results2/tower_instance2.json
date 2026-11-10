@@ -1,0 +1,47 @@
+{
+ "instance": "instance2",
+ "contested": [
+  {
+   "lever": "USA.access_CHN",
+   "harmed": "EU"
+  },
+  {
+   "lever": "USA.access_EU",
+   "harmed": "CHN"
+  },
+  {
+   "lever": "CHN.access_EU",
+   "harmed": "USA"
+  },
+  {
+   "lever": "CHN.access_USA",
+   "harmed": "EU"
+  },
+  {
+   "lever": "EU.access_USA",
+   "harmed": "CHN"
+  },
+  {
+   "lever": "EU.access_CHN",
+   "harmed": "USA"
+  }
+ ],
+ "owner_side": [],
+ "harmed": [
+  "USA",
+  "CHN",
+  "EU"
+ ],
+ "bases": {
+  "n_profiles": 46656,
+  "n_leaving_a_cpep_for_all": 64,
+  "of_these_with_an_inactive_actor": 0,
+  "coalitions_that_form_a_cpep_from_zero": [
+   "USA",
+   "CHN",
+   "EU"
+  ]
+ },
+ "tower": null,
+ "reason": "chain rule gives an empty first coalition"
+}
