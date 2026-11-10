@@ -5,7 +5,7 @@
   "n_actors": 3,
   "n_levers": 9,
   "n_coalitions": 7,
-  "runtime_seconds": 7.6
+  "runtime_seconds": 8.4
  },
  "orientation": {
   "passed": false,
@@ -129,6 +129,35 @@
   "pareto_efficient": false,
   "coalitions_gaining_by_over_fulfilment": 3,
   "registry_returns_profile": true
+ },
+ "fallback1_efficient_post_hoc": {
+  "n_efficient_candidates": 6,
+  "eps": 0.22046221760581675,
+  "flat": 37676,
+  "profile": {
+   "USA.access_CHN": 2,
+   "USA.access_EU": 1,
+   "USA.climate": 1,
+   "CHN.access_EU": 0,
+   "CHN.access_USA": 0,
+   "CHN.climate": 2,
+   "EU.access_USA": 1,
+   "EU.access_CHN": 2,
+   "EU.climate": 0
+  },
+  "norm_gain": {
+   "USA": 0.04113818757735853,
+   "CHN": 0.7067346066134548,
+   "EU": 0.4431316541158139
+  },
+  "Q": 0.7012999999999999,
+  "T": 6,
+  "strict_blockers": [
+   "USA+CHN",
+   "USA+EU",
+   "CHN+EU"
+  ],
+  "coalitions_gaining_by_over_fulfilment": 1
  },
  "E2": {
   "n_deviations": 50652,

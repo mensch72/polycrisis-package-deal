@@ -12,6 +12,8 @@ Jobst Heitzig. Not yet reviewed by a second person.
 | `STATUS.md` | status log, one entry per session |
 | `docs/plan.md` | the work plan: ten work packages, phases, gates, objections, references |
 | `docs/phase0_results.md` | write-up of the first increment of Phase 0 |
+| `docs/phase0_instance2.md` | write-up of the second instance and the contested variant (step 1) |
+| `audit/` | independent audit of the first increment: report, checker, outputs |
 | `phase0/` | code and results of the Phase 0 toy instance |
 | `run_all.sh` | recomputes every Phase 0 result from a clean state |
 | `log_*.txt` | console output of the last full run |
@@ -31,10 +33,11 @@ orientation test at the base point. No conclusion about real actors follows from
 
 ## Reproduce
 
-    sh run_all.sh        # deletes phase0/results and recomputes everything, about 15 minutes on two cores
+    sh run_all.sh        # deletes phase0/results and results2, recomputes everything, about 20 minutes on two cores
 
 Needs Python 3 with numpy (tested with Python 3.13, numpy 2.5). All random seeds are fixed.
-The last step, `check_writeup.py`, fails loudly if any number quoted in the write-up no longer matches.
+`check_writeup.py` and `check_writeup2.py` fail loudly if a number quoted in a write-up no longer matches.
+`check_writeup2.py` also checks that each number stands in the text; `check_writeup.py` does not yet.
 
 ## Files in `phase0/`
 
@@ -57,6 +60,19 @@ The last step, `check_writeup.py`, fails loudly if any number quoted in the writ
 | `results/menu.md` | the menu of core profiles |
 | `results/filings.md`, `results/briefs.md` | generated filings and briefs for the lead candidate |
 | `results/core_acceptable.json` | flat indices of the core profiles inside the acceptable region |
+| `instance2.py` | second instance: 3 actors, 2 issues, 9 levers, contested access levers, empty core |
+| `fallbacks.py` | smallest blocking margin, strict blockers, cores of sub-packages; exact, for any lever grid |
+| `run_instance2.py` | second instance through core, both fallbacks, registry rule and search; tests E1 to E3 |
+| `run_contested.py` | first instance with a compliance burden on developers; search test G1c |
+| `check_writeup2.py` | asserts every number quoted in `docs/phase0_instance2.md`, against files and text |
+| `results2/results.json`, `results2/contested.json`, `results2/params.json` | results of the two runners |
+
+## Second instance and contested variant
+
+The second instance has three actors who can grant each other preferential access. Each grant harms
+the third, so the access levers are contested and the core is empty. The contested variant adds a
+compliance burden on developers to the first instance. `mechanism.py` and `search.py` read their
+instance from the module name `instance`; `run_instance2.py` puts `instance2` under that name.
 
 ## Conventions
 

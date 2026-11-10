@@ -76,6 +76,36 @@ def main(heur_seeds=8):
                                       registry_returns_profile=reg, coalitions_gaining_by_over_fulfilment=over,
                                       strictly_strong_equilibrium_certified=bool(ok and reg and over == 0)))
     log('Nash point', [int(x) for x in a], R['nash']['certificate'])
+    # ---- [post hoc] added after the first run showed that the Nash point is in the strict core but is not
+    # an equilibrium: which core profiles are also free of gains by over-fulfilment, and which groups gain?
+    P = np.array(np.unravel_index(core_idx, SHAPE)).T
+    nover = np.array([core.over_fulfilment(U, OWNER, p) for p in P])
+    eq = nover == 0
+    groups = []
+    ua = Uf[:, f]
+    for G in core.coalitions(N):
+        idx = tuple(slice(int(a[d]), None) if OWNER[d] in G else int(a[d]) for d in range(D))
+        rows = np.stack([np.asarray(U[i][idx]).reshape(-1) for i in G], axis=1)
+        u = ua[list(G)]
+        ge = np.all(rows >= u - 1e-9, axis=1)
+        if ge.any() and np.any(rows[ge] > u + 1e-9):
+            groups.append(G)
+    minimal = [G for G in groups if not any(set(H) < set(G) for H in groups)]
+    R['over_fulfilment_post_hoc'] = dict(
+        core_profiles=int(len(core_idx)), core_profiles_that_are_equilibria=int(eq.sum()),
+        minimal_groups_gaining_at_nash=[gname(G) for G in minimal],
+        dev_gain_at_nash=float(gains[ACTORS.index('DEV'), f]),
+        equilibria_with_any_oversight=int((eq & ((P[:, 1] > 0) | (P[:, 3] > 0))).sum()),
+        core_profiles_with_any_oversight=int(((P[:, 1] > 0) | (P[:, 3] > 0)).sum()))
+    if eq.any():
+        je = int(np.flatnonzero(eq)[int(np.argmax(logn[eq]))])
+        fe = int(core_idx[je])
+        R['over_fulfilment_post_hoc']['nash_among_equilibria'] = dict(
+            flat=fe, profile=describe(P[je]), log_nash_gap_to_core_optimum=float(best_log - logn[je]),
+            norm_gain={ACTORS[i]: float(gains[i, fe] / scale[i]) for i in range(N)},
+            Q=float(ev['Q'].reshape(-1)[fe]), A=float(ev['A'].reshape(-1)[fe]), P=float(ev['P'].reshape(-1)[fe]))
+    log('[post hoc] core profiles that are equilibria:', int(eq.sum()), 'of', len(core_idx),
+        '| minimal over-fulfilling groups at the Nash point:', [gname(G) for G in minimal])
     runs = []
     core_set = set(int(x) for x in core_idx)
     for s in range(heur_seeds):

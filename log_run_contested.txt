@@ -1,0 +1,13 @@
+[   2.9s]   efficient and IR candidates: 833
+[   3.6s] core inside C: 399 | efficient 833 | blocked by proper coalitions 434
+[   4.3s] Nash point [2, 0, 2, 0, 1, 2, 1, 1, 0, 2, 2, 1] {'individually_rational': True, 'acceptable_to_all': True, 'strict_core_by_direct_test': True, 'registry_returns_profile': True, 'coalitions_gaining_by_over_fulfilment': 32, 'strictly_strong_equilibrium_certified': False}
+[   9.7s] [post hoc] core profiles that are equilibria: 150 of 399 | minimal over-fulfilling groups at the Nash point: ['USA+CHN']
+[  13.3s]   seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 92773}
+[  17.3s]   seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 100776}
+[  21.4s]   seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 98710}
+[  25.4s]   seed 3: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 93962}
+[  29.7s]   seed 4: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 97096}
+[  33.5s]   seed 5: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 94955}
+[  38.0s]   seed 6: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 101687}
+[  41.7s]   seed 7: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 98211}
+[  41.7s] G1c: PASSED | all in core: True | share reaching optimum: 1.0

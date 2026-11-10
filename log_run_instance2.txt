@@ -1,0 +1,17 @@
+[   0.0s] orientation: contested levers 6 | owner side []
+[   0.8s] core inside C: 0 of 548 candidates | without aspirations: 0 of 2448
+[   1.9s] E3 PASSED
+[   2.5s] fallback 1: eps 0.1653 | minimisers 1 | profile [2, 0, 1, 0, 0, 2, 1, 1, 1] | blockers ['USA+CHN', 'USA+EU', 'CHN+EU', 'USA+CHN+EU']
+[   2.5s] fallback 1 among efficient candidates [post hoc]: eps 0.2205 | profile [2, 1, 1, 0, 0, 2, 1, 2, 0]
+[   7.0s] E2 PASSED | deviating groups {'USA+CHN': 3, 'USA+EU': 15, 'CHN+EU': 16, 'USA+CHN+EU': 1}
+[   7.8s] fallback 3: {'access': (0, 0), 'climate': (7, 7), 'access+climate': (0, 0)}
+[   7.9s]   E1 seed 0: {'seed': 0, 'returned_profile': False, 'rounds': 5, 'cuts': 4, 'evals': 13625, 'candidates_left_uncut': 0}
+[   8.0s]   E1 seed 1: {'seed': 1, 'returned_profile': False, 'rounds': 5, 'cuts': 4, 'evals': 12746, 'candidates_left_uncut': 0}
+[   8.1s]   E1 seed 2: {'seed': 2, 'returned_profile': False, 'rounds': 5, 'cuts': 4, 'evals': 13076, 'candidates_left_uncut': 0}
+[   8.2s]   E1 seed 3: {'seed': 3, 'returned_profile': False, 'rounds': 5, 'cuts': 4, 'evals': 13198, 'candidates_left_uncut': 0}
+[   8.2s]   E1 seed 4: {'seed': 4, 'returned_profile': False, 'rounds': 5, 'cuts': 4, 'evals': 13368, 'candidates_left_uncut': 0}
+[   8.3s]   E1 seed 5: {'seed': 5, 'returned_profile': False, 'rounds': 5, 'cuts': 4, 'evals': 13047, 'candidates_left_uncut': 0}
+[   8.3s]   E1 seed 6: {'seed': 6, 'returned_profile': False, 'rounds': 5, 'cuts': 4, 'evals': 13185, 'candidates_left_uncut': 0}
+[   8.4s]   E1 seed 7: {'seed': 7, 'returned_profile': False, 'rounds': 5, 'cuts': 4, 'evals': 13634, 'candidates_left_uncut': 0}
+[   8.4s] E1 PASSED
+[   8.4s] done

@@ -41,3 +41,18 @@ Newest entry last. Every session ends with an entry: what ran, what failed, what
 - Claude Doc: not edited. It still says that no repository exists.
 - Open decisions for Jobst: Gate 1 sign-off; the four proposals at the end of `audit/AUDIT.md`;
   whether further increments run as scheduled sessions.
+- Later in the same session, on Jobst's instruction to start working: step 1 of the open list.
+  - New: `phase0/instance2.py` (3 actors, contested access levers, empty core), `phase0/fallbacks.py`,
+    `phase0/run_instance2.py`, `phase0/run_contested.py`, `phase0/check_writeup2.py`,
+    `docs/phase0_instance2.md`. `run_all.sh` now runs them too. `README.md` and `CLAUDE.md` updated.
+  - Pass marks E1 to E3 and G1c were committed before the first run of each runner. All four passed.
+  - Weak or failed: in the contested variant the search meets the Gate 1 criterion, but the profile it
+    returns is not an equilibrium; only 150 of 399 core profiles are. The margin fallback returns a
+    Pareto-dominated profile. The issue-set fallback gives a deal with margin 0.479 in the package game,
+    against 0.165 for the margin fallback. No empty core was found on the eight-actor lattice.
+  - Changed after seeing results, and labelled post hoc: the margin fallback restricted to efficient
+    candidates, and the count of core profiles that are equilibria.
+  - Not done: robustness set for the second instance, heuristic for the smallest margin, far-sighted
+    fallback. The audit proposals were not acted on.
+  - Claude Doc: not edited. It lacks the audit, the second instance and the repository.
+  - Open decisions for Jobst, added: the two at the end of `docs/phase0_instance2.md`.
