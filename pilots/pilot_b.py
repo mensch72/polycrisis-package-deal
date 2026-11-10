@@ -44,6 +44,7 @@ BASE = {
 PROVENANCE = {'default': dict(status='illustrative', source='set by Claude before the first run; to be corrected by '
                               'people who know the developers', who_says='Claude', retrieved='2026-11-10')}
 PERTURB = [k for k in BASE if k.split('.')[0] in ('al', 'k', 'tau', 'kap')]
+TIPPING = [k for k in BASE if k != 'gap']          # every illustrative number, one at a time
 
 
 def grids():

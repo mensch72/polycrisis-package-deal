@@ -181,6 +181,30 @@ def main():
                            ranking=[dict(parameter=k, shift=v) for k, v in sorted(sens.items(), key=lambda kv: -abs(kv[1]))[:8]])
     log('robustness: certified in', int(ok.sum()), 'of', N_DRAWS, '| top parameters', [r['parameter'] for r in R['robustness']['ranking'][:5]])
 
+    # ---- [post hoc] added after the first pilot run, in which all 200 draws stayed certified and the ranking
+    # was empty: tipping factors. For each illustrative parameter alone, the smallest factor on a fixed grid,
+    # upwards and downwards, at which the final outcome is no longer certified.
+    GRID = [1.1, 1.25, 1.5, 2.0, 3.0]
+    tip = {}
+    for k in getattr(M, 'TIPPING', M.PERTURB):
+        up = down = None
+        for fct in GRID:
+            if up is None:
+                p = dict(BASE); p[k] = BASE[k] * fct
+                e2 = M.evaluate(p)
+                if not certified(e2['U'], e2['acc'], fm):
+                    up = fct
+            if down is None:
+                p = dict(BASE); p[k] = BASE[k] / fct
+                e2 = M.evaluate(p)
+                if not certified(e2['U'], e2['acc'], fm):
+                    down = fct
+        tip[k] = dict(up=up, down=down)
+    order = sorted(tip, key=lambda k: min(x for x in (tip[k]['up'], tip[k]['down'], 99) if x is not None))
+    R['tipping_post_hoc'] = dict(grid=GRID, n_parameters=len(tip), n_that_tip_within_grid=sum(1 for k in tip if tip[k]['up'] or tip[k]['down']),
+                                 ranking=[dict(parameter=k, **tip[k]) for k in order if tip[k]['up'] or tip[k]['down']])
+    log('[post hoc] tipping:', [(r['parameter'], r['up'], r['down']) for r in R['tipping_post_hoc']['ranking'][:8]])
+
     # ---- the filing, in words
     with open(os.path.join(OUT, f'{name}_filings.md'), 'w') as fh:
         fh.write(f'# Filings of the selected tower ({name})\n\nNested step form. Generated from illustrative numbers; not a draft.\n')

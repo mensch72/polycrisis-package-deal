@@ -1,0 +1,125 @@
+{
+ "base": {
+  "w.min": 0.4,
+  "w.avg": 0.35,
+  "w.acc": 0.25,
+  "al.A": 1.2,
+  "al.B": 1.2,
+  "al.C": 0.9,
+  "al.D": 0.9,
+  "al.E": 0.6,
+  "k.A": 0.1,
+  "k.B": 0.1,
+  "k.C": 0.12,
+  "k.D": 0.12,
+  "k.E": 0.15,
+  "tau.A": 0.06,
+  "tau.B": 0.06,
+  "tau.C": 0.08,
+  "tau.D": 0.08,
+  "tau.E": 0.1,
+  "kap.A": 0.12,
+  "kap.B": 0.12,
+  "kap.C": 0.12,
+  "kap.D": 0.12,
+  "kap.E": 0.06,
+  "B.A": 0.95,
+  "B.B": 0.95,
+  "B.C": 0.6,
+  "B.D": 0.6,
+  "B.E": 0.45,
+  "gap": 1
+ },
+ "provenance": {
+  "default": {
+   "status": "illustrative",
+   "source": "set by Claude before the first run; to be corrected by people who know the developers",
+   "who_says": "Claude",
+   "retrieved": "2026-11-10"
+  }
+ },
+ "perturbed": [
+  "al.A",
+  "al.B",
+  "al.C",
+  "al.D",
+  "al.E",
+  "k.A",
+  "k.B",
+  "k.C",
+  "k.D",
+  "k.E",
+  "tau.A",
+  "tau.B",
+  "tau.C",
+  "tau.D",
+  "tau.E",
+  "kap.A",
+  "kap.B",
+  "kap.C",
+  "kap.D",
+  "kap.E"
+ ],
+ "levers": [
+  {
+   "actor": "A",
+   "lever": "safeguards",
+   "levels": 4,
+   "issue": "ai"
+  },
+  {
+   "actor": "A",
+   "lever": "access",
+   "levels": 3,
+   "issue": "ai"
+  },
+  {
+   "actor": "B",
+   "lever": "safeguards",
+   "levels": 4,
+   "issue": "ai"
+  },
+  {
+   "actor": "B",
+   "lever": "access",
+   "levels": 3,
+   "issue": "ai"
+  },
+  {
+   "actor": "C",
+   "lever": "safeguards",
+   "levels": 4,
+   "issue": "ai"
+  },
+  {
+   "actor": "C",
+   "lever": "access",
+   "levels": 3,
+   "issue": "ai"
+  },
+  {
+   "actor": "D",
+   "lever": "safeguards",
+   "levels": 4,
+   "issue": "ai"
+  },
+  {
+   "actor": "D",
+   "lever": "access",
+   "levels": 3,
+   "issue": "ai"
+  },
+  {
+   "actor": "E",
+   "lever": "safeguards",
+   "levels": 4,
+   "issue": "ai"
+  },
+  {
+   "actor": "E",
+   "lever": "access",
+   "levels": 3,
+   "issue": "ai"
+  }
+ ]
+}
