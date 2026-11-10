@@ -1,0 +1,638 @@
+{
+ "pilot": "pilot_a",
+ "n_actors": 5,
+ "n_levers": 6,
+ "n_profiles": 3072,
+ "n_groups": 31,
+ "chain": [
+  [
+   "ZAF",
+   "DEU",
+   "GBR"
+  ],
+  [
+   "ZAF",
+   "DEU",
+   "GBR",
+   "EU",
+   "FRA"
+  ]
+ ],
+ "scale": {
+  "ZAF": 1.9142666666666668,
+  "DEU": 0.9540000000000002,
+  "GBR": 0.725,
+  "EU": 0.8013333333333333,
+  "FRA": 0.5
+ },
+ "orientation": {
+  "passed": false,
+  "violations": [
+   {
+    "lever": "ZAF.ambition",
+    "actor": "ZAF"
+   }
+  ]
+ },
+ "regions": {
+  "acceptable": 858,
+  "individually_rational": 498,
+  "both": 204
+ },
+ "core": {
+  "n_efficient": 89,
+  "n_core": 89,
+  "n_equilibria": 89
+ },
+ "towers": {
+  "n_first_stage_core": 12,
+  "n_first_stage_admissible": 0,
+  "n_towers": 0,
+  "n_nontrivial": 0,
+  "n_all_at_or_above_a0": 0
+ },
+ "chain_scan_post_hoc": {
+  "n_first_coalitions": 30,
+  "n_with_a_tower": 19,
+  "n_with_a_nontrivial_first_stage": 3,
+  "first_coalitions_with_a_nontrivial_first_stage": [
+   "ZAF+DEU+GBR+EU",
+   "ZAF+DEU+GBR+FRA",
+   "ZAF+DEU+EU+FRA"
+  ],
+  "by_first_coalition": {
+   "ZAF": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "DEU": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "GBR": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "EU": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+DEU": {
+    "n_first_stage_core": 3,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+GBR": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+EU": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "DEU+GBR": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "DEU+EU": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "DEU+FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "GBR+EU": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "GBR+FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "EU+FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+DEU+GBR": {
+    "n_first_stage_core": 12,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+DEU+EU": {
+    "n_first_stage_core": 13,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+DEU+FRA": {
+    "n_first_stage_core": 9,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+GBR+EU": {
+    "n_first_stage_core": 4,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+GBR+FRA": {
+    "n_first_stage_core": 6,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+EU+FRA": {
+    "n_first_stage_core": 5,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "DEU+GBR+EU": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "DEU+GBR+FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "DEU+EU+FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "GBR+EU+FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "ZAF+DEU+GBR+EU": {
+    "n_first_stage_core": 62,
+    "n_first_stage_admissible": 19,
+    "n_towers": 20,
+    "n_nontrivial": 9,
+    "n_all_at_or_above_a0": 20,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 20
+   },
+   "ZAF+DEU+GBR+FRA": {
+    "n_first_stage_core": 50,
+    "n_first_stage_admissible": 3,
+    "n_towers": 3,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 3,
+    "best_smallest_gain": 0.11866666666666659,
+    "n_with_nontrivial_first_stage": 3
+   },
+   "ZAF+DEU+EU+FRA": {
+    "n_first_stage_core": 51,
+    "n_first_stage_admissible": 5,
+    "n_towers": 5,
+    "n_nontrivial": 2,
+    "n_all_at_or_above_a0": 5,
+    "best_smallest_gain": 0.4114369297206936,
+    "n_with_nontrivial_first_stage": 5
+   },
+   "ZAF+GBR+EU+FRA": {
+    "n_first_stage_core": 33,
+    "n_first_stage_admissible": 0,
+    "n_towers": 0,
+    "n_nontrivial": 0,
+    "n_all_at_or_above_a0": 0,
+    "best_smallest_gain": null,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "DEU+GBR+EU+FRA": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 89,
+    "n_nontrivial": 89,
+    "n_all_at_or_above_a0": 89,
+    "best_smallest_gain": 0.46388521278818684,
+    "n_with_nontrivial_first_stage": 0
+   }
+  }
+ },
+ "tower_chain": "best other chain with a first stage that does something [post hoc]",
+ "chain_used": [
+  [
+   "ZAF",
+   "DEU",
+   "GBR",
+   "EU"
+  ],
+  [
+   "ZAF",
+   "DEU",
+   "GBR",
+   "EU",
+   "FRA"
+  ]
+ ],
+ "tower": {
+  "stage1": {
+   "ZAF.ambition": 2,
+   "ZAF.reform": 1,
+   "DEU.finance": 2,
+   "GBR.finance": 1,
+   "EU.finance": 2,
+   "FRA.finance": 0
+  },
+  "final": {
+   "ZAF.ambition": 3,
+   "ZAF.reform": 2,
+   "DEU.finance": 3,
+   "GBR.finance": 3,
+   "EU.finance": 3,
+   "FRA.finance": 2
+  },
+  "nontrivial": true,
+  "stage1_indicators": {
+   "M": 0.5333333333333333,
+   "F": 3.618333333333334,
+   "GE": 1.2243333333333335
+  },
+  "final_indicators": {
+   "M": 1.0,
+   "F": 7.087666666666666,
+   "GE": 2.2816666666666667
+  },
+  "stage1_norm_gain": {
+   "ZAF": 0.36699867660374735,
+   "DEU": 0.21104122990915444,
+   "GBR": 0.42068965517241375,
+   "EU": 0.1697171381031614,
+   "FRA": 0.5333333333333333
+  },
+  "final_norm_gain": {
+   "ZAF": 0.46388521278818684,
+   "DEU": 0.651991614255765,
+   "GBR": 0.5172413793103449,
+   "EU": 0.5041597337770383,
+   "FRA": 0.6346666666666667
+  },
+  "final_certified_in_full_game": true
+ },
+ "tests": {
+  "T1": true,
+  "T2": true,
+  "T3": true,
+  "T4": true
+ },
+ "full_game": {
+  "groups_with_profitable_deviation": 0,
+  "groups": [],
+  "strictly_strong_equilibrium": true
+ },
+ "withdrawal": {
+  "ZAF": {
+   "outcome": {
+    "ZAF.ambition": 0,
+    "ZAF.reform": 0,
+    "DEU.finance": 0,
+    "GBR.finance": 0,
+    "EU.finance": 0,
+    "FRA.finance": 0
+   },
+   "indicators": {
+    "M": 0.0,
+    "F": 0.0,
+    "GE": 0.0
+   },
+   "falls_to": "zero",
+   "norm_gain": {
+    "ZAF": 0.0,
+    "DEU": 0.0,
+    "GBR": 0.0,
+    "EU": 0.0,
+    "FRA": 0.0
+   }
+  },
+  "DEU": {
+   "outcome": {
+    "ZAF.ambition": 0,
+    "ZAF.reform": 0,
+    "DEU.finance": 0,
+    "GBR.finance": 0,
+    "EU.finance": 0,
+    "FRA.finance": 0
+   },
+   "indicators": {
+    "M": 0.0,
+    "F": 0.0,
+    "GE": 0.0
+   },
+   "falls_to": "zero",
+   "norm_gain": {
+    "ZAF": 0.0,
+    "DEU": 0.0,
+    "GBR": 0.0,
+    "EU": 0.0,
+    "FRA": 0.0
+   }
+  },
+  "GBR": {
+   "outcome": {
+    "ZAF.ambition": 0,
+    "ZAF.reform": 0,
+    "DEU.finance": 0,
+    "GBR.finance": 0,
+    "EU.finance": 0,
+    "FRA.finance": 0
+   },
+   "indicators": {
+    "M": 0.0,
+    "F": 0.0,
+    "GE": 0.0
+   },
+   "falls_to": "zero",
+   "norm_gain": {
+    "ZAF": 0.0,
+    "DEU": 0.0,
+    "GBR": 0.0,
+    "EU": 0.0,
+    "FRA": 0.0
+   }
+  },
+  "EU": {
+   "outcome": {
+    "ZAF.ambition": 0,
+    "ZAF.reform": 0,
+    "DEU.finance": 0,
+    "GBR.finance": 0,
+    "EU.finance": 0,
+    "FRA.finance": 0
+   },
+   "indicators": {
+    "M": 0.0,
+    "F": 0.0,
+    "GE": 0.0
+   },
+   "falls_to": "zero",
+   "norm_gain": {
+    "ZAF": 0.0,
+    "DEU": 0.0,
+    "GBR": 0.0,
+    "EU": 0.0,
+    "FRA": 0.0
+   }
+  },
+  "FRA": {
+   "outcome": {
+    "ZAF.ambition": 2,
+    "ZAF.reform": 1,
+    "DEU.finance": 2,
+    "GBR.finance": 1,
+    "EU.finance": 2,
+    "FRA.finance": 0
+   },
+   "indicators": {
+    "M": 0.5333333333333333,
+    "F": 3.618333333333334,
+    "GE": 1.2243333333333335
+   },
+   "falls_to": "stage 1",
+   "norm_gain": {
+    "ZAF": 0.36699867660374735,
+    "DEU": 0.21104122990915444,
+    "GBR": 0.42068965517241375,
+    "EU": 0.1697171381031614,
+    "FRA": 0.5333333333333333
+   }
+  }
+ },
+ "robustness": {
+  "n": 200,
+  "spread": 0.25,
+  "n_perturbed_parameters": 8,
+  "final_stays_certified": 173,
+  "ranking": [
+   {
+    "parameter": "ca",
+    "shift": 0.15643267264749253
+   },
+   {
+    "parameter": "rho",
+    "shift": -0.15353099467440512
+   },
+   {
+    "parameter": "w.GBR",
+    "shift": 0.0573753641197972
+   },
+   {
+    "parameter": "w.EU",
+    "shift": -0.03493056330546665
+   },
+   {
+    "parameter": "cr",
+    "shift": -0.017104803248335694
+   },
+   {
+    "parameter": "w.FRA",
+    "shift": 0.011952160378918032
+   },
+   {
+    "parameter": "v.ZAF",
+    "shift": 0.006160098920601872
+   },
+   {
+    "parameter": "w.DEU",
+    "shift": 0.003862748304989814
+   }
+  ]
+ },
+ "tipping_post_hoc": {
+  "grid": [
+   1.1,
+   1.25,
+   1.5,
+   2.0,
+   3.0
+  ],
+  "n_parameters": 15,
+  "n_that_tip_within_grid": 12,
+  "ranking": [
+   {
+    "parameter": "rho",
+    "up": null,
+    "down": 1.25
+   },
+   {
+    "parameter": "ca",
+    "up": 1.25,
+    "down": null
+   },
+   {
+    "parameter": "conc",
+    "up": 2.0,
+    "down": 1.5
+   },
+   {
+    "parameter": "smax.DEU",
+    "up": null,
+    "down": 1.5
+   },
+   {
+    "parameter": "cr",
+    "up": 2.0,
+    "down": null
+   },
+   {
+    "parameter": "w.DEU",
+    "up": null,
+    "down": 2.0
+   },
+   {
+    "parameter": "w.GBR",
+    "up": null,
+    "down": 2.0
+   },
+   {
+    "parameter": "w.EU",
+    "up": null,
+    "down": 2.0
+   },
+   {
+    "parameter": "smax.GBR",
+    "up": null,
+    "down": 2.0
+   },
+   {
+    "parameter": "smax.EU",
+    "up": null,
+    "down": 2.0
+   },
+   {
+    "parameter": "w.FRA",
+    "up": null,
+    "down": 3.0
+   },
+   {
+    "parameter": "GEmin",
+    "up": 3.0,
+    "down": null
+   }
+  ]
+ },
+ "runtime_seconds": 2.4
+}

@@ -1,0 +1,94 @@
+{
+ "base": {
+  "S.DEU": 2898,
+  "S.GBR": 1875,
+  "S.EU": 1592,
+  "S.FRA": 1084,
+  "G.DEU": 338,
+  "G.GBR": 75,
+  "G.EU": 264,
+  "G.FRA": 4,
+  "conc": 0.25,
+  "v.ZAF": 1.0,
+  "rho": 1.2,
+  "ca": 0.25,
+  "cr": 0.3,
+  "w.DEU": 1.6,
+  "w.GBR": 0.9,
+  "w.EU": 1.0,
+  "w.FRA": 0.5,
+  "B.ZAF": 0.6,
+  "GEmin": 0.8,
+  "smax.DEU": 0.55,
+  "smax.GBR": 0.4,
+  "smax.EU": 0.4,
+  "smax.FRA": 0.25
+ },
+ "provenance": {
+  "S.": {
+   "status": "sourced",
+   "source": "JET PMU Quarterly Progress Report 30 June 2026, Table 3, total pledged",
+   "url": "https://justenergytransition.co.za/wp-content/uploads/2026/11/JET-IP-Quarterly-Progress-Report-Q2-2026.pdf",
+   "retrieved": "2026-11-10"
+  },
+  "G.": {
+   "status": "sourced",
+   "source": "same table, grants pledged",
+   "retrieved": "2026-11-10"
+  },
+  "default": {
+   "status": "illustrative",
+   "source": "set by Claude before the first run; to be corrected by people who know the partnership",
+   "who_says": "Claude",
+   "retrieved": "2026-11-10"
+  }
+ },
+ "perturbed": [
+  "v.ZAF",
+  "rho",
+  "ca",
+  "cr",
+  "w.DEU",
+  "w.GBR",
+  "w.EU",
+  "w.FRA"
+ ],
+ "levers": [
+  {
+   "actor": "ZAF",
+   "lever": "ambition",
+   "levels": 4,
+   "issue": "jetp"
+  },
+  {
+   "actor": "ZAF",
+   "lever": "reform",
+   "levels": 3,
+   "issue": "jetp"
+  },
+  {
+   "actor": "DEU",
+   "lever": "finance",
+   "levels": 4,
+   "issue": "jetp"
+  },
+  {
+   "actor": "GBR",
+   "lever": "finance",
+   "levels": 4,
+   "issue": "jetp"
+  },
+  {
+   "actor": "EU",
+   "lever": "finance",
+   "levels": 4,
+   "issue": "jetp"
+  },
+  {
+   "actor": "FRA",
+   "lever": "finance",
+   "levels": 4,
+   "issue": "jetp"
+  }
+ ]
+}

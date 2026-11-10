@@ -88,30 +88,62 @@ def main():
     log('regions', R['regions'], '| core', R['core'], '| orientation passed:', R['orientation']['passed'])
 
     # ---- towers under (ii') along the chain
-    chain = [[ACTORS.index(a) for a in S] for S in M.CHAIN]
-    I1, newc = chain[0], [i for i in chain[1] if i not in chain[0]]
     zeroD = np.zeros(D, int)
-    Uk, dims, owner_k, sub = tower.stage_game(U, OWNER, I1, zeroD)
-    ck, _ = core.strict_core(Uk, owner_k, np.ones(sub, bool))
-    b1s = []
-    for x in ck:
-        b1 = tower.to_full(x, dims, sub, zeroD, D)
-        if acc.reshape(N, -1)[I1, flat(b1)].all() and not tower.stage_deviations(U, SHAPE, OWNER, I1, zeroD, b1):
-            b1s.append(b1)
-    pairs = []
-    for b1 in b1s:
-        U2, d2, o2, s2 = tower.stage_game(U, OWNER, range(N), b1)
-        c2, _ = core.strict_core(U2, o2, np.ones(s2, bool))
-        for x in c2:
-            b2 = tower.to_full(x, d2, s2, b1, D)
-            f2 = flat(b2)
-            if C[f2] and core.over_fulfilment(U, OWNER, b2) == 0:
-                g = gains[:, f2] / scale
-                pairs.append((float(g.min()), float(g.sum()), -f2, -flat(b1)))
-    R['towers'] = dict(n_first_stage_core=int(len(ck)), n_first_stage_admissible=len(b1s), n_towers=len(pairs),
-                       n_nontrivial=sum(p[2] != p[3] for p in pairs),
-                       n_all_at_or_above_a0=sum(bool(np.all(gains[:, -p[2]] >= -1e-9)) for p in pairs))
-    log('towers', R['towers'])
+
+    def towers_for(I1):
+        Uk, dims, owner_k, sub = tower.stage_game(U, OWNER, I1, zeroD)
+        ck, _ = core.strict_core(Uk, owner_k, np.ones(sub, bool))
+        b1s = []
+        for x in ck:
+            b1 = tower.to_full(x, dims, sub, zeroD, D)
+            if acc.reshape(N, -1)[I1, flat(b1)].all() and not tower.stage_deviations(U, SHAPE, OWNER, I1, zeroD, b1):
+                b1s.append(b1)
+        pairs = []
+        for b1 in b1s:
+            U2, d2, o2, s2 = tower.stage_game(U, OWNER, range(N), b1)
+            c2, _ = core.strict_core(U2, o2, np.ones(s2, bool))
+            for x in c2:
+                b2 = tower.to_full(x, d2, s2, b1, D)
+                f2 = flat(b2)
+                if C[f2] and core.over_fulfilment(U, OWNER, b2) == 0:
+                    g = gains[:, f2] / scale
+                    pairs.append((float(g.min()), float(g.sum()), -f2, -flat(b1)))
+        return dict(n_first_stage_core=int(len(ck)), n_first_stage_admissible=len(b1s), n_towers=len(pairs),
+                    n_nontrivial=sum(p[2] != p[3] for p in pairs),
+                    n_all_at_or_above_a0=sum(bool(np.all(gains[:, -p[2]] >= -1e-9)) for p in pairs)), pairs
+
+    chain = [[ACTORS.index(a) for a in S] for S in M.CHAIN]
+    I1 = chain[0]
+    R['towers'], pairs = towers_for(I1)
+    log('towers along the fixed chain', R['towers'])
+    # [post hoc] added after pilot A had no tower along its fixed chain: the same count for EVERY first
+    # coalition, and, if the fixed chain has no tower, the tower of the best other chain by the same rule.
+    scan = {}
+    best_other = None
+    for G in core.coalitions(N):
+        if len(G) == N:
+            continue
+        st, pr = towers_for(list(G))
+        scan[gname(G)] = dict(st, best_smallest_gain=max(pr)[0] if pr else None,
+                              n_with_nontrivial_first_stage=sum(p[3] != 0 for p in pr))
+        if pr and list(G) != I1 and any(p[3] != 0 for p in pr):
+            cand = max(p for p in pr if p[3] != 0)
+            if best_other is None or cand > best_other[0]:
+                best_other = (cand, list(G), [p for p in pr if p[3] != 0])
+    R['chain_scan_post_hoc'] = dict(
+        n_first_coalitions=len(scan), n_with_a_tower=sum(v['n_towers'] > 0 for v in scan.values()),
+        n_with_a_nontrivial_first_stage=sum(v['n_with_nontrivial_first_stage'] > 0 for v in scan.values()),
+        first_coalitions_with_a_nontrivial_first_stage=[k for k, v in scan.items() if v['n_with_nontrivial_first_stage'] > 0],
+        by_first_coalition=scan)
+    log('[post hoc] chain scan:', R['chain_scan_post_hoc']['n_with_a_tower'], 'of', len(scan), 'first coalitions have a tower;',
+        'with a first stage that does something:', R['chain_scan_post_hoc']['first_coalitions_with_a_nontrivial_first_stage'])
+    R['tower_chain'] = 'fixed'
+    if not pairs or not any(p[3] != 0 for p in pairs):
+        if best_other is not None:
+            R['tower_chain'] = 'best other chain with a first stage that does something [post hoc]'
+            I1, pairs = best_other[1], best_other[2]
+            R['chain_used'] = [[ACTORS[i] for i in I1], ACTORS]
+    newc = [i for i in range(N) if i not in I1]
     if not pairs:
         R['tower'] = None
         json.dump(R, open(os.path.join(OUT, f'{name}.json'), 'w'), indent=1)

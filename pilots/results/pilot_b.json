@@ -45,6 +45,297 @@
   "n_nontrivial": 92,
   "n_all_at_or_above_a0": 92
  },
+ "chain_scan_post_hoc": {
+  "n_first_coalitions": 30,
+  "n_with_a_tower": 30,
+  "n_with_a_nontrivial_first_stage": 11,
+  "first_coalitions_with_a_nontrivial_first_stage": [
+   "A+B",
+   "A+B+C",
+   "A+B+D",
+   "A+B+E",
+   "A+C+D",
+   "B+C+D",
+   "A+B+C+D",
+   "A+B+C+E",
+   "A+B+D+E",
+   "A+C+D+E",
+   "B+C+D+E"
+  ],
+  "by_first_coalition": {
+   "A": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "B": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "C": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "D": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "A+B": {
+    "n_first_stage_core": 3,
+    "n_first_stage_admissible": 3,
+    "n_towers": 92,
+    "n_nontrivial": 92,
+    "n_all_at_or_above_a0": 92,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 37
+   },
+   "A+C": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "A+D": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "A+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "B+C": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "B+D": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "B+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "C+D": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "C+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "D+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "A+B+C": {
+    "n_first_stage_core": 4,
+    "n_first_stage_admissible": 4,
+    "n_towers": 35,
+    "n_nontrivial": 35,
+    "n_all_at_or_above_a0": 35,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 35
+   },
+   "A+B+D": {
+    "n_first_stage_core": 4,
+    "n_first_stage_admissible": 4,
+    "n_towers": 35,
+    "n_nontrivial": 35,
+    "n_all_at_or_above_a0": 35,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 35
+   },
+   "A+B+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 8,
+    "n_nontrivial": 8,
+    "n_all_at_or_above_a0": 8,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 8
+   },
+   "A+C+D": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 11,
+    "n_nontrivial": 11,
+    "n_all_at_or_above_a0": 11,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 11
+   },
+   "A+C+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "A+D+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "B+C+D": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 11,
+    "n_nontrivial": 11,
+    "n_all_at_or_above_a0": 11,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 11
+   },
+   "B+C+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "B+D+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "C+D+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 55,
+    "n_nontrivial": 55,
+    "n_all_at_or_above_a0": 55,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 0
+   },
+   "A+B+C+D": {
+    "n_first_stage_core": 11,
+    "n_first_stage_admissible": 11,
+    "n_towers": 83,
+    "n_nontrivial": 83,
+    "n_all_at_or_above_a0": 83,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 83
+   },
+   "A+B+C+E": {
+    "n_first_stage_core": 4,
+    "n_first_stage_admissible": 4,
+    "n_towers": 35,
+    "n_nontrivial": 35,
+    "n_all_at_or_above_a0": 35,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 35
+   },
+   "A+B+D+E": {
+    "n_first_stage_core": 4,
+    "n_first_stage_admissible": 4,
+    "n_towers": 35,
+    "n_nontrivial": 35,
+    "n_all_at_or_above_a0": 35,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 35
+   },
+   "A+C+D+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 11,
+    "n_nontrivial": 11,
+    "n_all_at_or_above_a0": 11,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 11
+   },
+   "B+C+D+E": {
+    "n_first_stage_core": 1,
+    "n_first_stage_admissible": 1,
+    "n_towers": 11,
+    "n_nontrivial": 11,
+    "n_all_at_or_above_a0": 11,
+    "best_smallest_gain": 0.5882352941176473,
+    "n_with_nontrivial_first_stage": 11
+   }
+  }
+ },
+ "tower_chain": "fixed",
  "tower": {
   "stage1": {
    "A.safeguards": 0,
@@ -303,5 +594,5 @@
    }
   ]
  },
- "runtime_seconds": 13.5
+ "runtime_seconds": 16.8
 }
