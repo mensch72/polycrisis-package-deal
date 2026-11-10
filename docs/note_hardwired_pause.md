@@ -18,7 +18,7 @@ moving first. I propose to make it the lead variant of track B.
 
 | Question | Answer |
 | --- | --- |
-| What is it? | Fithian, Holliday and the Working Group on AI Pause Feasibility (2026): a working paper by 30-odd scholars on whether a pause of frontier AI training for a decade or more is feasible. |
+| What is it? | Fithian, Holliday and the Working Group on AI Pause Feasibility (2026): a working paper by 26 listed authors on whether a pause of frontier AI training for a decade or more is feasible. |
 | What does it claim? | Feasible, if states are willing: stop making training-capable chips, phase out the existing stock, replace it with inference-only chips, and verify by a census and monitoring. |
 | What does it assume? | "Pause-willingness": leaders would prefer pausing if confident that others pause or that defection is detected in time. |
 | What does it leave open? | How willingness that is conditional on others turns into an agreement, in what order, and with what stability against groups. |

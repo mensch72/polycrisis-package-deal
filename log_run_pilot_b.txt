@@ -1,7 +1,7 @@
 [   0.1s] regions {'acceptable': 12858, 'individually_rational': 143, 'both': 143} | core {'n_efficient': 56, 'n_core': 55, 'n_equilibria': 55} | orientation passed: True
 [   0.3s] towers along the fixed chain {'n_first_stage_core': 3, 'n_first_stage_admissible': 3, 'n_towers': 92, 'n_nontrivial': 92, 'n_all_at_or_above_a0': 92}
-[   3.4s] [post hoc] chain scan: 30 of 30 first coalitions have a tower; with a first stage that does something: ['A+B', 'A+B+C', 'A+B+D', 'A+B+E', 'A+C+D', 'B+C+D', 'A+B+C+D', 'A+B+C+E', 'A+B+D+E', 'A+C+D+E', 'B+C+D+E']
-[   4.2s] tests {'T1': True, 'T2': True, 'T3': True, 'T4': True} | groups that can still gain: 0
-[  10.0s] robustness: certified in 200 of 200 | top parameters []
-[  17.7s] [post hoc] tipping: [('w.acc', 2.0, None), ('al.C', None, 2.0), ('al.D', None, 2.0), ('al.E', None, 2.0), ('k.E', 2.0, None), ('al.A', None, 3.0), ('al.B', None, 3.0), ('k.C', 3.0, None)]
-[  17.7s] done
+[   2.8s] [post hoc] chain scan: 30 of 30 first coalitions have a tower; with a first stage that does something: ['A+B', 'A+B+C', 'A+B+D', 'A+B+E', 'A+C+D', 'B+C+D', 'A+B+C+D', 'A+B+C+E', 'A+B+D+E', 'A+C+D+E', 'B+C+D+E']
+[   3.5s] tests {'T1': True, 'T2': True, 'T3': True, 'T4': True} | groups that can still gain: 0
+[   8.5s] robustness: certified in 200 of 200 | top parameters []
+[  15.3s] [post hoc] tipping: [('w.acc', 2.0, None), ('al.C', None, 2.0), ('al.D', None, 2.0), ('al.E', None, 2.0), ('k.E', 2.0, None), ('al.A', None, 3.0), ('al.B', None, 3.0), ('k.C', 3.0, None)]
+[  15.3s] done

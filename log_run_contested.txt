@@ -1,13 +1,13 @@
 [   2.8s]   efficient and IR candidates: 833
-[   3.4s] core inside C: 399 | efficient 833 | blocked by proper coalitions 434
+[   3.3s] core inside C: 399 | efficient 833 | blocked by proper coalitions 434
 [   4.0s] Nash point [2, 0, 2, 0, 1, 2, 1, 1, 0, 2, 2, 1] {'individually_rational': True, 'acceptable_to_all': True, 'strict_core_by_direct_test': True, 'registry_returns_profile': True, 'coalitions_gaining_by_over_fulfilment': 32, 'strictly_strong_equilibrium_certified': False}
-[   9.0s] [post hoc] core profiles that are equilibria: 150 of 399 | minimal over-fulfilling groups at the Nash point: ['USA+CHN']
-[  13.2s]   seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 92773}
-[  16.7s]   seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 100776}
-[  20.4s]   seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 98710}
-[  23.8s]   seed 3: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 93962}
-[  27.9s]   seed 4: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 97096}
-[  31.5s]   seed 5: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 94955}
-[  36.0s]   seed 6: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 101687}
-[  39.9s]   seed 7: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 98211}
-[  39.9s] G1c: PASSED | all in core: True | share reaching optimum: 1.0
+[   8.9s] [post hoc] core profiles that are equilibria: 150 of 399 | minimal over-fulfilling groups at the Nash point: ['USA+CHN']
+[  12.0s]   seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 92773}
+[  15.4s]   seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 100776}
+[  19.4s]   seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 98710}
+[  22.5s]   seed 3: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 93962}
+[  26.4s]   seed 4: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 97096}
+[  30.1s]   seed 5: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 94955}
+[  34.0s]   seed 6: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 101687}
+[  37.5s]   seed 7: {'in_core': True, 'gap': 0.0, 'rounds': 16, 'cuts': 15, 'evals': 98211}
+[  37.5s] G1c: PASSED | all in core: True | share reaching optimum: 1.0

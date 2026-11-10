@@ -59,7 +59,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 38452,
-    "seconds": 0.7
+    "seconds": 0.8
    },
    {
     "actor": "CHN",
@@ -70,7 +70,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 39017,
-    "seconds": 1.0
+    "seconds": 0.7
    },
    {
     "actor": "CHN",
@@ -81,7 +81,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 41026,
-    "seconds": 1.0
+    "seconds": 0.7
    },
    {
     "actor": "CHN",
@@ -92,7 +92,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 39694,
-    "seconds": 0.8
+    "seconds": 0.7
    },
    {
     "actor": "EU",
@@ -103,7 +103,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 35929,
-    "seconds": 0.7
+    "seconds": 1.0
    },
    {
     "actor": "EU",
@@ -114,7 +114,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 37086,
-    "seconds": 0.6
+    "seconds": 0.8
    },
    {
     "actor": "EU",
@@ -136,7 +136,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 36950,
-    "seconds": 0.7
+    "seconds": 0.8
    },
    {
     "actor": "IND",
@@ -147,7 +147,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 34817,
-    "seconds": 1.0
+    "seconds": 0.7
    },
    {
     "actor": "IND",
@@ -169,7 +169,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 36307,
-    "seconds": 0.8
+    "seconds": 0.7
    },
    {
     "actor": "FEX",
@@ -180,7 +180,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 36591,
-    "seconds": 0.8
+    "seconds": 0.5
    },
    {
     "actor": "FEX",
@@ -191,7 +191,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 37515,
-    "seconds": 0.6
+    "seconds": 0.7
    },
    {
     "actor": "LIC",
@@ -202,7 +202,7 @@
     "rounds": 2,
     "cuts": 1,
     "evals": 43021,
-    "seconds": 0.9
+    "seconds": 0.7
    },
    {
     "actor": "LIC",
@@ -224,7 +224,7 @@
     "rounds": 2,
     "cuts": 1,
     "evals": 44592,
-    "seconds": 1.0
+    "seconds": 0.8
    },
    {
     "actor": "DEV",
@@ -235,7 +235,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 37794,
-    "seconds": 1.1
+    "seconds": 0.7
    },
    {
     "actor": "DEV",
@@ -246,7 +246,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 37558,
-    "seconds": 0.7
+    "seconds": 0.8
    },
    {
     "actor": "DEV",
@@ -279,7 +279,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 37984,
-    "seconds": 0.9
+    "seconds": 0.6
    },
    {
     "actor": "MDB",
@@ -290,7 +290,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 38830,
-    "seconds": 0.7
+    "seconds": 0.6
    }
   ],
   "all_in_core": true,
@@ -299,5 +299,5 @@
   "mean_cuts": 0.125,
   "mean_share_of_profiles_evaluated": 0.019331713599269117
  },
- "runtime_seconds": 594.2
+ "runtime_seconds": 571.2
 }
