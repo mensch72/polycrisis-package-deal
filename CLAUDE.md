@@ -36,7 +36,8 @@ signs off each gate, and is the only channel to the outside world.
   point where outside knowledge is needed. Each has a sourced fact file in `data/sources/`, a skeleton
   instance in `pilots/` with illustrative preferences, and a two-page brief in `outreach/`.
   Track B has two variants: B1 among developers, and B2 among states, shaped on the "hardwired pause"
-  report of Fithian, Holliday et al. (`docs/note_hardwired_pause.md`), proposed as the lead variant.
+  report of Fithian, Holliday et al. (`docs/note_hardwired_pause.md`). Jobst made B2 the lead variant on
+  11 November 2026; Wesley Holliday, whom he knows well, is the first contact.
   `docs/outreach_proposal.md` proposes whom Jobst should ask first. Nothing has been sent. Claude is
   built by Anthropic, a party to track B; that is disclosed in the track's documents.
 - The plan section "Bounded rationality and diplomatic knowledge" exists; only a first exploration is

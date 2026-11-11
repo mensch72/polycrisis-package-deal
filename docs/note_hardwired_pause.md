@@ -65,6 +65,9 @@ the report's verification is for.
 **What this does not show.** Anything about real governments, or that a pause is desirable. The skeleton
 has one core profile on a tiny lattice, so it tests the format, not the method.
 
+**Decisions.** On 11 November 2026 Jobst decided: B2 is the lead variant of track B; Wesley Holliday, whom he
+knows well, is the first contact; and the rest of the report is read before anything goes out.
+
 ## Consequences proposed
 
 1. **Track B gets two variants.** B1, developers' safeguards: nearer, but legally delicate and hard to
