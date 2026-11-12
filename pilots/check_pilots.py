@@ -69,24 +69,45 @@ chk('B tower in brief', True, BB, 'all five can move one tier together', 'collap
 tp = B['tipping_post_hoc']['ranking']
 chk('B sensitivity', B['robustness']['final_stays_certified'] == 200 and min(min(x for x in (r['up'], r['down'], 99) if x) for r in tp) == 2.0, DB,
     '200 of 200 draws', 'no number tips it below a factor of 2')
-# ---- pilot B2 and the note on the hardwired-pause report
+# ---- pilot B2 (version 2) and the note on the hardwired-pause report
+import sys
+import numpy as np
+sys.path.insert(0, HERE)
+import pilot_b2 as M2
 B2 = json.load(open(os.path.join(HERE, 'results', 'pilot_b2.json')))
-NB = txt('docs', 'note_hardwired_pause.md')
+P2 = json.load(open(os.path.join(HERE, 'results', 'pilot_b2_params.json')))['base']
+NB, OL = txt('docs', 'note_hardwired_pause.md'), txt('outreach', 'outline_B2.md')
+chk('B2 sourced inputs', (P2['alpha'], P2['stockB.USA'], P2['stockB.CHN'], P2['gain']) == (.25, .20, .018, .57)
+    and (P2['dark0.USA'], P2['dark1.USA'], P2['dark2.USA'], P2['dark0.CHN'], P2['dark1.CHN'], P2['dark2.CHN'])
+    == (.047, .0094, .0011, .16, .018, .0011), NB, '57 % a year')
+k = np.log(10) / np.log(1 + P2['gain'])
+tab = [[round(float(k * min(P2['cap'], M2.headroom(P2, 'USA', np.array(2), np.array(d)), M2.headroom(P2, 'USA', np.array(2), np.array(d)),
+                              M2.headroom(P2, 'CHN', np.array(cc), np.array(3)))), 1) for cc in range(3)] for d in range(4)]
+rows = ['| United States keeps its whole fleet at home | 0.5 | 0.5 | 0.5 |', '| keeps half | 1.0 | 2.0 | 2.0 |',
+        '| keeps a tenth | 1.0 | 5.6 | 5.6 |', '| keeps a residual | 1.0 | 5.8 | 10.2 |']
+for doc in (NB, OL):
+    chk('durability table', tab == [[0.5, 0.5, 0.5], [1.0, 2.0, 2.0], [1.0, 5.6, 5.6], [1.0, 5.8, 10.2]], doc, *rows)
+cn_home = round(float(k * min(P2['cap'], M2.headroom(P2, 'USA', np.array(2), np.array(3)), M2.headroom(P2, 'CHN', np.array(2), np.array(0)))), 1)
+chk('China fleet at home caps durability', cn_home == 5.8, NB, 'caps durability at 5.8 years')
 t = B2['tower']
+rg = B2['regions']
 tipped = {r['parameter'] for r in B2['tipping_post_hoc']['ranking']}
-chk('B2', (B2['n_profiles'], B2['n_groups'], B2['core']['n_core'], B2['core']['n_equilibria']) == (256, 7, 1, 1)
-    and {(v['lever'], v['actor']) for v in B2['orientation']['violations']} >= {('USA.pause', 'SUP'), ('CHN.pause', 'SUP')}
+full = {'USA.pause': 1, 'USA.census': 2, 'USA.drawdown': 3, 'CHN.pause': 1, 'CHN.census': 2, 'CHN.drawdown': 3}
+chk('B2 skeleton', (B2['n_profiles'], B2['n_groups'], rg['acceptable'], rg['individually_rational'], rg['both'],
+                    B2['core']['n_core'], B2['core']['n_equilibria']) == (2304, 7, 318, 49, 39, 2, 2)
     and B2['tower_chain'] == 'fixed' and B2['chain'][0] == ['USA', 'CHN']
-    and t['stage1'] == {'USA.pause': 1, 'USA.drawdown': 3, 'CHN.pause': 1, 'CHN.drawdown': 3, 'SUP.production_stop': 0, 'SUP.census': 0}
-    and t['final']['SUP.production_stop'] == 1 and t['final']['SUP.census'] == 1
+    and t['stage1'] == dict(full, **{'SUP.production_stop': 0, 'SUP.monitoring': 0})
+    and t['final'] == dict(full, **{'SUP.production_stop': 1, 'SUP.monitoring': 1})
+    and round(t['stage1_indicators']['YEARS']) == 5 and round(t['final_indicators']['YEARS']) == 10
     and B2['chain_scan_post_hoc']['first_coalitions_with_a_nontrivial_first_stage'] == ['USA+CHN']
     and B2['full_game']['strictly_strong_equilibrium'] and all(B2['tests'].values())
     and B2['withdrawal']['SUP']['falls_to'] == 'stage 1' and B2['withdrawal']['USA']['falls_to'] == 'zero'
-    and B2['withdrawal']['CHN']['falls_to'] == 'zero'
-    and 'G' not in tipped and 3.0 in B2['tipping_post_hoc']['grid'], NB,
-    '| lattice | 256 profiles, 7 groups |', '| 1 profile, an equilibrium |', 'only the two lead states together',
+    and B2['withdrawal']['CHN']['falls_to'] == 'zero' and 'G' not in tipped and 3.0 in B2['tipping_post_hoc']['grid'], NB,
+    '| lattice | 2,304 profiles, 7 groups |', '| 318; 49; 39 |', '| 2 profiles, both equilibria |',
+    'about 5 years after stage 1, about 10 after stage 2', 'only the two lead states together',
     'suppliers out: back to stage 1; either lead state out: back to zero', 'can be tripled without breaking the certificate')
-P2 = json.load(open(os.path.join(HERE, 'results', 'pilot_b2_params.json')))['base']
-net_mutual = P2['a.USA'] * P2['x.base'] - P2['f.USA']
-chk('B2 tripled gain makes a Prisoner\'s Dilemma', P2['G'] < net_mutual < 3 * P2['G'], NB, "the stage game is a Prisoner's Dilemma, not a stag hunt")
+chk('B2 in the outline', True, OL, 'if the suppliers leave, the outcome falls back to the first stage; if a lead state leaves, to nothing',
+    'tripled', 'the two lead states first, the suppliers on top')
+x_mutual = P2['a.USA'] * 0.5 - P2['f.USA']      # value of a bare mutual pause at half durability, illustrative
+chk("B2 tripled gain makes a Prisoner's Dilemma", P2['G'] < x_mutual < 3 * P2['G'], NB, "the stage game is a Prisoner's Dilemma, not a stag hunt")
 print(f'all {n_ok} checks passed')

@@ -24,8 +24,8 @@ others joining on top, each stage tested for stability against every group.
 3. Your ledger gives levers in common units, and allowances that start high and shrink are a ladder.
 4. The binding constraints are asymmetric. The United States holds the breakout lever, China the census lever.
 
-**What your numbers already imply.** Reading durability off your ledger at α = 0.25 and 57 % a year, with all
-else in order (our arithmetic on your illustrative values; please check):
+**What your numbers already imply.** Reading durability off your ledger at α = 0.25 and 57 % a year, with every
+other lever at its most cooperative level (our arithmetic on your illustrative values; please check):
 
 | Years of durability | China conceals | cooperates a little | cooperates fully |
 | --- | --- | --- | --- |

@@ -26,11 +26,11 @@ Both pilots now stop at questions that public documents cannot answer.
 | later | JET Project Management Unit, South Africa | the partnership's own unit | keeps the pledge register | only after a researcher has read the brief |
 | later | a donor-side official | Germany is the largest pledger in South Africa and co-leads Indonesia | could say what a ministry can sign | through Jobst's institutional channels |
 
-**Track B, variant B2 (states and hardware; see `docs/note_hardwired_pause.md`). Proposed as the first contact for track B.**
+**Track B, variant B2 (states and hardware; see `docs/note_hardwired_pause.md`). Decided by Jobst on 11 November 2026: this is the lead variant, and Wesley Holliday, whom he knows well, is the first contact.**
 
 | Order | Person or body | Affiliation | Why | Ask |
 | --- | --- | --- | --- | --- |
-| 1 | Wesley H. Holliday; William Fithian | University of California, Berkeley (philosophy; statistics); organisers of the Working Group on AI Pause Feasibility | their report assumes conditional willingness to pause and leaves the entry step open | whether a companion analysis of entry would be useful; comments on an outline. Draft: `outreach/email_B2.md` |
+| 1 | Wesley H. Holliday; William Fithian | University of California, Berkeley (philosophy; statistics); organisers of the Working Group on AI Pause Feasibility | their report assumes conditional willingness to pause and leaves the entry step open | whether a companion analysis of entry would be useful; a check of how we read the ledger. To send: `outreach/email_B2.md` with `outreach/outline_B2.md` |
 | later, through them | Shachar Kariv; Rose Gottemoeller | Berkeley (economics); Stanford (CISAC) | an experimental economist and a former arms-control negotiator, both members of that group | experiments (M4); what negotiators can sign (M5) |
 
 **Track B, variant B1 (developers).**
@@ -63,7 +63,7 @@ that is not marked as a placeholder.
 
 ## Channel
 
-1. Email from Jobst's institutional address, to one person at a time, starting with anyone he knows.
+1. Email from Jobst's institutional address, to one person at a time, starting with anyone he knows. For Holliday that is a personal note, not a formal approach.
 2. Where he knows nobody, an introduction through a colleague beats a cold message.
 3. For track B, researchers before companies. After the class action of September 2026, a message that
    looks like an attempt to convene developers would be unwelcome and possibly unwise.

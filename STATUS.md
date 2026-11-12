@@ -112,3 +112,23 @@ Newest entry last. Every session ends with an entry: what ran, what failed, what
   - Proposed, not decided: B2 as lead variant of track B; Holliday and Fithian as first contact.
   - Changed: plan (pilot table, one reference), pilot B note, outreach proposal, `run_all.sh`,
     `pilots/check_pilots.py`. The Claude Doc has none of this.
+
+## 11 and 12 November 2026, session 2 continued (Claude, Claude Code session)
+
+- Jobst decided: B2 is the lead variant of track B; Wesley Holliday, whom he knows well, is the first
+  contact; the rest of the hardwired-pause report is read before anything goes out.
+- Read: sections 1, 2.3, 3.1, 3.2.3, 3.4 to 3.6, 6.1, 6.5, 8.3, 8.5.2, 9 by me; sections 3.2, 3.3, 4, 5,
+  6.2 to 6.4, 7 through a sub-session's extract with 234 quotes
+  (`data/sources/hardwired_pause_extract_technical.md`). Not read beyond keyword passages: 2.1, 2.2, 8.1,
+  8.2, 8.4, 8.5.1.
+- Failed: three statements in the first version of `docs/note_hardwired_pause.md` were wrong in detail.
+  The "100 % to 25 %" is the allowance on a state's ledger, not retained stock; not every lever is
+  observable; the chokepoint holders are more than the three named. The first skeleton shared the first
+  error. Nothing had been sent.
+- Changed: the note rewritten; `pilots/pilot_b2.py` rebuilt as version 2 on the report's ledger (pushed
+  before its first run); `outreach/email_B2.md` rewritten as a personal note; new
+  `outreach/outline_B2.md`; assertions in `pilots/check_pilots.py`; plan table; outreach proposal.
+- Result: read off the report's own illustrative numbers, neither lead state can secure more than about a
+  year of durability alone; the skeleton's tower follows the report's order of entry. Preferences invented.
+- Not sent: anything. The package for Holliday is the email and the outline, for Jobst to edit and send.
+- The Claude Doc has none of this.

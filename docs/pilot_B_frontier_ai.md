@@ -10,7 +10,7 @@ by someone with no tie to any developer.
 
 **Two variants.** This note covers B1, commitments among developers. Variant B2, commitments among states
 on chip production and stocks, follows the "hardwired pause" report and is in `docs/note_hardwired_pause.md`.
-B2 avoids the competition-law question and has verifiable levers; I propose it as the lead variant.
+B2 avoids the competition-law question. Jobst made it the lead variant on 11 November 2026.
 
 ## Proposal in brief
 

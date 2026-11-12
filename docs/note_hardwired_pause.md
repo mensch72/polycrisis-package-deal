@@ -59,7 +59,8 @@ that question can stand.
 
 Durability can be read off the report's ledger. Take headroom as the orders of magnitude by which training
 efficiency may improve before a ledger exceeds its allowance, and convert at the report's 57 % a year.
-With everything else in order, two levers decide it [derived from the report's illustrative values]:
+With every other lever at its most cooperative level, two levers decide it [derived from the report's
+illustrative values]:
 
 | Years of durability | China conceals | China cooperates a little | China cooperates fully |
 | --- | --- | --- | --- |
@@ -68,6 +69,7 @@ With everything else in order, two levers decide it [derived from the report's i
 | keeps a tenth | 1.0 | 5.6 | 5.6 |
 | keeps a residual | 1.0 | 5.8 | 10.2 |
 
+China's own fleet, if left at home, caps durability at 5.8 years, so the last cell needs its drawdown too.
 Neither state can buy durability alone. That is the report's asymmetry as a table, and it is the natural
 subject of a pair of conditional filings: fleet moved out against census cooperation.
 
