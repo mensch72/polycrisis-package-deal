@@ -6,7 +6,7 @@
   "n_actors": 8,
   "n_levers": 12,
   "n_coalitions": 255,
-  "runtime_seconds": 493.3
+  "runtime_seconds": 479.8
  },
  "orientation": {
   "passed": true,
@@ -598,7 +598,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 42377,
-    "seconds": 0.9
+    "seconds": 0.8
    },
    {
     "seed": 2,
@@ -611,7 +611,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 44279,
-    "seconds": 1.2
+    "seconds": 0.9
    },
    {
     "seed": 3,
@@ -624,7 +624,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 41125,
-    "seconds": 0.8
+    "seconds": 0.9
    },
    {
     "seed": 4,
@@ -637,7 +637,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 43361,
-    "seconds": 1.0
+    "seconds": 0.8
    },
    {
     "seed": 5,
@@ -663,7 +663,7 @@
     "rounds": 1,
     "cuts": 0,
     "evals": 41802,
-    "seconds": 0.8
+    "seconds": 1.1
    },
    {
     "seed": 7,

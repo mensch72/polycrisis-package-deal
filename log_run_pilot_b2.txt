@@ -1,7 +1,7 @@
-[   0.0s] regions {'acceptable': 50, 'individually_rational': 55, 'both': 41} | core {'n_efficient': 1, 'n_core': 1, 'n_equilibria': 1} | orientation passed: False
-[   0.0s] towers along the fixed chain {'n_first_stage_core': 1, 'n_first_stage_admissible': 1, 'n_towers': 1, 'n_nontrivial': 1, 'n_all_at_or_above_a0': 1}
+[   0.0s] regions {'acceptable': 318, 'individually_rational': 49, 'both': 39} | core {'n_efficient': 2, 'n_core': 2, 'n_equilibria': 2} | orientation passed: False
+[   0.0s] towers along the fixed chain {'n_first_stage_core': 2, 'n_first_stage_admissible': 2, 'n_towers': 2, 'n_nontrivial': 2, 'n_all_at_or_above_a0': 2}
 [   0.0s] [post hoc] chain scan: 6 of 6 first coalitions have a tower; with a first stage that does something: ['USA+CHN']
 [   0.0s] tests {'T1': True, 'T2': True, 'T3': True, 'T4': True} | groups that can still gain: 0
-[   0.1s] robustness: certified in 200 of 200 | top parameters []
-[   0.2s] [post hoc] tipping: [('a.SUP', None, 2.0), ('m.SUP', 3.0, None)]
-[   0.2s] done
+[   0.2s] robustness: certified in 200 of 200 | top parameters []
+[   0.3s] [post hoc] tipping: [('a.SUP', None, 2.0), ('a.USA', None, 3.0), ('a.CHN', None, 3.0), ('m.SUP', 3.0, None)]
+[   0.3s] done

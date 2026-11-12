@@ -1,5 +1,5 @@
-[  10.1s] acceptable first-stage core profiles: 142
-[  12.8s] {'n_first_stage': 142, 'n_first_stage_with_a_second': 125, 'n_pairs': 169, 'n_pairs_nontrivial': 75, 'n_pairs_newcomer_at_or_above_a0': 150, 'n_pairs_all_at_or_above_a0': 150}
-[  15.1s] T1 True | T2 True
-[  30.0s] T3 True | T4 True | groups that can still gain: 0
-[  30.0s] done
+[   9.4s] acceptable first-stage core profiles: 142
+[  12.4s] {'n_first_stage': 142, 'n_first_stage_with_a_second': 125, 'n_pairs': 169, 'n_pairs_nontrivial': 75, 'n_pairs_newcomer_at_or_above_a0': 150, 'n_pairs_all_at_or_above_a0': 150}
+[  14.7s] T1 True | T2 True
+[  29.9s] T3 True | T4 True | groups that can still gain: 0
+[  29.9s] done

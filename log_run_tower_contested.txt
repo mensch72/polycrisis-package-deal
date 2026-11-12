@@ -1,7 +1,7 @@
-[  44.3s] harmed: ['DEV'] | bases leaving a CPEP for all: 221184 | with an inactive actor: 176832
-[  53.4s] with aspirations: no tower [(4621, 142, 0)]
-[  62.1s] without aspirations: tower found [(4621, 870), (1, 1)]
-[  63.5s] T1 PASSED | T2 PASSED
-[  77.4s] T3 PASSED | T4 PASSED | groups that can still gain: 4 | minimal: ['USA+CHN+EU+IND+LIC+DEV']
-[ 131.5s] [post hoc] first-stage candidates 870 | with a non-trivial last stage 15 | newcomers end at or above a0 in 0 | best newcomer gain -0.433
-[ 131.5s] done
+[  42.7s] harmed: ['DEV'] | bases leaving a CPEP for all: 221184 | with an inactive actor: 176832
+[  51.5s] with aspirations: no tower [(4621, 142, 0)]
+[  60.5s] without aspirations: tower found [(4621, 870), (1, 1)]
+[  62.0s] T1 PASSED | T2 PASSED
+[  75.5s] T3 PASSED | T4 PASSED | groups that can still gain: 4 | minimal: ['USA+CHN+EU+IND+LIC+DEV']
+[ 127.3s] [post hoc] first-stage candidates 870 | with a non-trivial last stage 15 | newcomers end at or above a0 in 0 | best newcomer gain -0.433
+[ 127.3s] done

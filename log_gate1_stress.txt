@@ -1,29 +1,29 @@
-[ 147.4s]   efficient and IR candidates: 21490
-[ 184.6s] no-aspiration variant: efficient IR 21490 | strict core 19649 | blocked by proper coalitions 1841
-[ 520.2s] B1 oracle recall: v2 294 / 300 | v1 191 | invalid 0 | false alarms 0 | sizes {7: 71, 3: 30, 2: 49, 6: 89, 5: 45, 4: 10}
-[ 543.7s] B1 hold-out: v2 300 / 300
-[ 544.9s]   B2 USA seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 545.8s]   B2 USA seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
-[ 547.1s]   B2 USA seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.8}
-[ 548.2s]   B2 CHN seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 549.3s]   B2 CHN seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 550.3s]   B2 CHN seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 552.0s]   B2 EU seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 1.0}
-[ 553.4s]   B2 EU seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.8}
-[ 554.6s]   B2 EU seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 555.8s]   B2 IND seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.8}
-[ 556.8s]   B2 IND seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 558.0s]   B2 IND seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 559.0s]   B2 FEX seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 560.0s]   B2 FEX seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.5}
-[ 561.0s]   B2 FEX seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 562.1s]   B2 LIC seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 2, 'cuts': 1, 'seconds': 0.7}
-[ 563.3s]   B2 LIC seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 2, 'cuts': 1, 'seconds': 0.8}
-[ 564.6s]   B2 LIC seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 2, 'cuts': 1, 'seconds': 0.8}
-[ 565.8s]   B2 DEV seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
-[ 567.0s]   B2 DEV seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.8}
-[ 568.2s]   B2 DEV seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.8}
-[ 569.2s]   B2 MDB seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
-[ 570.2s]   B2 MDB seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
-[ 571.2s]   B2 MDB seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
-[ 571.2s] B1 PASSED | B2 PASSED | all in core: True | share reaching optimum: 1.0
+[ 142.6s]   efficient and IR candidates: 21490
+[ 177.5s] no-aspiration variant: efficient IR 21490 | strict core 19649 | blocked by proper coalitions 1841
+[ 486.5s] B1 oracle recall: v2 294 / 300 | v1 191 | invalid 0 | false alarms 0 | sizes {7: 71, 3: 30, 2: 49, 6: 89, 5: 45, 4: 10}
+[ 507.4s] B1 hold-out: v2 300 / 300
+[ 508.4s]   B2 USA seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 509.3s]   B2 USA seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 510.3s]   B2 USA seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
+[ 511.3s]   B2 CHN seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 512.3s]   B2 CHN seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
+[ 513.4s]   B2 CHN seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
+[ 514.3s]   B2 EU seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 515.3s]   B2 EU seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 516.3s]   B2 EU seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.8}
+[ 517.3s]   B2 IND seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
+[ 518.3s]   B2 IND seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
+[ 519.4s]   B2 IND seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
+[ 520.3s]   B2 FEX seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 521.3s]   B2 FEX seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 522.2s]   B2 FEX seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 523.2s]   B2 LIC seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 2, 'cuts': 1, 'seconds': 0.6}
+[ 524.3s]   B2 LIC seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 2, 'cuts': 1, 'seconds': 0.8}
+[ 525.3s]   B2 LIC seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 2, 'cuts': 1, 'seconds': 0.7}
+[ 526.3s]   B2 DEV seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.8}
+[ 527.4s]   B2 DEV seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
+[ 528.4s]   B2 DEV seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.7}
+[ 529.3s]   B2 MDB seed 0: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 530.2s]   B2 MDB seed 1: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 531.1s]   B2 MDB seed 2: {'in_core': True, 'gap': 0.0, 'rounds': 1, 'cuts': 0, 'seconds': 0.6}
+[ 531.1s] B1 PASSED | B2 PASSED | all in core: True | share reaching optimum: 1.0
