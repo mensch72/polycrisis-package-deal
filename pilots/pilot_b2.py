@@ -1,9 +1,10 @@
-"""Pilot B2 skeleton, version 2: entry into a hardwired pause of frontier AI training, as a registry of
-conditional commitments among states. Rebuilt on 12 November 2026 on the report's own ledger, after the
-whole report had been read. Version 1 (10 November) had invented effect numbers and one wrong lever.
+"""Pilot B2 skeleton, version 3: entry into a hardwired pause of frontier AI training, as a registry of
+conditional commitments among states. Version 3 (12 November 2026, at Jobst's request) splits the supplier
+bloc of version 2 into three actors. Version 1 (10 November) had invented effect numbers and one wrong lever.
 
 Source: Fithian, Holliday and the Working Group on AI Pause Feasibility (2026), "The Feasibility of a
 Hardwired Pause of Frontier AI Training", working paper v1.0.2, https://hardwired-pause.ai/paper.
+Jurisdictions and chokepoints as compiled in data/sources/hardwired_pause_actors.md.
 
 TAKEN FROM THE REPORT (its illustrative values for a pause at year-end 2026; sections 3.2.3, 6.4, 6.5):
   - the ledger rule: a state's covert-evasion ledger L_E must stay below alpha * F_E, its overt-breakout
@@ -14,26 +15,34 @@ TAKEN FROM THE REPORT (its illustrative values for a pause at year-end 2026; sec
   - other ledger terms can be held near 0.25 % of the thresholds, which gives two orders of magnitude of
     headroom; moving half of the US transitional fleet out of its territory is the report's own example;
   - training efficiency gains of 57 % a year erode the thresholds: one order of magnitude in about 5 years;
-  - order of entry: the United States and China first, then the jurisdictions holding supply-chain chokepoints.
+  - order of entry: the United States and China first, then the jurisdictions holding chokepoints;
+  - who holds which chokepoint: Netherlands lithography, Germany optics, Japan coater and developer
+    equipment, South Korea memory, Taiwan leading-edge foundry and packaging; nobody the whole chain.
 DERIVED HERE from those values: durability = headroom in orders of magnitude, min over both states and both
 ledgers of log10(alpha * F / L), capped at 2, converted to years at 57 % a year.
 ILLUSTRATIVE (Claude, 12 November 2026, fixed before the first run of this version): every preference
-number; the grid of retained shares below one half; the effect of the suppliers' levers on durability.
-Nothing here says anything about any government.
+number; the grid of retained shares below one half; and the whole effect of the suppliers on durability.
+That effect is modelled as coverage S = lam * (best supplier) + (1 - lam) * (average supplier), where a
+supplier counts 1 if it both stops and accepts monitoring. lam = 1 would mean one chokepoint holder
+suffices to deny a covert chain, lam = 0 that every holder contributes equally. Without suppliers half of
+the durability is kept. Nothing here says anything about any government.
 
+Actors. USA, CHN: lead states. EUR: European Union, standing for the Netherlands and Germany. EAS: Japan and
+South Korea. TWN: Taiwan. The United Kingdom and other chip-holding states are not modelled.
 Levers. Each lead state: pause (0/1); census cooperation (0 concealment, 1 low, 2 high); drawdown of the
 training-capable fleet kept in its territory (0 all kept, 1 half, 2 a tenth, 3 about one eightieth).
-Suppliers, one bloc: stop production of training-capable chips (0/1); accept monitoring of fabrication (0/1).
+Each supplier: stop its part of the production of training-capable chips (0/1); accept monitoring (0/1).
 """
 import numpy as np
 
-ACTORS = ['USA', 'CHN', 'SUP']
+ACTORS = ['USA', 'CHN', 'EUR', 'EAS', 'TWN']
 N = len(ACTORS)
-ACTOR_INFO = {'USA': 'United States', 'CHN': 'China',
-              'SUP': 'Chokepoint jurisdictions (Netherlands, Germany, Japan, Taiwan, South Korea)'}
+SUPPLIERS = ['EUR', 'EAS', 'TWN']
+ACTOR_INFO = {'USA': 'United States', 'CHN': 'China', 'EUR': 'European Union (Netherlands, Germany)',
+              'EAS': 'Japan and South Korea', 'TWN': 'Taiwan'}
 LEVERS = [('USA', 'pause', 2, 'ai'), ('USA', 'census', 3, 'ai'), ('USA', 'drawdown', 4, 'ai'),
-          ('CHN', 'pause', 2, 'ai'), ('CHN', 'census', 3, 'ai'), ('CHN', 'drawdown', 4, 'ai'),
-          ('SUP', 'production_stop', 2, 'ai'), ('SUP', 'monitoring', 2, 'ai')]
+          ('CHN', 'pause', 2, 'ai'), ('CHN', 'census', 3, 'ai'), ('CHN', 'drawdown', 4, 'ai')]
+LEVERS += [(j, lev, 2, 'ai') for j in SUPPLIERS for lev in ('production_stop', 'monitoring')]
 ISSUES = ['ai']
 SHAPE = tuple(n for (_, _, n, _) in LEVERS)
 D = len(LEVERS)
@@ -47,8 +56,8 @@ LEVER_TEXT = {'pause': 'prohibit training beyond the threshold and stop orders f
               'drawdown': {1: 'keep at most half of its training-capable fleet in its territory',
                            2: 'keep at most a tenth of its training-capable fleet in its territory',
                            3: 'keep only a residual training-capable fleet in its territory'},
-              'production_stop': 'stop the production of training-capable chips',
-              'monitoring': 'accept monitoring of fabrication'}
+              'production_stop': 'stop its part of the production of training-capable chips',
+              'monitoring': 'accept monitoring of its part of the supply chain'}
 
 BASE = {
     # from the report
@@ -57,22 +66,24 @@ BASE = {
     'dark0.CHN': .16, 'dark1.CHN': .018, 'dark2.CHN': .0011,
     'gain': .57, 'cap': 2.0,                                        # efficiency gain per year; headroom cap (orders of magnitude)
     # illustrative
-    'x.sup0': .5, 'x.prod': .25, 'x.mon': .25,                      # share of durability kept without / with the suppliers' levers
-    'a.USA': 1.0, 'a.CHN': 1.0, 'a.SUP': .8,                        # value of full durability (X = 1)
+    'x.sup0': .5, 'lam': .5,                                        # durability kept without suppliers; weight of the best supplier
+    'a.USA': 1.0, 'a.CHN': 1.0, 'a.EUR': .9, 'a.EAS': .7, 'a.TWN': .7,   # value of full durability (X = 1)
     'f.USA': .20, 'f.CHN': .20, 'G': .20, 'sig': .50,               # forgone benefit of pausing; gain from training on alone; exposure
     'kc': .03, 'kd': .03, 'th': .30,                                # cost per census level, per drawdown level; exposure per unit of extra concession
-    'r.SUP': .30, 'c.SUP': .05, 'm.SUP': .25,                       # suppliers: lost revenue, monitoring cost, orders lost to a pause
+    'r.EUR': .20, 'r.EAS': .25, 'r.TWN': .40,                       # suppliers: revenue lost by stopping
+    'c.EUR': .05, 'c.EAS': .05, 'c.TWN': .05,                       # cost of accepting monitoring
+    'm.EUR': .15, 'm.EAS': .25, 'm.TWN': .35,                       # orders lost when the lead states pause
     'gap': .25,                                                     # red line: concession index beyond the rival's
 }
 PROVENANCE = {
     'report': dict(status='sourced', keys=['alpha', 'stockB.', 'dark', 'gain', 'cap'],
                    source='Fithian, Holliday et al. (2026), sections 3.2.3, 6.1, 6.4, 6.5; illustrative values of the report itself',
                    url='https://hardwired-pause.ai/paper', retrieved='2026-11-12'),
-    'default': dict(status='illustrative', source='set by Claude before the first run of version 2', who_says='Claude',
+    'default': dict(status='illustrative', source='set by Claude before the first run of version 3', who_says='Claude',
                     retrieved='2026-11-12'),
 }
-PERTURB = ['a.USA', 'a.CHN', 'a.SUP', 'f.USA', 'f.CHN', 'G', 'sig', 'kc', 'kd', 'th', 'r.SUP', 'c.SUP', 'm.SUP']
-TIPPING = PERTURB + ['x.sup0', 'x.prod', 'x.mon']
+PERTURB = [k for k in BASE if k.split('.')[0] in ('a', 'f', 'r', 'c', 'm')] + ['G', 'sig', 'kc', 'kd', 'th']
+TIPPING = PERTURB + ['x.sup0', 'lam']
 
 
 def grids():
@@ -85,11 +96,21 @@ def headroom(p, s, cen, draw):
     return np.minimum(np.log10(p['alpha'] / dark), np.log10(p['alpha'] / kept))
 
 
+def coverage(p, sup):
+    """sup: list of (stop, monitoring) arrays per supplier. Returns S in [0, 1]."""
+    sj = [(st + mo) / 2 for st, mo in sup]
+    lam = min(max(p['lam'], 0.0), 1.0)
+    return lam * np.maximum.reduce(np.broadcast_arrays(*sj)) + (1 - lam) * sum(sj) / len(sj)
+
+
 def evaluate(p=BASE, light=False):
-    pU, cU, dU, pC, cC, dC, prod, mon = grids()
+    g = grids()
+    pU, cU, dU, pC, cC, dC = g[:6]
+    sup = [(g[6 + 2 * j], g[7 + 2 * j]) for j in range(len(SUPPLIERS))]
     both = np.minimum(pU, pC)
     H = np.clip(np.minimum(headroom(p, 'USA', cU, dU), headroom(p, 'CHN', cC, dC)), 0, p['cap'])
-    Deff = both * H * (p['x.sup0'] + p['x.prod'] * prod + p['x.mon'] * mon)
+    x0 = min(max(p['x.sup0'], 0.0), 1.0)
+    Deff = both * H * (x0 + (1 - x0) * coverage(p, sup))
     X = Deff / p['cap']
     years = Deff * np.log(10) / np.log(1 + p['gain'])
     conc = {'USA': (cU / 2 + dU / 3) / 2, 'CHN': (cC / 2 + dC / 3) / 2}
@@ -99,8 +120,11 @@ def evaluate(p=BASE, light=False):
         U[i] = (p['a.' + me] * X - p['f.' + me] * pm - p['sig'] * np.maximum(pm - po, 0) + p['G'] * np.maximum(po - pm, 0)
                 - p['kc'] * cm - p['kd'] * dm - p['th'] * np.maximum(conc[me] - conc[ot], 0))
         acc[i] &= (conc[me] <= conc[ot] + p['gap'] + 1e-9) & ((cm + dm == 0) | (pm == 1))
-    U[2] = p['a.SUP'] * X - p['r.SUP'] * prod * (1 - 0.5 * both) - p['c.SUP'] * mon - p['m.SUP'] * (pU + pC) / 2
-    acc[2] &= (prod == 0) | (both == 1)
+    for j, name in enumerate(SUPPLIERS):
+        st, mo = sup[j]
+        U[2 + j] = (p['a.' + name] * X - p['r.' + name] * st * (1 - 0.5 * both) - p['c.' + name] * mo
+                    - p['m.' + name] * (pU + pC) / 2)
+        acc[2 + j] &= (st == 0) | (both == 1)
     return dict(U=U, acc=acc, X=np.broadcast_to(X, SHAPE), YEARS=np.broadcast_to(years, SHAPE))
 
 
