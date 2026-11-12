@@ -48,6 +48,7 @@ of the technical extract.
 
 ## How the skeleton uses this
 
-`pilots/pilot_b2.py`, version 2, lumps the Netherlands, Germany, Japan, Taiwan and South Korea into one
-bloc, `SUP`. That is a modelling shortcut of mine and not the report's view. The United Kingdom and the
-second group of signatories are not in the skeleton at all.
+`pilots/pilot_b2.py`, version 3, has three supplier actors: `EUR` for the Netherlands and Germany, `EAS` for
+Japan and South Korea, `TWN` for Taiwan. Version 2 lumped them into one bloc. The grouping is a modelling
+choice of mine and not the report's view. The United Kingdom and the second group of signatories are not
+in the skeleton at all.

@@ -12,11 +12,12 @@
   "gain": 0.57,
   "cap": 2.0,
   "x.sup0": 0.5,
-  "x.prod": 0.25,
-  "x.mon": 0.25,
+  "lam": 0.5,
   "a.USA": 1.0,
   "a.CHN": 1.0,
-  "a.SUP": 0.8,
+  "a.EUR": 0.9,
+  "a.EAS": 0.7,
+  "a.TWN": 0.7,
   "f.USA": 0.2,
   "f.CHN": 0.2,
   "G": 0.2,
@@ -24,9 +25,15 @@
   "kc": 0.03,
   "kd": 0.03,
   "th": 0.3,
-  "r.SUP": 0.3,
-  "c.SUP": 0.05,
-  "m.SUP": 0.25,
+  "r.EUR": 0.2,
+  "r.EAS": 0.25,
+  "r.TWN": 0.4,
+  "c.EUR": 0.05,
+  "c.EAS": 0.05,
+  "c.TWN": 0.05,
+  "m.EUR": 0.15,
+  "m.EAS": 0.25,
+  "m.TWN": 0.35,
   "gap": 0.25
  },
  "provenance": {
@@ -45,7 +52,7 @@
   },
   "default": {
    "status": "illustrative",
-   "source": "set by Claude before the first run of version 2",
+   "source": "set by Claude before the first run of version 3",
    "who_says": "Claude",
    "retrieved": "2026-11-12"
   }
@@ -53,17 +60,25 @@
  "perturbed": [
   "a.USA",
   "a.CHN",
-  "a.SUP",
+  "a.EUR",
+  "a.EAS",
+  "a.TWN",
   "f.USA",
   "f.CHN",
+  "r.EUR",
+  "r.EAS",
+  "r.TWN",
+  "c.EUR",
+  "c.EAS",
+  "c.TWN",
+  "m.EUR",
+  "m.EAS",
+  "m.TWN",
   "G",
   "sig",
   "kc",
   "kd",
-  "th",
-  "r.SUP",
-  "c.SUP",
-  "m.SUP"
+  "th"
  ],
  "levers": [
   {
@@ -103,13 +118,37 @@
    "issue": "ai"
   },
   {
-   "actor": "SUP",
+   "actor": "EUR",
    "lever": "production_stop",
    "levels": 2,
    "issue": "ai"
   },
   {
-   "actor": "SUP",
+   "actor": "EUR",
+   "lever": "monitoring",
+   "levels": 2,
+   "issue": "ai"
+  },
+  {
+   "actor": "EAS",
+   "lever": "production_stop",
+   "levels": 2,
+   "issue": "ai"
+  },
+  {
+   "actor": "EAS",
+   "lever": "monitoring",
+   "levels": 2,
+   "issue": "ai"
+  },
+  {
+   "actor": "TWN",
+   "lever": "production_stop",
+   "levels": 2,
+   "issue": "ai"
+  },
+  {
+   "actor": "TWN",
    "lever": "monitoring",
    "levels": 2,
    "issue": "ai"

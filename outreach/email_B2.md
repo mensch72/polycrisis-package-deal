@@ -15,7 +15,7 @@ can buy more than about a year alone: the US holds the breakout lever, China the
 mutually conditional filings is the natural object, and it happens to be the form of the one reciprocal
 mechanism in your text, the conditional recovery of hidden chips.
 
-The attached two pages sketch a companion analysis and a first skeleton on your ledger. Its preferences are
+The attached two pages sketch a companion analysis and a first five-actor skeleton on your ledger. Its preferences are
 placeholders, so it shows a format and no findings. Would you and Will be open to a call, or to comments?
 Please also tell me if we misread the ledger.
 

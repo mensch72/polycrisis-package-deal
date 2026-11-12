@@ -74,29 +74,51 @@ China's own fleet, if left at home, caps durability at 5.8 years, so the last ce
 Neither state can buy durability alone. That is the report's asymmetry as a table, and it is the natural
 subject of a pair of conditional filings: fleet moved out against census cooperation.
 
-## Skeleton, version 2
+## Skeleton, version 3
 
-Three actors: the United States, China, and the chokepoint jurisdictions as one bloc. The ledger rule,
-thresholds, stocks, census scenarios and order of entry are the report's. Every preference number, and the
-effect of the suppliers' levers, is invented.
+Five actors: the United States, China, the EU (for the Netherlands and Germany), Japan with South Korea,
+and Taiwan. Version 2 lumped the last three into one bloc; Jobst asked for the split. The ledger rule,
+thresholds, stocks, census scenarios, chokepoints and order of entry are the report's. Every preference
+number is invented, and so is the whole effect of the suppliers on durability.
+
+**The supplier assumption.** A supplier counts fully if it both stops its part of production and accepts
+monitoring. Coverage is half the best supplier plus half the average. That sits between "one chokepoint
+holder suffices to deny a covert chain" and "every holder counts equally". Without suppliers half of the
+durability is kept. Under these assumptions durability is 5.1 years with no supplier, 8.5 with one,
+9.4 with two and 10.2 with all three.
 
 | Step | Result |
 | --- | --- |
-| lattice | 2,304 profiles, 7 groups |
-| acceptable to all; individually rational; both | 318; 49; 39 |
-| strict core inside the acceptable region | 2 profiles, both equilibria |
-| tower along the report's order | stage 1: both lead states pause, cooperate fully and draw down; stage 2: suppliers stop production and accept monitoring |
-| durability | about 5 years after stage 1, about 10 after stage 2 |
-| first coalitions with a first stage that does something [post hoc] | only the two lead states together |
+| lattice | 36,864 profiles, 31 groups |
+| acceptable to all; individually rational; both | 4,920; 169; 154 |
+| strict core inside the acceptable region | 32 profiles, all equilibria |
+| tower along the report's order | stage 1: both lead states pause, cooperate fully and draw down; stage 2: the EU stops and accepts monitoring, the other two accept monitoring only |
+| durability | about 5 years after stage 1, 9.4 after stage 2 |
+| first coalitions with a first stage that does something [post hoc] | 7 of 30, and every one contains both lead states |
 | stability | strictly strong equilibrium of the full game; tests T1 to T4 pass |
-| withdrawal | suppliers out: back to stage 1; either lead state out: back to zero |
+| withdrawal | any supplier out: back to stage 1; either lead state out: back to zero |
+
+**What the split shows about Europe.**
+
+1. **No supplier can start anything.** Alone, together, or with one lead state, the suppliers have no first
+   stage that does something. Europe's lever works only on top of a deal between the two lead states.
+2. **Somebody must stop, and it need not be everybody.** In every one of the 32 core profiles at least one
+   supplier both stops and accepts monitoring: one does in 18, two in 12, all three in 2. Each supplier
+   stops in exactly 16. Who bears the stop is a coordination problem among the suppliers.
+3. **The selection rule picks the EU.** That follows from the lowest cost of stopping, which I assigned to
+   it. With other numbers it would be another supplier. The structure, not the name, is the result.
+4. **The supplier who stops gains least.** In the selected outcome the EU holds 78 % of its largest
+   acceptable gain, the smallest share of the five.
+5. **Step filings tie the suppliers together.** If any one of them withdraws, all three fall back, because
+   each conditions on the others. Separate stages per supplier would avoid that [open].
 
 **One structural point.** The gain from training on while the rival pauses can be tripled without breaking
 the certificate. At that value the stage game is a Prisoner's Dilemma, not a stag hunt. Conditional filings
 do not need the benign case. They need to bind, and binding is what the report's verification is for.
 
-**What this does not show.** Anything about real governments, or that a pause is desirable. The halving of
-durability without the suppliers is my assumption, so the "5 years" is not the report's number.
+**What this does not show.** Anything about real governments, or that a pause is desirable. The result
+tips when the weight of the best supplier is doubled, so the supplier assumption is the first thing an
+expert should correct.
 
 ## Decisions and consequences
 
@@ -117,7 +139,8 @@ to the extent stated at the top.
 1. Read the sections not yet read, above all 8.4 and 8.5.1.
 2. Graded entry: filings on the allowance schedule itself, shrinking as the other side's census advances.
 3. Hidden chips as an unobservable lever: what a filing can condition on when the level is an estimate.
-4. Developers and other chip-holding states as actors; strategic reserves as insurance next to filings.
+4. Developers, the United Kingdom and other chip-holding states as actors; chains of three stages, so that
+   suppliers can enter one by one; strategic reserves as insurance next to filings.
 5. The report's repeated-game enforcement against the linear-compensation device of WP7.
 
 **Source.** Fithian, W., Holliday, W.H. and the Working Group on AI Pause Feasibility (2026) *The

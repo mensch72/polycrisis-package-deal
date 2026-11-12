@@ -132,3 +132,12 @@ Newest entry last. Every session ends with an entry: what ran, what failed, what
   year of durability alone; the skeleton's tower follows the report's order of entry. Preferences invented.
 - Not sent: anything. The package for Holliday is the email and the outline, for Jobst to edit and send.
 - The Claude Doc has none of this.
+- Later on 12 November: Jobst found that the technical extract does not list the EU, the Netherlands or
+  Germany among the states. Cause: the extract covers only the technical sections, and the report names its
+  participants in section 3.1. Fixed with `data/sources/hardwired_pause_actors.md` and a note in the extract.
+- On Jobst's instruction the supplier bloc of the B2 skeleton was split: `pilots/pilot_b2.py`, version 3,
+  has five actors (USA, CHN, EUR, EAS, TWN), pushed before its first run. Tests T1 to T4 pass. Result,
+  illustrative: no supplier can start anything without both lead states; in every core profile some
+  supplier stops, and which one is a coordination problem; the selection picks the EU only because I gave
+  it the lowest cost of stopping. Weak: the suppliers' effect on durability is wholly invented, and the
+  result tips when its main weight is doubled. Note, outline, email and assertions updated.

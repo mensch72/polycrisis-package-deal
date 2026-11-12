@@ -91,23 +91,44 @@ cn_home = round(float(k * min(P2['cap'], M2.headroom(P2, 'USA', np.array(2), np.
 chk('China fleet at home caps durability', cn_home == 5.8, NB, 'caps durability at 5.8 years')
 t = B2['tower']
 rg = B2['regions']
-tipped = {r['parameter'] for r in B2['tipping_post_hoc']['ranking']}
+tipped = {r['parameter']: r for r in B2['tipping_post_hoc']['ranking']}
 full = {'USA.pause': 1, 'USA.census': 2, 'USA.drawdown': 3, 'CHN.pause': 1, 'CHN.census': 2, 'CHN.drawdown': 3}
+sup0 = {f'{j}.{l}': 0 for j in ('EUR', 'EAS', 'TWN') for l in ('production_stop', 'monitoring')}
+fin = dict(sup0, **{'EUR.production_stop': 1, 'EUR.monitoring': 1, 'EAS.monitoring': 1, 'TWN.monitoring': 1})
+sc2 = B2['chain_scan_post_hoc']
+g = t['final_norm_gain']
 chk('B2 skeleton', (B2['n_profiles'], B2['n_groups'], rg['acceptable'], rg['individually_rational'], rg['both'],
-                    B2['core']['n_core'], B2['core']['n_equilibria']) == (2304, 7, 318, 49, 39, 2, 2)
+                    B2['core']['n_core'], B2['core']['n_equilibria']) == (36864, 31, 4920, 169, 154, 32, 32)
     and B2['tower_chain'] == 'fixed' and B2['chain'][0] == ['USA', 'CHN']
-    and t['stage1'] == dict(full, **{'SUP.production_stop': 0, 'SUP.monitoring': 0})
-    and t['final'] == dict(full, **{'SUP.production_stop': 1, 'SUP.monitoring': 1})
-    and round(t['stage1_indicators']['YEARS']) == 5 and round(t['final_indicators']['YEARS']) == 10
-    and B2['chain_scan_post_hoc']['first_coalitions_with_a_nontrivial_first_stage'] == ['USA+CHN']
+    and t['stage1'] == dict(full, **sup0) and t['final'] == dict(full, **fin)
+    and round(t['stage1_indicators']['YEARS']) == 5 and round(t['final_indicators']['YEARS'], 1) == 9.4
+    and sc2['n_first_coalitions'] == 30 and sc2['n_with_a_nontrivial_first_stage'] == 7
+    and all('USA' in k and 'CHN' in k for k in sc2['first_coalitions_with_a_nontrivial_first_stage'])
     and B2['full_game']['strictly_strong_equilibrium'] and all(B2['tests'].values())
-    and B2['withdrawal']['SUP']['falls_to'] == 'stage 1' and B2['withdrawal']['USA']['falls_to'] == 'zero'
-    and B2['withdrawal']['CHN']['falls_to'] == 'zero' and 'G' not in tipped and 3.0 in B2['tipping_post_hoc']['grid'], NB,
-    '| lattice | 2,304 profiles, 7 groups |', '| 318; 49; 39 |', '| 2 profiles, both equilibria |',
-    'about 5 years after stage 1, about 10 after stage 2', 'only the two lead states together',
-    'suppliers out: back to stage 1; either lead state out: back to zero', 'can be tripled without breaking the certificate')
-chk('B2 in the outline', True, OL, 'if the suppliers leave, the outcome falls back to the first stage; if a lead state leaves, to nothing',
-    'tripled', 'the two lead states first, the suppliers on top')
+    and all(B2['withdrawal'][k]['falls_to'] == 'stage 1' for k in ('EUR', 'EAS', 'TWN'))
+    and B2['withdrawal']['USA']['falls_to'] == 'zero' and B2['withdrawal']['CHN']['falls_to'] == 'zero'
+    and 'G' not in tipped and 3.0 in B2['tipping_post_hoc']['grid'] and tipped['lam']['up'] == 2.0
+    and min(g, key=g.get) == 'EUR' and round(100 * g['EUR']) == 78, NB,
+    '| lattice | 36,864 profiles, 31 groups |', '| 4,920; 169; 154 |', '| 32 profiles, all equilibria |',
+    'about 5 years after stage 1, 9.4 after stage 2', '| 7 of 30, and every one contains both lead states |',
+    'any supplier out: back to stage 1; either lead state out: back to zero', 'can be tripled without breaking the certificate',
+    'the EU holds 78 %', 'tips when the weight of the best supplier is doubled')
+one = (np.array(1), np.array(1)); none = (np.array(0), np.array(0))
+ys = [round(float(k * P2['cap'] * (P2['x.sup0'] + (1 - P2['x.sup0']) * M2.coverage(P2, [one] * n + [none] * (3 - n)))), 1) for n in range(4)]
+chk('durability by number of suppliers', ys == [5.1, 8.5, 9.4, 10.2], NB,
+    'durability is 5.1 years with no supplier, 8.5 with one, 9.4 with two and 10.2 with all three')
+sys.path.insert(0, os.path.join(HERE, '..', 'phase0'))
+import core as _core
+ev2 = M2.evaluate()
+ci, _ = _core.strict_core(ev2['U'], M2.OWNER, ev2['acc'].all(0))
+Pc = np.array(np.unravel_index(ci, M2.SHAPE)).T
+fullsup = np.stack([(Pc[:, 6 + 2 * j] + Pc[:, 7 + 2 * j]) == 2 for j in range(3)], axis=1)
+chk('suppliers in the core', len(Pc) == 32 and np.bincount(fullsup.sum(1), minlength=4).tolist() == [0, 18, 12, 2]
+    and [int(Pc[:, 6 + 2 * j].sum()) for j in range(3)] == [16, 16, 16], NB,
+    'one does in 18, two in 12, all three in 2', 'Each supplier stops in exactly 16')
+chk('B2 in the outline', True, OL, 'if a supplier leaves, the outcome falls back to the first stage; if a lead state leaves, to nothing',
+    'tripled', 'the two lead states first, the suppliers on top', 'no supplier, and no group without both lead states, can start anything',
+    'some supplier must stop production, but not all')
 x_mutual = P2['a.USA'] * 0.5 - P2['f.USA']      # value of a bare mutual pause at half durability, illustrative
 chk("B2 tripled gain makes a Prisoner's Dilemma", P2['G'] < x_mutual < 3 * P2['G'], NB, "the stage game is a Prisoner's Dilemma, not a stag hunt")
 print(f'all {n_ok} checks passed')

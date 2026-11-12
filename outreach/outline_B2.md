@@ -37,12 +37,15 @@ other lever at its most cooperative level (our arithmetic on your illustrative v
 Neither side can buy durability alone. A pair of conditional filings, fleet moved out against census
 cooperation, is the natural object.
 
-**A first skeleton.** Three actors: the United States, China, and the chokepoint jurisdictions as a bloc.
-Your ledger, thresholds, stocks and census scenarios; invented preferences. By full enumeration:
+**A first skeleton.** Five actors: the United States, China, the EU (for the Netherlands and Germany),
+Japan with South Korea, and Taiwan. Your ledger, thresholds, stocks, census scenarios and chokepoints;
+invented preferences, and an invented rule for how much the suppliers add. By full enumeration:
 
 - terms acceptable to all and stable against every group exist in the skeleton;
 - they can be reached in your order: the two lead states first, the suppliers on top;
-- if the suppliers leave, the outcome falls back to the first stage; if a lead state leaves, to nothing;
+- no supplier, and no group without both lead states, can start anything;
+- some supplier must stop production, but not all: who bears the stop is a coordination problem among them;
+- if a supplier leaves, the outcome falls back to the first stage; if a lead state leaves, to nothing;
 - the filings stay an equilibrium when the temptation to train on alone is tripled, which turns the stage
   game from a stag hunt into a Prisoner's Dilemma. Conditional filings need to bind, not to be benign.
 
@@ -58,6 +61,6 @@ The preferences are placeholders, so these are properties of a format, not findi
 6. A response rule for a state's breakout, which the report leaves to the parties.
 
 **What we would need from you.** Your judgement on plausible preference orderings for the lead states and
-the suppliers; a check of how we read the ledger; and, if it appeals, a slot in a tabletop exercise.
+the suppliers; how much each chokepoint holder adds to durability; a check of how we read the ledger; and, if it appeals, a slot in a tabletop exercise.
 
 **What this is not.** A view on whether a pause is desirable or likely.
