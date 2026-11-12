@@ -1,7 +1,7 @@
 [   0.1s] regions {'acceptable': 858, 'individually_rational': 498, 'both': 204} | core {'n_efficient': 89, 'n_core': 89, 'n_equilibria': 89} | orientation passed: False
 [   0.1s] towers along the fixed chain {'n_first_stage_core': 12, 'n_first_stage_admissible': 0, 'n_towers': 0, 'n_nontrivial': 0, 'n_all_at_or_above_a0': 0}
-[   1.8s] [post hoc] chain scan: 19 of 30 first coalitions have a tower; with a first stage that does something: ['ZAF+DEU+GBR+EU', 'ZAF+DEU+GBR+FRA', 'ZAF+DEU+EU+FRA']
-[   1.9s] tests {'T1': True, 'T2': True, 'T3': True, 'T4': True} | groups that can still gain: 0
-[   2.2s] robustness: certified in 173 of 200 | top parameters ['ca', 'rho', 'w.GBR', 'w.EU', 'cr']
-[   2.4s] [post hoc] tipping: [('rho', None, 1.25), ('ca', 1.25, None), ('conc', 2.0, 1.5), ('smax.DEU', None, 1.5), ('cr', 2.0, None), ('w.DEU', None, 2.0), ('w.GBR', None, 2.0), ('w.EU', None, 2.0)]
-[   2.4s] done
+[   2.3s] [post hoc] chain scan: 19 of 30 first coalitions have a tower; with a first stage that does something: ['ZAF+DEU+GBR+EU', 'ZAF+DEU+GBR+FRA', 'ZAF+DEU+EU+FRA']
+[   2.3s] tests {'T1': True, 'T2': True, 'T3': True, 'T4': True} | groups that can still gain: 0
+[   2.7s] robustness: certified in 173 of 200 | top parameters ['ca', 'rho', 'w.GBR', 'w.EU', 'cr']
+[   2.9s] [post hoc] tipping: [('rho', None, 1.25), ('ca', 1.25, None), ('conc', 2.0, 1.5), ('smax.DEU', None, 1.5), ('cr', 2.0, None), ('w.DEU', None, 2.0), ('w.GBR', None, 2.0), ('w.EU', None, 2.0)]
+[   2.9s] done

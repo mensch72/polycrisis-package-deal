@@ -122,7 +122,7 @@
     "rounds": 16,
     "cuts": 15,
     "evals": 92773,
-    "seconds": 2.7
+    "seconds": 2.8
    },
    {
     "seed": 1,
@@ -134,7 +134,7 @@
     "rounds": 16,
     "cuts": 15,
     "evals": 100776,
-    "seconds": 3.2
+    "seconds": 3.7
    },
    {
     "seed": 2,
@@ -146,7 +146,7 @@
     "rounds": 16,
     "cuts": 15,
     "evals": 98710,
-    "seconds": 3.3
+    "seconds": 3.1
    },
    {
     "seed": 3,
@@ -158,7 +158,7 @@
     "rounds": 16,
     "cuts": 15,
     "evals": 93962,
-    "seconds": 2.7
+    "seconds": 2.9
    },
    {
     "seed": 4,
@@ -170,7 +170,7 @@
     "rounds": 16,
     "cuts": 15,
     "evals": 97096,
-    "seconds": 3.2
+    "seconds": 2.9
    },
    {
     "seed": 5,
@@ -182,7 +182,7 @@
     "rounds": 16,
     "cuts": 15,
     "evals": 94955,
-    "seconds": 2.9
+    "seconds": 3.5
    },
    {
     "seed": 6,
@@ -194,7 +194,7 @@
     "rounds": 16,
     "cuts": 15,
     "evals": 101687,
-    "seconds": 3.5
+    "seconds": 3.2
    },
    {
     "seed": 7,
@@ -206,7 +206,7 @@
     "rounds": 16,
     "cuts": 15,
     "evals": 98211,
-    "seconds": 2.9
+    "seconds": 3.2
    }
   ],
   "all_in_core": true,
@@ -215,5 +215,5 @@
   "runs_with_cuts": 8,
   "mean_share_of_profiles_evaluated": 0.04886391722125771
  },
- "runtime_seconds": 36.5
+ "runtime_seconds": 38.7
 }
