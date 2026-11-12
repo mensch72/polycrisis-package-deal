@@ -1,27 +1,26 @@
 *Draft. To be edited and sent by Jobst; nothing has been sent.*
 
-Subject: From pause-willingness to a pause – a possible companion to your report
+Subject: Hardwired pause – the step before, and a possible companion piece
 
-Dear Wes, dear Will, [or: Dear Professors Holliday and Fithian,]
+Dear Wes,
 
-I read your working group's report on the feasibility of a hardwired pause with great interest. Your
-premise is conditional: leaders would pause if confident that others do. My own recent work is on exactly
-that kind of preference: a mechanism in which each party files a unilateral commitment that is conditional
-on the others' commitments, and a fixed rule computes the joint outcome (Games, 2025,
-doi:10.3390/g16060058). Strong equilibria of that mechanism are known for a class of public-good games,
-and we are extending them to cases where some parties are harmed by others' actions.
+I have read the working group's report with great interest. One sentence struck me in particular:
+pause-willingness "does not assume that there is a single set of terms" acceptable to all. That existence
+question, and the question of how parties reach such terms without anyone moving first, is what my
+conditional-commitment mechanism is built for (Games, 2025, doi:10.3390/g16060058). We are currently
+extending it to settings where some parties are harmed by others' actions, through staged entry.
 
-Your report shows how a pause could be verified once agreed. It seems to me that a short companion
-analysis could address the step before: how conditional willingness becomes a commitment without anyone
-moving first, in which order states could enter, and which groups could upset each stage. We have a small
-skeleton with your levers and your order of entry. Its preferences are invented, so it shows the format
-only. One structural point may interest you: mutually conditional filings stay an equilibrium even when
-the stage game is a Prisoner's Dilemma, provided the filings bind, which is what your verification supplies.
+Your ledger makes this concrete. Reading durability off your illustrative numbers, neither the US nor China
+can buy more than about a year alone: the US holds the breakout lever, China the census lever. A pair of
+mutually conditional filings is the natural object, and it happens to be the form of the one reciprocal
+mechanism in your text, the conditional recovery of hidden chips.
 
-Would you be open to a conversation, or to comments on a two-page outline?
+The attached two pages sketch a companion analysis and a first skeleton on your ledger. Its preferences are
+placeholders, so it shows a format and no findings. Would you and Will be open to a call, or to comments?
+Please also tell me if we misread the ledger.
 
-Best regards,
-Jobst Heitzig
+Best,
+Jobst
 
 PS: drafts and computations are produced with Claude, an AI system built by Anthropic, and checked by me.
 I mention the maker because your proposal concerns it directly.

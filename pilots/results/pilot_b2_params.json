@@ -1,9 +1,19 @@
 {
  "base": {
-  "x.base": 0.5,
-  "x.prod": 0.2,
-  "x.census": 0.1,
-  "x.draw": 0.2,
+  "alpha": 0.25,
+  "stockB.USA": 0.2,
+  "stockB.CHN": 0.018,
+  "dark0.USA": 0.047,
+  "dark1.USA": 0.0094,
+  "dark2.USA": 0.0011,
+  "dark0.CHN": 0.16,
+  "dark1.CHN": 0.018,
+  "dark2.CHN": 0.0011,
+  "gain": 0.57,
+  "cap": 2.0,
+  "x.sup0": 0.5,
+  "x.prod": 0.25,
+  "x.mon": 0.25,
   "a.USA": 1.0,
   "a.CHN": 1.0,
   "a.SUP": 0.8,
@@ -11,19 +21,33 @@
   "f.CHN": 0.2,
   "G": 0.2,
   "sig": 0.5,
+  "kc": 0.03,
   "kd": 0.03,
-  "th": 0.15,
+  "th": 0.3,
   "r.SUP": 0.3,
   "c.SUP": 0.05,
   "m.SUP": 0.25,
-  "gap": 1
+  "gap": 0.25
  },
  "provenance": {
+  "report": {
+   "status": "sourced",
+   "keys": [
+    "alpha",
+    "stockB.",
+    "dark",
+    "gain",
+    "cap"
+   ],
+   "source": "Fithian, Holliday et al. (2026), sections 3.2.3, 6.1, 6.4, 6.5; illustrative values of the report itself",
+   "url": "https://hardwired-pause.ai/paper",
+   "retrieved": "2026-11-12"
+  },
   "default": {
    "status": "illustrative",
-   "source": "set by Claude before the first run; structure after the hardwired-pause report, numbers invented",
+   "source": "set by Claude before the first run of version 2",
    "who_says": "Claude",
-   "retrieved": "2026-11-10"
+   "retrieved": "2026-11-12"
   }
  },
  "perturbed": [
@@ -34,6 +58,7 @@
   "f.CHN",
   "G",
   "sig",
+  "kc",
   "kd",
   "th",
   "r.SUP",
@@ -49,6 +74,12 @@
   },
   {
    "actor": "USA",
+   "lever": "census",
+   "levels": 3,
+   "issue": "ai"
+  },
+  {
+   "actor": "USA",
    "lever": "drawdown",
    "levels": 4,
    "issue": "ai"
@@ -57,6 +88,12 @@
    "actor": "CHN",
    "lever": "pause",
    "levels": 2,
+   "issue": "ai"
+  },
+  {
+   "actor": "CHN",
+   "lever": "census",
+   "levels": 3,
    "issue": "ai"
   },
   {
@@ -73,7 +110,7 @@
   },
   {
    "actor": "SUP",
-   "lever": "census",
+   "lever": "monitoring",
    "levels": 2,
    "issue": "ai"
   }
