@@ -15,6 +15,10 @@ marks is my summary. "Not found in my ranges" means exactly that.
 
 ### A1. States
 
+> Note added by Claude, 12 November 2026: this table covers only the sections listed at the top. The report's list
+> of participating jurisdictions (EU, Netherlands, Germany, United Kingdom, Japan, South Korea, Taiwan and others) is in
+> its section 3.1 and is compiled in `hardwired_pause_actors.md`. Chokepoints by jurisdiction are in A2 below.
+
 | Actor | Role the report gives it | Quote |
 |---|---|---|
 | United States, China | The two key parties; all ledgers are computed for them; both must take part in the census voluntarily | "The core of our feasibility analysis concerns the U.S. and China, two leading powers that are not members of the same coalition" (@94122) ; "voluntary participation of both the U.S. and China would likely be essential, as well as participation of other states such as Singapore and Malaysia, where many of the companies that supplied China with diverted stock reside" (@187081) |

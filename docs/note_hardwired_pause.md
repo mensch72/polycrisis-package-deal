@@ -5,7 +5,8 @@ numbers are asserted by `pilots/check_pilots.py`.
 
 **What was read, and how.** Myself: sections 1, 2.3, 3.1, 3.2.3, 3.4 to 3.6, 6.1, 6.5, 8.3, 8.5.2 and 9, and
 the executive summary. Through a research sub-session that extracted 234 quotes with character offsets:
-sections 3.2, 3.3, 4, 5, 6.2 to 6.4 and 7 (`data/sources/hardwired_pause_extract_technical.md`); of that
+sections 3.2, 3.3, 4, 5, 6.2 to 6.4 and 7 (`data/sources/hardwired_pause_extract_technical.md`); the jurisdictions the
+report names, with their roles, are compiled in `data/sources/hardwired_pause_actors.md`; of that
 extract I read the numbers, asymmetries, sequencing and its checks of my earlier statements. Not read
 beyond keyword passages: 2.1, 2.2, 8.1, 8.2, 8.4 and 8.5.1. Technical claims about chips are the report's.
 
